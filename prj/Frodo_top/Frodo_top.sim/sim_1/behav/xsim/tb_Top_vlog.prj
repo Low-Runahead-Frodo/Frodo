@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../rtl/Control/AGU.v" \
+"../../../../../../rtl/Control/Bus.v" \
+"../../../../../../rtl/Control/Control.v" \
+"../../../../../../rtl/Control/Datapre.v" \
+"../../../../../../rtl/Macs/Macs.v" \
+"../../../../../../rtl/Macs/PE_Simple.v" \
+"../../../../../../rtl/Top.v" \
+"../../../../../../rtl/Control/sync_rom.v" \
+"../../../../../../rtl/Control/ucontrol.v" \
+"../../../../../../sim/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
