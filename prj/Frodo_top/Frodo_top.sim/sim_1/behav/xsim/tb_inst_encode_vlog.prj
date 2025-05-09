@@ -4,12 +4,12 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Control/Bus.v" \
 "../../../../../../rtl/Control/Control.v" \
 "../../../../../../rtl/Control/Datapre.v" \
-"../../../../../../rtl/Macs/Macs.v" \
-"../../../../../../rtl/Macs/PE_Simple.v" \
+"../../../../../../rtl/Encode.v" \
 "../../../../../../rtl/Top.v" \
+"../../../../../../rtl/dual_port_ram.v" \
 "../../../../../../rtl/Control/sync_rom.v" \
 "../../../../../../rtl/Control/ucontrol.v" \
-"../../../../../../sim/test.v" \
+"../../../../../../sim/tb_inst_encode.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

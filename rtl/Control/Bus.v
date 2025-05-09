@@ -31,11 +31,11 @@ module Bus
         if(control_addr_en)begin
             mem0_addr_0 = control_addr;
         end
-        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b00) begin
-            mem0_addr_0 = A_addr[ADDR_WIDTH-1:0];
-        end
         else if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b00) begin
             mem0_addr_0 = B_addr[ADDR_WIDTH-1:0];
+        end
+        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b00) begin
+            mem0_addr_0 = A_addr[ADDR_WIDTH-1:0];
         end
         else if(C_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b00) begin
             mem0_addr_0 = C_addr[ADDR_WIDTH-1:0];
@@ -46,11 +46,11 @@ module Bus
     end
 
     always @(*) begin
-        if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b01) begin
-            mem0_addr_1 = A_addr[ADDR_WIDTH-1:0];
-        end
-        else if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b01) begin
+        if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b01) begin
             mem0_addr_1 = B_addr[ADDR_WIDTH-1:0];
+        end
+        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b01) begin
+            mem0_addr_1 = A_addr[ADDR_WIDTH-1:0];
         end
         else if(C_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b01) begin
             mem0_addr_1 = C_addr[ADDR_WIDTH-1:0];
@@ -64,11 +64,11 @@ module Bus
         if(uinst_addr_en)begin
             mem1_addr_0 = uinst_addr;
         end
-        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b10) begin
-            mem1_addr_0 = A_addr[ADDR_WIDTH-1:0];
-        end
         else if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b10) begin
             mem1_addr_0 = B_addr[ADDR_WIDTH-1:0];
+        end
+        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b10) begin
+            mem1_addr_0 = A_addr[ADDR_WIDTH-1:0];
         end
         else if(C_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b10) begin
             mem1_addr_0 = C_addr[ADDR_WIDTH-1:0];
@@ -79,11 +79,11 @@ module Bus
     end
 
     always @(*) begin
-        if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b11) begin
-            mem1_addr_1 = A_addr[ADDR_WIDTH-1:0];
-        end
-        else if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b11) begin
+        if(B_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b11) begin
             mem1_addr_1 = B_addr[ADDR_WIDTH-1:0];
+        end
+        else if(A_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b11) begin
+            mem1_addr_1 = A_addr[ADDR_WIDTH-1:0];
         end
         else if(C_addr[ADDR_WIDTH+1:ADDR_WIDTH] == 2'b11) begin
             mem1_addr_1 = C_addr[ADDR_WIDTH-1:0];

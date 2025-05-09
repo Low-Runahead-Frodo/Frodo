@@ -1,54 +1,17 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Top_behav xil_defaultlib.tb_Top xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_inst_encode_behav xil_defaultlib.tb_inst_encode xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'port_a_en' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:21]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'din_a' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:23]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'port_b_en' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:26]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'din_b' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:28]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'port_a_en' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:37]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'din_a' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:39]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'port_b_en' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:42]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'din_b' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:44]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'loop_0' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:355]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'loop_1' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:356]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 11 for port 'loop_2' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:357]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/RAM/dual_port_ram.v" Line 1. Module dual_port_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/RAM/dual_port_ram.v" Line 1. Module dual_port_ram(LOAD_FILE_PATH="../../../../../../sim/RAM/data/mem1.hex") doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v" Line 1. Module Control doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v" Line 1. Module Bus doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/sync_rom.v" Line 1. Module sync_rom(ADDR_WIDTH=8,DATA_WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v" Line 1. Module ucontrol doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Datapre.v" Line 1. Module Datapre doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/AGU.v" Line 1. Module AGU doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v" Line 1. Module Macs doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v" Line 1. Module Top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/RAM/dual_port_ram.v" Line 1. Module dual_port_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/RAM/dual_port_ram.v" Line 1. Module dual_port_ram(LOAD_FILE_PATH="../../../../../../sim/RAM/data/mem1.hex") doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v" Line 1. Module Control doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v" Line 1. Module Bus doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/sync_rom.v" Line 1. Module sync_rom(ADDR_WIDTH=8,DATA_WIDTH=32) doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v" Line 1. Module ucontrol doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Datapre.v" Line 1. Module Datapre doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/AGU.v" Line 1. Module AGU doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v" Line 1. Module Macs doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v" Line 1. Module PE_Simple doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4100] "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.dual_port_ram
+Compiling module xil_defaultlib.dual_port_ram(TIME=100,STORE_PAT...
 Compiling module xil_defaultlib.dual_port_ram(LOAD_FILE_PATH=".....
 Compiling module xil_defaultlib.Bus
 Compiling module xil_defaultlib.sync_rom(ADDR_WIDTH=8,DATA_WIDTH...
@@ -56,9 +19,8 @@ Compiling module xil_defaultlib.ucontrol
 Compiling module xil_defaultlib.Datapre
 Compiling module xil_defaultlib.AGU
 Compiling module xil_defaultlib.Control
-Compiling module xil_defaultlib.PE_Simple
-Compiling module xil_defaultlib.Macs
+Compiling module xil_defaultlib.Encode
 Compiling module xil_defaultlib.Top
-Compiling module xil_defaultlib.tb_Top
+Compiling module xil_defaultlib.tb_inst_encode
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Top_behav
+Built simulation snapshot tb_inst_encode_behav

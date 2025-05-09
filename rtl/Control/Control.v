@@ -1,5 +1,4 @@
-module Control 
-#(
+module Control #(
     parameter INST_WIDTH        = 27,
     parameter ADDR_WIDTH        = 12,
     parameter UINST_ADDR_WIDTH  = 8,
@@ -9,8 +8,9 @@ module Control
     input                   rstn,
     input [INST_WIDTH-1:0]  inst,
     input                   inst_valid,
+    
 
-    // 读出mem的数据
+    // mem数据
     input       [63:0]              mem0_rd_data_0,
     input       [63:0]              mem0_rd_data_1,
     input       [63:0]              mem1_rd_data_0,
@@ -26,47 +26,35 @@ module Control
     output reg                      mem1_wr_en_0,
     output reg                      mem1_wr_en_1,
 
-    //来自mac的数据
-    output      [7:0]               short_data_0,
-    output      [7:0]               short_data_1,
-    output      [7:0]               short_data_2,
-    output      [7:0]               short_data_3,
-    output      [15:0]              long_data_0,
-    output      [15:0]              long_data_1,
-    output      [15:0]              long_data_2,
-    output      [15:0]              long_data_3,
-    output      [15:0]              result_data_0,
-    output      [15:0]              result_data_1,
-    output      [15:0]              result_data_2,
-    output      [15:0]              result_data_3,
-    input       [63:0]              macs_data,
+    output reg  [63:0]              mem_wr_data,  // 需要写入mem的数据
 
+    //mac相关数据
+    output      [31:0]              short_data,  //4个8位数据
+    output      [63:0]              long_data,   //4个16位数据
+    output      [63:0]              add_data,    //4个加矩阵数据,
+    input       [63:0]              macs_result, //mac计算结果
+    
     output                          macs_mode,  // macs模式，0为乘法，1为加法
     output                          macs_signal, // macs符号信号，0为正，1为负
-    output                          macs_en    // macs使能信号
+    output                          macs_en,    // macs使能信号
 
+    //其他输入数据
+    input       [63:0]              data_encode,
+    input                           encode_en,
+    input       [63:0]              data_decode
 );
-
+    
     parameter IDLE = 2'b00;  //待机状态
     parameter IF   = 2'b01;  //取指令阶段
     parameter ID   = 2'b10;  //译码阶段
     parameter EX   = 2'b11;  //执行阶段
 
-    reg [1:0] state,next_state; // 状态机
-    reg [INST_WIDTH-1:0] inst_reg; // 指令寄存器
+    wire finish; // 完成信号
 
-    wire finish;  // 完成信号
+    reg [1:0] state,next_state;
+    reg [2:0] ID_cnt;  // ID阶段计数器
 
-    reg control_addr_en;
-    reg [ADDR_WIDTH+1:0] A_addr_start,B_addr_start,C_addr_start,D_addr_start;
-    reg [2:0]  ID_cnt;
-    reg [ADDR_WIDTH-1:0] control_addr;
-
-    wire [2:0] opcode;
-    assign opcode = inst_reg[INST_WIDTH-1:INST_WIDTH-3];
-
-
-    //状态机
+//状态机
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             state <= IDLE;
@@ -76,7 +64,7 @@ module Control
         end
     end
 
-    always @(posedge clk or negedge rstn) begin
+    always @(*) begin
         case (state)
             IDLE: begin
                 next_state = IF;
@@ -99,7 +87,7 @@ module Control
             end
             EX: begin
                 if(finish)begin
-                    next_state = ID;
+                    next_state = IDLE;
                 end
                 else begin
                     next_state = EX;
@@ -111,7 +99,11 @@ module Control
         endcase
     end
 
-    // inst_reg,取指阶段取指
+//IF阶段
+//inst_reg,取指阶段取指
+    reg [INST_WIDTH-1:0] inst_reg;//指令寄存器
+    wire [2:0] opcode;
+    assign opcode = inst_reg[INST_WIDTH-1:INST_WIDTH-3];
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             inst_reg <= 0;
@@ -128,7 +120,8 @@ module Control
         end
     end
 
-    // 译码获取地址,先获取三个矩阵的地址,再获取指令的微地址
+//ID阶段
+//ID_cnt
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             ID_cnt <= 3'b0;
@@ -142,11 +135,10 @@ module Control
             end
         end
     end
-
-
-
-
-
+//读地址
+    reg [ADDR_WIDTH-1:0] control_addr; //矩阵索引，用来读矩阵首地址
+    reg control_addr_en;
+    reg [ADDR_WIDTH+1:0] A_addr_start,B_addr_start,C_addr_start,D_addr_start;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             control_addr <= 0;
@@ -164,26 +156,28 @@ module Control
                 end
                 3'b001:begin
                     control_addr[3:0] <= inst_reg[INST_WIDTH-8:INST_WIDTH-11];
-                    A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
+                    //A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b010:begin
                     control_addr[3:0] <= inst_reg[INST_WIDTH-12:INST_WIDTH-15];
-                    B_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
+                    A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b011:begin
+                    B_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
+                end
+                3'b100:begin
                     C_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                     D_addr_start      <= {mem0_rd_data_0[ADDR_WIDTH+1],~mem0_rd_data_0[ADDR_WIDTH],mem0_rd_data_0[ADDR_WIDTH-1:0]};
                 end
-                // 3'b100:begin
-
-                // end
                 3'b101:begin
                     control_addr_en <= 1'b0;
                 end
             endcase
         end
     end
-    //读写使能信号
+
+//读写使能信号
+    //D_addr对应的端口为写使能，其余均为读使能
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             mem0_wr_en_0 <= 1'b0;
@@ -193,7 +187,7 @@ module Control
         end
         else if(ID_cnt == 3'b101)begin
             if(opcode[2])begin
-                case (D_addr_start[ADDR_WIDTH-1:ADDR_WIDTH-2])
+                case (D_addr_start[ADDR_WIDTH+1:ADDR_WIDTH])
                 2'b00:begin
                     mem0_wr_en_0 <= 1'b1;
                     mem0_wr_en_1 <= 1'b0;
@@ -228,40 +222,37 @@ module Control
             mem1_wr_en_1 <= 1'b0;
         end
     end
-    wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
-    wire [63:0] A_data,B_data,C_data;   //屎山命名了，A是参与乘法的数据位宽为8位的矩阵数据，B是参与乘法的另一个，C是结果
 
+//wr_src,写数据的来源
+    reg [1:0] wr_src; // 写数据来源
 
+    parameter ENCODE = 2'b01;
+
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            wr_src <= 2'b00;
+        end
+        else if(state == ID)begin
+            case (opcode)
+                3'b110: wr_src = ENCODE;
+            endcase
+        end
+        else if(state == IDLE)begin
+            wr_src = 2'b00;
+        end
+    end
+
+    always @(*) begin
+        case (wr_src)
+            ENCODE:     mem_wr_data = data_encode;
+            default:    mem_wr_data = 64'b0;
+        endcase
+    end
+
+//upc首地址
+    reg [UINST_ADDR_WIDTH-1:0] upc_start; 
     reg [ADDR_WIDTH-1:0] uinst_addr;
     reg uinst_addr_en;
-
-    Bus u_bus(
-        .A_addr(A_addr),
-        .B_addr(B_addr),
-        .C_addr(C_addr),
-        .D_addr(D_addr),
-        .control_addr(control_addr),
-        .control_addr_en(control_addr_en),
-        .uinst_addr(uinst_addr),
-        .uinst_addr_en(uinst_addr_en),
-        .mem0_addr_0(mem0_addr_0),
-        .mem0_addr_1(mem0_addr_1),
-        .mem1_addr_0(mem1_addr_0),
-        .mem1_addr_1(mem1_addr_1),
-
-        .mem0_rd_data_0(mem0_rd_data_0),
-        .mem0_rd_data_1(mem0_rd_data_1),
-        .mem1_rd_data_0(mem1_rd_data_0),
-        .mem1_rd_data_1(mem1_rd_data_1),
-
-        .A_data(A_data),
-        .B_data(B_data),
-        .C_data(C_data)
-    );
-
-        //upc首地址
-
-    reg [UINST_ADDR_WIDTH-1:0] upc_start;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             uinst_addr <= 0;
@@ -286,7 +277,51 @@ module Control
             upc_start <= 0;
         end
     end
-    // EX阶段
+
+//short_data_mode,有两种模式，1只读8位出来，0读32位
+    reg short_data_mode;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            short_data_mode <= 1'b0;
+        end
+        else if(ID_cnt==3'b001)begin
+            case (opcode)
+                default: short_data_mode<=1'b1;
+            endcase
+        end
+        else if(state==IDLE)begin
+            short_data_mode <= 1'b0;
+        end
+    end
+//loop
+    reg [10:0] loop_0,loop_1,loop_2;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            loop_0 <= 11'b0;
+            loop_1 <= 11'b0;
+            loop_2 <= 11'b0;
+        end
+        else if(state==ID)begin
+            case (opcode)
+                3'b110:begin
+                    loop_0 <= 11'd16;
+                end
+            endcase
+        end
+        else if(state == IDLE)begin
+            loop_0 <= 11'b0;
+            loop_1 <= 11'b0;
+            loop_2 <= 11'b0;
+        end
+    end
+//macs相关控制信号
+    assign macs_mode = 0;  
+    assign macs_signal=0;
+    assign macs_en=0;  
+
+
+//EX阶段
+//start信号
     wire start;
     assign start = state==EX ? 1:0;
 
@@ -303,14 +338,13 @@ module Control
     wire start_pos;
     assign start_pos = start & (~start_reg);
 
-
-
-
+//微指令连线
     wire [UINST_ADDR_WIDTH-1:0] upc;
     wire [UINST_WIDTH-1:0] uinst;
 
     wire done;
     assign done = uinst[0];
+    assign finish = done;
     wire [2:0] upc_up; //更新upc至寄存器内地址
     assign upc_up = uinst[3:1];
     wire [2:0] upc_st; //存储此时upc至寄存器
@@ -324,14 +358,38 @@ module Control
     assign addr_a = uinst[13:10];
     assign addr_c = uinst[17:14];
     assign stride = uinst[21:18];
-
-    assign macs_mode = 1'b0;
-    assign macs_signal = 1'b0;
     assign macs_en = mac_en;
+    assign encode_en = uinst[22];
 
 
+//模块实例化连线
+    wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
+    wire [63:0] A_data,B_data,C_data;
+//数据总线
+    Bus u_bus(
+        .A_addr(A_addr),
+        .B_addr(B_addr),
+        .C_addr(C_addr),
+        .D_addr(D_addr),
+        .control_addr(control_addr),
+        .control_addr_en(control_addr_en),
+        .uinst_addr(uinst_addr),
+        .uinst_addr_en(uinst_addr_en),
+        .mem0_addr_0(mem0_addr_0),
+        .mem0_addr_1(mem0_addr_1),
+        .mem1_addr_0(mem1_addr_0),
+        .mem1_addr_1(mem1_addr_1),
 
+        .mem0_rd_data_0(mem0_rd_data_0),
+        .mem0_rd_data_1(mem0_rd_data_1),
+        .mem1_rd_data_0(mem1_rd_data_0),
+        .mem1_rd_data_1(mem1_rd_data_1),
 
+        .A_data(A_data),
+        .B_data(B_data),
+        .C_data(C_data)
+    );
+//微指令存储器
     sync_rom #(
         .ADDR_WIDTH(UINST_ADDR_WIDTH),
         .DATA_WIDTH(UINST_WIDTH)
@@ -342,7 +400,7 @@ module Control
         .addr(upc),
         .dout(uinst)
     );
-
+//微pc控制器
     ucontrol #(
         .UINST_ADDR_WIDTH(UINST_ADDR_WIDTH),
         .UINST_WIDTH(UINST_WIDTH)
@@ -352,39 +410,15 @@ module Control
         .start_pos(start_pos),
         .upc_start(upc_start),
         .upc(upc),
-        .loop_0(8),
-        .loop_1(0),
-        .loop_2(0),
+        .loop_0(loop_0),
+        .loop_1(loop_1),
+        .loop_2(loop_2),
         .done(done),
         .upc_up(upc_up),
         .upc_st(upc_st)
     );
 
-    //数据控制
-    //short_data
-    reg short_data_mode;  // 有两种模式，第一种是一次只读8位出来，只有A右乘指令，其余一次读32位.以上目前改了
-
-    always @(posedge clk or negedge rstn) begin
-        if(!rstn)begin
-            short_data_mode <= 1'b0;
-        end
-        else if(ID_cnt==3'b001)begin
-            case (opcode)
-                default: short_data_mode<=1'b1;
-            endcase
-        end
-        else if(state==IDLE)begin
-            short_data_mode <= 1'b0;
-        end
-    end
-
-    assign result_data_0 = C_data[15:0];
-    assign result_data_1 = C_data[31:16];
-    assign result_data_2 = C_data[47:32];
-    assign result_data_3 = C_data[63:48];
-
-
-
+//数据预处理模块
     Datapre u_data_pre(
         .clk(clk),
         .rstn(rstn),
@@ -395,20 +429,17 @@ module Control
         .short_data_mode(short_data_mode),
         .short_bia_add(short_bia_add),
         .long_bia_add(long_bia_add),
-        .short_data_0(short_data_0),
-        .short_data_1(short_data_1),
-        .short_data_2(short_data_2),
-        .short_data_3(short_data_3),
-        .long_data_0(long_data_0),
-        .long_data_1(long_data_1),
-        .long_data_2(long_data_2),
-        .long_data_3(long_data_3)
+        .short_data_0(short_data[7:0]),
+        .short_data_1(short_data[15:8]),
+        .short_data_2(short_data[23:16]),
+        .short_data_3(short_data[31:24]),
+        .long_data_0(long_data[15:0]),
+        .long_data_1(long_data[31:16]),
+        .long_data_2(long_data[47:32]),
+        .long_data_3(long_data[63:48])
     );
 
-    
-
-
-
+//地址生成单元
     AGU #(
         .ADDR_WIDTH(ADDR_WIDTH)
     )
@@ -427,8 +458,6 @@ module Control
         .C_addr(C_addr),
         .D_addr(D_addr)
     );
-
-
 
 
 endmodule

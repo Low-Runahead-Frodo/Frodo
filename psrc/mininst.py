@@ -10,7 +10,8 @@ class MicrocodeAssembler:
             'LBIA_A' : {'bits':1,'offset':9},  #16bit数据偏置增加
             'ADDR_A' : {'bits':4,'offset':10}, #地址增加,最低位是8位数据，次低位是16位
             'ADDR_C' : {'bits':4,'offset':14},#地址复位
-            'STRIDE' : {'bits':4,'offset':18} #地址增加步长
+            'STRIDE' : {'bits':4,'offset':18}, #地址增加步长
+            'ENCODE' : {'bits':1,'offset':22} #encode模块使能
         }
         self.validate_field_structure()
 
@@ -49,38 +50,38 @@ class MicrocodeAssembler:
         """批量转换多条微指令"""
         return [self.assemble(inst) for inst in microinstructions]
 
-# 使用示例
-assembler = MicrocodeAssembler()
+# # 使用示例
+# assembler = MicrocodeAssembler()
 
-#matmul指令  8*1344(8bit) * 1344*8(16bit)
-#下面代码的注释 E = SB + E
-multi_inst = [
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b1111,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b100,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#记录第一层循环pc位置，并获取循环数
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b0100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
-    {'DONE':0,'UPC_UP' : 0b100,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b1011,'ADDR_C':0b0000,'STRIDE':0b0010},#循环归位，左矩阵地址加2
-    {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000}#循环后接一个空操作
-]
+# #matmul指令  8*1344(8bit) * 1344*8(16bit)
+# #下面代码的注释 E = SB + E
+# multi_inst = [
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b1111,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b100,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#记录第一层循环pc位置，并获取循环数
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b0100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':1,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':1,'LBIA_A':0,'ADDR_A':0b1100,'ADDR_C':0b0000,'STRIDE':0b0000},
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000},#空周期等待结果
+#     {'DONE':0,'UPC_UP' : 0b100,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b1011,'ADDR_C':0b0000,'STRIDE':0b0010},#循环归位，左矩阵地址加2
+#     {'DONE':0,'UPC_UP' : 0b000,'UPC_ST' : 0b000,'MAC_EN':0,'SBIA_A':0,'LBIA_A':0,'ADDR_A':0b0000,'ADDR_C':0b0000,'STRIDE':0b0000}#循环后接一个空操作
+# ]
 
-# 批量转换
-binary_codes = assembler.assemble_batch(multi_inst)
+# # 批量转换
+# binary_codes = assembler.assemble_batch(multi_inst)
 
-# 输出结果
-for i, code in enumerate(binary_codes):
-    #print(f"指令{i+1}: {code} 长度={len(code)}bits")
-    print(code)
+# # 输出结果
+# for i, code in enumerate(binary_codes):
+#     #print(f"指令{i+1}: {code} 长度={len(code)}bits")
+#     print(code)
