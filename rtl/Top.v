@@ -17,9 +17,7 @@ module Top #(
     wire macs_mode,macs_signal,macs_en;
     wire [63:0] mem_wr_data;
     wire [63:0] data_encode,data_decode;
-    wire decode_en,encode_en;
-
-    assign decode_en =0;
+    wire trans_en;
     assign  macs_result=0;
 
 
@@ -90,14 +88,21 @@ module Top #(
         .macs_en(macs_en),
         
         .data_encode(data_encode),
-        .encode_en(encode_en),
+        .trans_en(trans_en),
         .data_decode(data_decode)
     );
     
     Encode u_encode(
         .input_data(long_data),
         .output_data(data_encode),
-        .en(encode_en),
+        .en(trans_en),
+        .level(level)
+    );
+
+    Decode u_decode(
+        .input_data(long_data),
+        .output_data(data_decode),
+        .en(trans_en),
         .level(level)
     );
 

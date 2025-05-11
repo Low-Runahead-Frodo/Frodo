@@ -1,10 +1,11 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_inst_encode_behav xil_defaultlib.tb_inst_encode xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_inst_trans_behav xil_defaultlib.tb_inst_trans xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 78 into 'output_data' is out of bounds [C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v:36]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
@@ -20,7 +21,8 @@ Compiling module xil_defaultlib.Datapre
 Compiling module xil_defaultlib.AGU
 Compiling module xil_defaultlib.Control
 Compiling module xil_defaultlib.Encode
+Compiling module xil_defaultlib.Decode
 Compiling module xil_defaultlib.Top
-Compiling module xil_defaultlib.tb_inst_encode
+Compiling module xil_defaultlib.tb_inst_trans
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_inst_encode_behav
+Built simulation snapshot tb_inst_trans_behav
