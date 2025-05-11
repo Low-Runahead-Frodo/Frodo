@@ -11,7 +11,7 @@ class MicrocodeAssembler:
             'ADDR_A' : {'bits':4,'offset':10}, #地址增加,最低位是8位数据，次低位是16位
             'ADDR_C' : {'bits':4,'offset':14},#地址复位
             'STRIDE' : {'bits':4,'offset':18}, #地址增加步长
-            'ENCODE' : {'bits':1,'offset':22} #encode模块使能
+            'TRANS'  : {'bits':1,'offset':22} #encode/decode模块使能
         }
         self.validate_field_structure()
 

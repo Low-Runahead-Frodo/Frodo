@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../rtl/Control/AGU.v" \
+"../../../../../../rtl/Control/Bus.v" \
+"../../../../../../rtl/Control/Control.v" \
+"../../../../../../rtl/Control/Datapre.v" \
+"../../../../../../rtl/Decode.v" \
+"../../../../../../rtl/Encode.v" \
+"../../../../../../rtl/Top.v" \
+"../../../../../../rtl/dual_port_ram.v" \
+"../../../../../../rtl/Control/sync_rom.v" \
+"../../../../../../rtl/Control/ucontrol.v" \
+"../../../../../../sim/tb_inst_trans.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

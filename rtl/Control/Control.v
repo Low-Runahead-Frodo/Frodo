@@ -40,7 +40,7 @@ module Control #(
 
     //其他输入数据
     input       [63:0]              data_encode,
-    input                           encode_en,
+    output                          trans_en,
     input       [63:0]              data_decode
 );
     
@@ -227,6 +227,7 @@ module Control #(
     reg [1:0] wr_src; // 写数据来源
 
     parameter ENCODE = 2'b01;
+    parameter DECODE = 2'b10;
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
@@ -234,7 +235,14 @@ module Control #(
         end
         else if(state == ID)begin
             case (opcode)
-                3'b110: wr_src = ENCODE;
+                3'b110:begin
+                    if(inst_reg[INST_WIDTH-16])begin
+                        wr_src <= DECODE;
+                    end
+                    else begin
+                        wr_src <= ENCODE;
+                    end
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -245,6 +253,7 @@ module Control #(
     always @(*) begin
         case (wr_src)
             ENCODE:     mem_wr_data = data_encode;
+            DECODE:     mem_wr_data = data_decode;
             default:    mem_wr_data = 64'b0;
         endcase
     end
@@ -359,7 +368,7 @@ module Control #(
     assign addr_c = uinst[17:14];
     assign stride = uinst[21:18];
     assign macs_en = mac_en;
-    assign encode_en = uinst[22];
+    assign trans_en = uinst[22];
 
 
 //模块实例化连线
