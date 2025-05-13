@@ -6,6 +6,8 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Control/Datapre.v" \
 "../../../../../../rtl/Decode.v" \
 "../../../../../../rtl/Encode.v" \
+"../../../../../../rtl/Macs/Macs.v" \
+"../../../../../../rtl/Macs/PE_Simple.v" \
 "../../../../../../rtl/Top.v" \
 "../../../../../../rtl/dual_port_ram.v" \
 "../../../../../../rtl/Control/sync_rom.v" \

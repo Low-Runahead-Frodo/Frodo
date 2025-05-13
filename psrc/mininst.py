@@ -11,7 +11,11 @@ class MicrocodeAssembler:
             'ADDR_A' : {'bits':4,'offset':10}, #地址增加,最低位是8位数据，次低位是16位
             'ADDR_C' : {'bits':4,'offset':14},#地址复位
             'STRIDE' : {'bits':4,'offset':18}, #地址增加步长
-            'TRANS'  : {'bits':1,'offset':22} #encode/decode模块使能
+            'TRANS'  : {'bits':1,'offset':22}, #encode/decode模块使能
+            'HASH_DI': {'bits':1,'offset':23}, #hash数据输入有效,
+            'SQUEEZE': {'bits':1,'offset':24}, #挤压使能
+            'RAM_RES': {'bits':1,'offset':25}, #ram复位
+            'DOUT_EN': {'bits':1,'offset':26}  #hash输出使能
         }
         self.validate_field_structure()
 

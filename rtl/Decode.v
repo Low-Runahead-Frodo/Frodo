@@ -33,7 +33,7 @@ module Decode (
     genvar i;
     generate
         for(i=0;i<4;i=i+1)begin
-            assign output_data[i*16+15+:16] = en ? decode(input_data[i*16+15+:16],level) : input_data[i*16+15+:16];
+            assign output_data[i*16+:16] = en ? decode(input_data[i*16+:16],level) : input_data[i*16+:16];
         end
     endgenerate
 

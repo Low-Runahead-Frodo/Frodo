@@ -22,6 +22,8 @@ Compiling module xil_defaultlib.AGU
 Compiling module xil_defaultlib.Control
 Compiling module xil_defaultlib.Encode
 Compiling module xil_defaultlib.Decode
+Compiling module xil_defaultlib.PE_Simple
+Compiling module xil_defaultlib.Macs
 Compiling module xil_defaultlib.Top
 Compiling module xil_defaultlib.tb_inst_trans
 Compiling module xil_defaultlib.glbl
