@@ -41,7 +41,16 @@ module Control #(
     //其他输入数据
     input       [63:0]              data_encode,
     output                          trans_en,
-    input       [63:0]              data_decode
+    input       [63:0]              data_decode,
+
+    output reg  [10:0]              hash_di_len,   // hash输入长度
+    output reg  [7:0]               hash_in,       // hash原始输入
+    output reg                      hash_lev,      // hash安全等级
+    output                          hash_di_valid, // hash数据有效信号
+    output                          squeeze_en,    // 挤压使能
+    output                          ram_reset,      // 显示复位使能
+    output                          dout_en,        //输出数据使能
+    input        [63:0]             hash_out
 );
     
     parameter IDLE = 2'b00;  //待机状态
@@ -369,6 +378,10 @@ module Control #(
     assign stride = uinst[21:18];
     assign macs_en = mac_en;
     assign trans_en = uinst[22];
+    assign di_valid = uinst[23];
+    assign squeeze_en = uinst[24];
+    assign ram_reset = uinst[25];
+    assign dout_en = uinst[26];
 
 
 //模块实例化连线
