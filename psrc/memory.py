@@ -1,4 +1,6 @@
 import math
+import numpy as np
+from typing import Union, List
 
 class MemoryData:
     def __init__(self, matrix, data_bit_width=8, start_addr=0, matrix_name="default_matrix"):
@@ -41,156 +43,134 @@ class MemoryData:
                 f"data_bit_width={self.data_bit_width}, matrix_size={matrix_dim})")
 
 
-class FinalMemory:
-    def __init__(self, bit_width=64, length=4096):
+class Memory:
+    def __init__(self, bit_width: int = 64, length: int = 4096):
         """
-        初始化最终存储器。
+        初始化 Memory 对象。
 
         参数:
-            bit_width (int): 存储器存储单元的位宽，默认64位。
-            length (int): 存储器单元总数，默认4096。
+            bit_width (int): 存储单元位宽，固定为64。
+            length (int): 存储单元数量（64位宽），默认4096。
         """
+        if bit_width != 64:
+            raise ValueError("Memory bit_width must be 64")
         self.bit_width = bit_width
         self.length = length
-        # 使用列表存储所有64位单元的数据，未赋值部分初始化为 0
-        self.memory = [0] * length
+        # 使用整数列表模拟存储器，每个元素表示一个64位存储单元的内容
+        self._words = [0] * self.length
+    def add_memory_data(self, mem_data) -> None:
+        """
+        将 MemoryData 对象的数据写入到主存中。
 
-    def _flatten_matrix(self, matrix):
+        小端按整块写入：
+        - 8位数据时，每个64位单元存8个数据；
+        - 16位数据时，每个64位单元存4个数据。
         """
-        将二维矩阵展平成一维列表。
-        """
-        return [value for row in matrix for value in row]
+        flat = [int(val) for row in mem_data.matrix for val in row]
+        bw = mem_data.data_bit_width
+        start = mem_data.start_addr
+        elems_per_word = self.bit_width // bw
+        mask = (1 << bw) - 1
+        # 总共要写入的单元数
+        total_words = math.ceil(len(flat) / elems_per_word)
+        for w in range(total_words):
+            word_index = start + w
+            if word_index >= self.length:
+                raise IndexError(f"Address {word_index} out of memory range")
+            chunk = flat[w*elems_per_word:(w+1)*elems_per_word]
+            word_val = 0
+            for i, v in enumerate(chunk):
+                if v < 0 or v > mask:
+                    raise ValueError(f"Value {v} out of range for bit width {bw}")
+                offset = i * bw
+                word_val |= (v & mask) << offset
+            self._words[word_index] = word_val
 
-    def _pack_to_words(self, data_list, data_bit_width):
+    def modify_word(self, addr: int, value: int) -> None:
         """
-        将数据列表按指定位宽打包为64位单元列表。
-        采用小端方式（先插入的数据在低位），若最后不足64位自动填0。
-        
+        修改指定存储单元的内容。
+
         参数:
-            data_list (list of int): 要打包的数据列表。
-            data_bit_width (int): 每个数据的位宽（例如8或16）。
-            
+            addr (int): 64位存储单元地址。
+            value (int): 要写入的64位值。
+        """
+        if not (0 <= addr < self.length):
+            raise IndexError(f"Address {addr} out of memory range")
+        if value < 0 or value >= (1 << self.bit_width):
+            raise ValueError(f"Value {value} out of range for 64-bit width")
+        self._words[addr] = value
+    
+    def export_to_file(self, filename: str, file_type: str = 'bin') -> None:
+        """
+        将当前内存内容输出到文件。
+
+        参数:
+            filename (str): 文件路径。
+            file_type (str): 输出格式，'bin' 或 'hex'。
+        """
+        if file_type == 'bin':
+            fmt = '{:064b}'
+        elif file_type == 'hex':
+            fmt = '{:016X}'
+        else:
+            raise ValueError("file_type must be 'bin' or 'hex'")
+        with open(filename, 'w') as f:
+            for word in self._words:
+                f.write(fmt.format(word) + '\n')
+
+
+class MemoryReader:
+    """
+    从 bin 或 hex 文件中读取存储内容，并可按需重构矩阵。
+    """
+    def __init__(self, filename: str, file_type: str = 'bin'):
+        self.words: List[int] = []
+        self._load_file(filename, file_type)
+
+    def _load_file(self, filename: str, file_type: str) -> None:
+        base = 2 if file_type == 'bin' else 16 if file_type == 'hex' else None
+        if base is None:
+            raise ValueError("file_type must be 'bin' or 'hex'")
+        with open(filename, 'r') as f:
+            for line in f:
+                s = line.strip()
+                if not s:
+                    continue
+                self.words.append(int(s, base))
+
+    def read_matrix(self, start_addr: int, rows: int, cols: int,
+                    data_bit_width: int) -> List[List[int]]:
+        """
+        从指定地址开始，按行优先顺序解析出矩阵。
+
+        参数:
+            start_addr: 起始64位单元地址
+            rows: 矩阵行数
+            cols: 矩阵列数
+            data_bit_width: 元素位宽，8 或 16
+
         返回:
-            list of int: 打包后的64位整数列表。
+            二维 int 矩阵，维度 rows x cols
         """
-        result = []
-        current_word = 0
-        bits_in_word = 0
+        if data_bit_width not in (8, 16):
+            raise ValueError("data_bit_width must be 8 or 16")
+        elems_per_word = 64 // data_bit_width
         mask = (1 << data_bit_width) - 1
-        
-        for value in data_list:
-            # 限制数据位宽
-            value = value & mask
-            # 合并当前数据
-            current_word |= (value << bits_in_word)
-            bits_in_word += data_bit_width
+        total = rows * cols
+        flat: List[int] = []
+        for idx in range(total):
+            word_index = start_addr + idx // elems_per_word
+            if word_index >= len(self.words):
+                raise IndexError(f"Address {word_index} out of memory range")
+            offset = (idx % elems_per_word) * data_bit_width
+            value = (self.words[word_index] >> offset) & mask
+            flat.append(value)
+        # reshape
+        matrix: List[List[int]] = []
+        for r in range(rows):
+            row_vals = flat[r * cols:(r + 1) * cols]
+            matrix.append(row_vals)
+        return matrix
 
-            # 当填满或超出64位时需要处理
-            if bits_in_word >= 64:
-                if bits_in_word > 64:
-                    # 数据跨越两个64位单元
-                    extra_bits = bits_in_word - 64
-                    # 将低64位保存
-                    result.append(current_word & ((1 << 64) - 1))
-                    # 剩下的 extra_bits 属于当前值的高位部分
-                    current_word = value >> (data_bit_width - extra_bits)
-                    bits_in_word = extra_bits
-                else:
-                    result.append(current_word)
-                    current_word = 0
-                    bits_in_word = 0
-        # 若最后还有剩余部分，则补0保存
-        if bits_in_word > 0:
-            result.append(current_word)
-        return result
-
-    def insert_memorydata(self, mem_data, insertion_addr=None):
-        """
-        将 MemoryData 对象中的数据按照数据位宽打包后插入到最终存储器中。
-        
-        参数:
-            mem_data (MemoryData): 需要插入的数据对象。
-            insertion_addr (int): 插入的起始地址，如果为 None 则使用 mem_data.start_addr。
-            
-        注意：插入的数据如果超出存储器总长度，将引发异常。
-        """
-        # 确定插入起始地址
-        addr = insertion_addr if insertion_addr is not None else mem_data.start_addr
-        
-        # 展平二维矩阵数据
-        flat_data = self._flatten_matrix(mem_data.matrix)
-        # 按照 mem_data 中的数据位宽打包成64位单元
-        packed_words = self._pack_to_words(flat_data, mem_data.data_bit_width)
-        
-        # 检查数据是否超出存储器范围
-        if addr < 0 or addr + len(packed_words) > self.length:
-            raise ValueError("插入的数据超出存储器范围")
-        
-        # 插入数据到内存中
-        for i, word in enumerate(packed_words):
-            self.memory[addr + i] = word
-
-    def modify_address(self, address, new_value):
-        """
-        修改指定地址处存储单元的数据值。
-        
-        参数:
-            address (int): 需要修改的地址。
-            new_value (int): 要写入的新值（应适合于64位）。
-        """
-        if address < 0 or address >= self.length:
-            raise ValueError("指定地址超出存储器范围")
-        # 这里假设 new_value 已在64位范围内，可以根据需求进行调整
-        self.memory[address] = new_value
-
-    def export_to_file(self, file_name, mode='hex'):
-        """
-        将整个存储器数据导出到文件，未赋值处保留为0。
-        
-        参数:
-            file_name (str): 输出文件名。
-            mode (str): 导出模式，支持 'hex'（默认） 或 'bin' 格式。
-        """
-        with open(file_name, "w") as f:
-            for word in self.memory:
-                if mode.lower() == 'hex':
-                    # 固定16位16进制数表示64位数据（不足左侧补0）
-                    f.write("{:016X}\n".format(word))
-                elif mode.lower() == 'bin':
-                    # 固定64位二进制数表示，左侧补0
-                    f.write("{:064b}\n".format(word))
-                else:
-                    raise ValueError("导出模式仅支持 'hex' 或 'bin'")
-        print(f"数据已导出到 {file_name}")
-
-    def __repr__(self):
-        return f"FinalMemory(bit_width={self.bit_width}, length={self.length})"
-
-
-# 示例使用
-if __name__ == "__main__":
-    # 构造一个4x4矩阵的测试数据，数据位宽为8
-    matrix = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 16]
-    ]
-    mem_data = MemoryData(matrix, data_bit_width=8, start_addr=10, matrix_name="TestMatrix")
-    print("MemoryData 对象：", mem_data)
-    
-    # 构造最终存储器，默认64位宽、长度4096
-    final_mem = FinalMemory()
-    print("初始 FinalMemory 对象：", final_mem)
-    
-    # 将 MemoryData 插入到存储器中，在地址 100 开始插入数据
-    final_mem.insert_memorydata(mem_data, insertion_addr=mem_data.start_addr)
-    
-    # 修改单个地址的数据，例如将地址105的数据修改为 0xDEADBEEFDEADBEEF
-    final_mem.modify_address(105, 0xDEADBEEFDEADBEEF)
-    
-    # 导出为 hex 文件
-    final_mem.export_to_file("final_memory.hex", mode="hex")
-    
-    # 如需导出 bin 文件，可如下调用：
-    # final_mem.export_to_file("final_memory.bin", mode="bin")
+    def __repr__(self) -> str:
+        return f"MemoryReader(words={len(self.words)} entries)"

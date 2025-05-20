@@ -1,6 +1,7 @@
 module tb_inst_trans;
     parameter INST_WIDTH = 27;
     parameter ADDR_WIDTH = 12;
+    parameter TIME = 100000;
 
     // DUT Inputs
     reg clk;
@@ -18,7 +19,8 @@ module tb_inst_trans;
     // Instantiate the DUT
     Top #(
         .INST_WIDTH(INST_WIDTH),
-        .ADDR_WIDTH(ADDR_WIDTH)
+        .ADDR_WIDTH(ADDR_WIDTH),
+        .TIME(TIME)
     ) dut (
         .clk(clk),
         .rstn(rstn),
@@ -42,30 +44,48 @@ module tb_inst_trans;
         C_index = 0;
         opcode = 0;
         mode = 0;
-        level = 2'b00;
+        level = 2'b01;
         repeat(5)@(posedge clk);
         rstn = 1;
         repeat(1)@(posedge clk);
 
-        //1344 encode
+        // //1344 encode
+        // inst_valid = 1;
+        // opcode = 3'b110;
+        // B_index = 0;
+        // C_index = 2;
+        // mode = 0;
+        // repeat(1)@(posedge clk);
+        // inst_valid = 0;
+        // repeat(30)@(posedge clk);
+        
+        // //1344 decode
+        // inst_valid = 1;
+        // opcode = 3'b110;
+        // B_index = 0;
+        // C_index = 3;
+        // mode = 1;
+        // repeat(1)@(posedge clk);
+        // inst_valid = 0;
+        // repeat(100)@(posedge clk);
         inst_valid = 1;
-        opcode = 3'b110;
-        B_index = 0;
-        C_index = 2;
+        opcode = 3'b100;
+        A_index = 1;
+        B_index = 2;
+        C_index = 3;
         mode = 0;
         repeat(1)@(posedge clk);
         inst_valid = 0;
-        repeat(30)@(posedge clk);
-        
-        //1344 decode
-        inst_valid = 1;
-        opcode = 3'b110;
-        B_index = 0;
-        C_index = 3;
-        mode = 1;
-        repeat(1)@(posedge clk);
-        inst_valid = 0;
-        repeat(100)@(posedge clk);
+        repeat(TIME)@(posedge clk);
+        // inst_valid = 1;
+        // opcode = 3'b101;
+        // A_index = 0;
+        // B_index = 3;
+        // C_index = 1; 
+        // mode = 0;
+        // repeat(1)@(posedge clk);
+        // inst_valid = 0;
+        // repeat(TIME)@(posedge clk);
 
         $finish;
     end

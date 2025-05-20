@@ -15,7 +15,10 @@ class MicrocodeAssembler:
             'HASH_DI': {'bits':1,'offset':23}, #hash数据输入有效,
             'SQUEEZE': {'bits':1,'offset':24}, #挤压使能
             'RAM_RES': {'bits':1,'offset':25}, #ram复位
-            'DOUT_EN': {'bits':1,'offset':26}  #hash输出使能
+            'DOUT_EN': {'bits':1,'offset':26},  #hash输出使能
+            'MEM_WEN': {'bits':1,'offset':27},   #写mem使能
+            'RBIAS_T': {'bits':1,'offset':28},  #转置模块读偏置
+            'WBIAS_T': {'bits':1,'offset':29},  #转置模块写偏置
         }
         self.validate_field_structure()
 

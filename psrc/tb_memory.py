@@ -1,28 +1,30 @@
 import numpy as np
-from memory import FinalMemory
+from memory import Memory
 from memory import MemoryData
 
-A = np.random.randint(1,9,size=(8,8))
-B = np.random.randint(1,9,size=(8,8))
+
+np.random.seed(1234)
+A = np.random.randint(1,9,size=(8,1344))
+B = np.random.randint(1,9,size=(8,1344))
 C = np.random.randint(1,9,size=(8,8))
 
+# print(A)
+
+mem0 = Memory()
+mem1 = Memory()
+
+A = MemoryData(A,data_bit_width=8,start_addr=16,matrix_name="A")
+B = MemoryData(B,data_bit_width=16,start_addr=1361,matrix_name="B")
+C = MemoryData(C,data_bit_width=16,start_addr=100,matrix_name="C")
 
 
-mem0 = FinalMemory()
-mem1 = FinalMemory()
+mem0.add_memory_data(A)
+mem0.add_memory_data(B)
+mem1.add_memory_data(C)
 
-B = MemoryData(B,data_bit_width=8,start_addr=10,matrix_name="A")
-A = MemoryData(A,data_bit_width=16,start_addr=100,matrix_name="B")
-C = MemoryData(C,data_bit_width=16,start_addr=10,matrix_name="B")
+mem0.modify_word(1,0x0000000000000016)
+mem0.modify_word(2,0x0000000000001551)
+mem0.modify_word(3,0x0000000000002064)
 
-
-mem0.insert_memorydata(A,insertion_addr=A.start_addr)
-mem0.insert_memorydata(B,insertion_addr=B.start_addr)
-mem1.insert_memorydata(C,insertion_addr=C.start_addr)
-
-mem0.modify_address(0,0x000000000000000a)
-mem0.modify_address(1,0x0000000000001064)
-mem0.modify_address(2,0x000000000000200a)
-
-mem0.export_to_file("src/rtl/RAM/data/mem0.hex",mode="hex")
-mem1.export_to_file("src/rtl/RAM/data/mem1.hex",mode="hex")
+mem0.export_to_file("sim/RAM/data/mem0.hex","hex")
+mem1.export_to_file("sim/RAM/data/mem1.hex","hex")

@@ -1,3 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM2/sim/DRAM2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM6/sim/DRAM6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM6
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM1/sim/DRAM1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM7/sim/DRAM7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM7
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM8/sim/DRAM8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM4/sim/DRAM4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM3/sim/DRAM3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/DRAM5/sim/DRAM5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM5
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/AGU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AGU
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v" into library xil_defaultlib
@@ -16,10 +32,90 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/M
 INFO: [VRFC 10-311] analyzing module PE_Simple
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Transpose.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Transpose
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/chiiota.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chiiota
+WARNING: [VRFC 10-3380] identifier 'c0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/chiiota.v:14]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/dual_port_ram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dual_port_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/hash_out_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hash_out_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak
+WARNING: [VRFC 10-2938] 'ci_out' is already implicitly declared on line 448 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:474]
+WARNING: [VRFC 10-2938] 'k_ram_i_all' is already implicitly declared on line 447 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:510]
+WARNING: [VRFC 10-2938] 'k_ram_o_all' is already implicitly declared on line 446 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:512]
+WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:687]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:24]
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:25]
+WARNING: [VRFC 10-3380] identifier 'data_o00_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:221]
+WARNING: [VRFC 10-3380] identifier 'data_o01_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:223]
+WARNING: [VRFC 10-3380] identifier 'data_o01_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:224]
+WARNING: [VRFC 10-3380] identifier 'data_o02_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:226]
+WARNING: [VRFC 10-3380] identifier 'data_o02_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:227]
+WARNING: [VRFC 10-3380] identifier 'data_o03_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:229]
+WARNING: [VRFC 10-3380] identifier 'data_o03_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:230]
+WARNING: [VRFC 10-3380] identifier 'data_o04_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:232]
+WARNING: [VRFC 10-3380] identifier 'data_o04_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:233]
+WARNING: [VRFC 10-3380] identifier 'data_o10_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:235]
+WARNING: [VRFC 10-3380] identifier 'data_o10_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:236]
+WARNING: [VRFC 10-3380] identifier 'data_o11_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:238]
+WARNING: [VRFC 10-3380] identifier 'data_o11_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:239]
+WARNING: [VRFC 10-3380] identifier 'data_o12_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:241]
+WARNING: [VRFC 10-3380] identifier 'data_o12_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:242]
+WARNING: [VRFC 10-3380] identifier 'data_o13_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:244]
+WARNING: [VRFC 10-3380] identifier 'data_o13_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:245]
+WARNING: [VRFC 10-3380] identifier 'data_o14_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:247]
+WARNING: [VRFC 10-3380] identifier 'data_o14_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:248]
+WARNING: [VRFC 10-3380] identifier 'data_o20_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:250]
+WARNING: [VRFC 10-3380] identifier 'data_o20_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:251]
+WARNING: [VRFC 10-3380] identifier 'data_o21_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:253]
+WARNING: [VRFC 10-3380] identifier 'data_o21_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:254]
+WARNING: [VRFC 10-3380] identifier 'data_o22_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:256]
+WARNING: [VRFC 10-3380] identifier 'data_o22_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:257]
+WARNING: [VRFC 10-3380] identifier 'data_o23_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:259]
+WARNING: [VRFC 10-3380] identifier 'data_o24_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:261]
+WARNING: [VRFC 10-3380] identifier 'data_o24_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:262]
+WARNING: [VRFC 10-3380] identifier 'data_o30_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:264]
+WARNING: [VRFC 10-3380] identifier 'data_o30_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:265]
+WARNING: [VRFC 10-3380] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:267]
+WARNING: [VRFC 10-3380] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:268]
+WARNING: [VRFC 10-3380] identifier 'data_o32_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:270]
+WARNING: [VRFC 10-3380] identifier 'data_o32_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:271]
+WARNING: [VRFC 10-3380] identifier 'data_o33_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:273]
+WARNING: [VRFC 10-3380] identifier 'data_o33_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:274]
+WARNING: [VRFC 10-3380] identifier 'data_o34_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:276]
+WARNING: [VRFC 10-3380] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:279]
+WARNING: [VRFC 10-3380] identifier 'data_o40_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:280]
+WARNING: [VRFC 10-3380] identifier 'data_o41_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:282]
+WARNING: [VRFC 10-3380] identifier 'data_o41_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:283]
+WARNING: [VRFC 10-3380] identifier 'data_o42_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:285]
+WARNING: [VRFC 10-3380] identifier 'data_o42_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:286]
+WARNING: [VRFC 10-3380] identifier 'data_o43_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:288]
+WARNING: [VRFC 10-3380] identifier 'data_o43_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:289]
+WARNING: [VRFC 10-3380] identifier 'data_o44_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:291]
+WARNING: [VRFC 10-3380] identifier 'data_o44_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:292]
+WARNING: [VRFC 10-3380] identifier 'theta_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:418]
+WARNING: [VRFC 10-3380] identifier 'k_ram_i_all' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:419]
+WARNING: [VRFC 10-3380] identifier 'ci_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:421]
+WARNING: [VRFC 10-3380] identifier 'ci_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:424]
+WARNING: [VRFC 10-3380] identifier 'k_ram_i_all' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:426]
+WARNING: [VRFC 10-3380] identifier 'theta_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:427]
+WARNING: [VRFC 10-3380] identifier 'ci_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:430]
+WARNING: [VRFC 10-3380] identifier 'theta_in' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:431]
+WARNING: [VRFC 10-3380] identifier 'k_ram_i_all' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:432]
+WARNING: [VRFC 10-3380] identifier 'data_o00_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:514]
+WARNING: [VRFC 10-3380] identifier 'data_o10_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:515]
+WARNING: [VRFC 10-3380] identifier 'data_o20_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:516]
+WARNING: [VRFC 10-3380] identifier 'data_o30_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:517]
+WARNING: [VRFC 10-3380] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/keccak.v:518]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/pre_theta.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PRE_THETA
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/sync_rom.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sync_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash/theta.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module theta
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ucontrol
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/sim/tb_inst_trans.v" into library xil_defaultlib

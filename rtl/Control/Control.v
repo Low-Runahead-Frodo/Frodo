@@ -21,10 +21,10 @@ module Control #(
     output      [ADDR_WIDTH-1:0]    mem1_addr_0,
     output      [ADDR_WIDTH-1:0]    mem1_addr_1,
 
-    output reg                      mem0_wr_en_0,
-    output reg                      mem0_wr_en_1,
-    output reg                      mem1_wr_en_0,
-    output reg                      mem1_wr_en_1,
+    output                          mem0_wr_en_0,
+    output                          mem0_wr_en_1,
+    output                          mem1_wr_en_0,
+    output                          mem1_wr_en_1,
 
     output reg  [63:0]              mem_wr_data,  // 需要写入mem的数据
 
@@ -34,8 +34,8 @@ module Control #(
     output      [63:0]              add_data,    //4个加矩阵数据,
     input       [63:0]              macs_result, //mac计算结果
     
-    output                          macs_mode,  // macs模式，0为乘法，1为加法
-    output                          macs_signal, // macs符号信号，0为正，1为负
+    output reg                      macs_mode,  // macs模式，0为乘法，1为加法
+    output reg                      macs_signal, // macs符号信号，0为正，1为负
     output                          macs_en,    // macs使能信号
 
     //其他输入数据
@@ -50,7 +50,9 @@ module Control #(
     output                          squeeze_en,    // 挤压使能
     output                          ram_reset,      // 显示复位使能
     output                          dout_en,        //输出数据使能
-    input        [63:0]             hash_out
+    input        [63:0]             hash_out,
+
+    input        [1:0]              level
 );
     
     parameter IDLE = 2'b00;  //待机状态
@@ -62,6 +64,17 @@ module Control #(
 
     reg [1:0] state,next_state;
     reg [2:0] ID_cnt;  // ID阶段计数器
+
+//安全等级
+    reg [10:0] level_num;
+    always @(*) begin
+        case (level)
+            2'b01: level_num = 11'd1344;
+            2'b10: level_num = 11'd976;
+            2'b11: level_num = 11'd640;
+            2'b00: level_num = 0;
+        endcase
+    end
 
 //状态机
     always @(posedge clk or negedge rstn) begin
@@ -187,60 +200,71 @@ module Control #(
 
 //读写使能信号
     //D_addr对应的端口为写使能，其余均为读使能
+    wire mem_wen;
+    reg mem_wen_reg [0:3];
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
-            mem0_wr_en_0 <= 1'b0;
-            mem0_wr_en_1 <= 1'b0;
-            mem1_wr_en_0 <= 1'b0;
-            mem1_wr_en_1 <= 1'b0;
+            mem_wen_reg[0] <= 1'b0;
+            mem_wen_reg[1] <= 1'b0;
+            mem_wen_reg[2] <= 1'b0;
+            mem_wen_reg[3] <= 1'b0;
         end
         else if(ID_cnt == 3'b101)begin
             if(opcode[2])begin
                 case (D_addr_start[ADDR_WIDTH+1:ADDR_WIDTH])
                 2'b00:begin
-                    mem0_wr_en_0 <= 1'b1;
-                    mem0_wr_en_1 <= 1'b0;
-                    mem1_wr_en_0 <= 1'b0;
-                    mem1_wr_en_1 <= 1'b0;
+                    mem_wen_reg[0] <= 1'b1;
+                    mem_wen_reg[1] <= 1'b0;
+                    mem_wen_reg[2] <= 1'b0;
+                    mem_wen_reg[3] <= 1'b0;
                 end
                 2'b01:begin
-                    mem0_wr_en_0 <= 1'b0;
-                    mem0_wr_en_1 <= 1'b1;
-                    mem1_wr_en_0 <= 1'b0;
-                    mem1_wr_en_1 <= 1'b0;
+                    mem_wen_reg[0] <= 1'b0;
+                    mem_wen_reg[1] <= 1'b1;
+                    mem_wen_reg[2] <= 1'b0;
+                    mem_wen_reg[3] <= 1'b0;
                 end
                 2'b10:begin
-                    mem0_wr_en_0 <= 1'b0;
-                    mem0_wr_en_1 <= 1'b0;
-                    mem1_wr_en_0 <= 1'b1;
-                    mem1_wr_en_1 <= 1'b0;
+                    mem_wen_reg[0] <= 1'b0;
+                    mem_wen_reg[1] <= 1'b0;
+                    mem_wen_reg[2] <= 1'b1;
+                    mem_wen_reg[3] <= 1'b0;
                 end
                 2'b11:begin
-                    mem0_wr_en_0 <= 1'b0;
-                    mem0_wr_en_1 <= 1'b0;
-                    mem1_wr_en_0 <= 1'b0;
-                    mem1_wr_en_1 <= 1'b1;
+                    mem_wen_reg[0] <= 1'b0;
+                    mem_wen_reg[1] <= 1'b0;
+                    mem_wen_reg[2] <= 1'b0;
+                    mem_wen_reg[3] <= 1'b1;
                 end   
                 endcase
             end
         end
         else if(state == IDLE)begin
-            mem0_wr_en_0 <= 1'b0;
-            mem0_wr_en_1 <= 1'b0;
-            mem1_wr_en_0 <= 1'b0;
-            mem1_wr_en_1 <= 1'b0;
+            mem_wen_reg[0] <= 1'b0;
+            mem_wen_reg[1] <= 1'b0;
+            mem_wen_reg[2] <= 1'b0;
+            mem_wen_reg[3] <= 1'b0;
         end
     end
 
-//wr_src,写数据的来源
-    reg [1:0] wr_src; // 写数据来源
+    assign mem0_wr_en_0 = mem_wen_reg[0] & mem_wen;
+    assign mem0_wr_en_1 = mem_wen_reg[1] & mem_wen;
+    assign mem1_wr_en_0 = mem_wen_reg[2] & mem_wen;
+    assign mem1_wr_en_1 = mem_wen_reg[3] & mem_wen;
 
-    parameter ENCODE = 2'b01;
-    parameter DECODE = 2'b10;
+
+//wr_src,写数据的来源
+    reg [2:0] wr_src; // 写数据来源
+    wire [63:0] transpose_data;//转置模块输出
+
+    parameter ENCODE    = 3'b001;
+    parameter DECODE    = 3'b010;
+    parameter MACS      = 3'b011;
+    parameter TRANSPOSE = 3'b100;
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
-            wr_src <= 2'b00;
+            wr_src <= 3'b00;
         end
         else if(state == ID)begin
             case (opcode)
@@ -252,10 +276,16 @@ module Control #(
                         wr_src <= ENCODE;
                     end
                 end
+                3'b100:begin
+                    wr_src <= MACS;
+                end
+                3'b101:begin
+                    wr_src <= TRANSPOSE;
+                end
             endcase
         end
         else if(state == IDLE)begin
-            wr_src = 2'b00;
+            wr_src = 3'b00;
         end
     end
 
@@ -263,6 +293,8 @@ module Control #(
         case (wr_src)
             ENCODE:     mem_wr_data = data_encode;
             DECODE:     mem_wr_data = data_decode;
+            MACS:       mem_wr_data = macs_result;
+            TRANSPOSE:  mem_wr_data = transpose_data;
             default:    mem_wr_data = 64'b0;
         endcase
     end
@@ -304,6 +336,7 @@ module Control #(
         end
         else if(ID_cnt==3'b001)begin
             case (opcode)
+                3'b100:  short_data_mode<=1'b0;
                 default: short_data_mode<=1'b1;
             endcase
         end
@@ -324,6 +357,16 @@ module Control #(
                 3'b110:begin
                     loop_0 <= 11'd16;
                 end
+                3'b100:begin
+                    loop_0 <= level_num;
+                    loop_1 <= 11'd2;
+                    loop_2 <= 11'd4;
+                end
+                3'b101:begin
+                    loop_0 <= 11'd4;
+                    loop_1 <= 11'd2;
+                    loop_2 <= 11'd4;
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -333,11 +376,47 @@ module Control #(
         end
     end
 //macs相关控制信号
-    assign macs_mode = 0;  
-    assign macs_signal=0;
-    assign macs_en=0;  
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            macs_mode <= 1'b0;
+        end
+        else if(state == ID)begin
+            macs_mode <= 1'b0;
+        end
+        else if(state == IDLE)begin
+            macs_mode <= 1'b0;
+        end
+    end
 
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            macs_signal <= 1'b0;
+        end
+        else if(state==ID)begin
+            case (opcode)
+                3'b100:begin
+                    macs_signal = inst_reg[INST_WIDTH-16];
+                end
+            endcase
+        end
+        else if(state==IDLE)begin
+            macs_signal <= 1'b0;
+        end
+    end
 
+//Transpose控制信号
+    reg trans_mode;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            trans_mode <= 1'b0;
+        end
+        else if(state == ID)begin
+            trans_mode <= inst_reg[INST_WIDTH-16];
+        end
+        else if(state == IDLE)begin
+            trans_mode <= 1'b0;
+        end
+    end
 //EX阶段
 //start信号
     wire start;
@@ -382,7 +461,10 @@ module Control #(
     assign squeeze_en = uinst[24];
     assign ram_reset = uinst[25];
     assign dout_en = uinst[26];
-
+    assign mem_wen = uinst[27];
+    wire trans_rbias_add,trans_wbias_add;
+    assign trans_rbias_add = uinst[28];
+    assign trans_wbias_add = uinst[29];
 
 //模块实例化连线
     wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
@@ -460,6 +542,7 @@ module Control #(
         .long_data_2(long_data[47:32]),
         .long_data_3(long_data[63:48])
     );
+    assign add_data = C_data;
 
 //地址生成单元
     AGU #(
@@ -479,6 +562,18 @@ module Control #(
         .B_addr(B_addr),
         .C_addr(C_addr),
         .D_addr(D_addr)
+    );
+
+//转置模块
+    Transpose  u_Transpose (
+    .clk                              ( clk                               ),
+    .rstn                             ( rstn                              ),
+    .rdata                            ( B_data                            ),
+    .wdata                            ( C_data                            ),
+    .mode                             ( trans_mode                        ),
+    .rbias_add                        ( trans_rbias_add                   ),
+    .wbias_add                        ( trans_wbias_add                   ),
+    .output_data                      ( transpose_data                    )
     );
 
 
