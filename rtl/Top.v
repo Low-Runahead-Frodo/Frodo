@@ -1,6 +1,7 @@
 module Top #(
     parameter INST_WIDTH = 27,
-    parameter ADDR_WIDTH = 12
+    parameter ADDR_WIDTH = 12,
+    parameter TIME = 100000
 )(
     input                       clk,
     input                       rstn,
@@ -32,10 +33,6 @@ module Top #(
     //wire [63:0] Hash_64out;
     //assign  macs_result=0;
 
-
-
-    parameter TIME = 100;
-
     // dual_ram ram_0(
     //     .addra(mem0_addr_0),
     //     .clka(clk),
@@ -65,7 +62,7 @@ module Top #(
 
     dual_port_ram  #(
         .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem0.hex"),
-        .STORE_PATH("../../../../../../sim/mem0_result.txt"),
+        .STORE_PATH("../../../../../../sim/mem0_result.hex"),
         .TIME(TIME)
     )u_ram_0(
         .clk(clk),
@@ -83,7 +80,7 @@ module Top #(
 
     dual_port_ram #(
         .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem1.hex"),
-        .STORE_PATH("../../../../../../sim/mem1_result.txt"),
+        .STORE_PATH("../../../../../../sim/mem1_result.hex"),
         .TIME(TIME)
     )u_ram_1(
         .clk(clk),
@@ -138,7 +135,9 @@ module Top #(
         .squeeze_en(squeeze_en),
         .ram_reset(ram_reset),
         .dout_en(dout_en),
-        .hash_out(Hash_64out)
+        .hash_out(Hash_64out),
+
+        .level(level)
     );
     
     Encode u_encode(

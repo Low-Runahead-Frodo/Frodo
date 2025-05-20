@@ -1,5 +1,13 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM2/sim/DRAM2.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM6/sim/DRAM6.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM1/sim/DRAM1.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM7/sim/DRAM7.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM8/sim/DRAM8.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM4/sim/DRAM4.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM3/sim/DRAM3.v" \
+"../../../../Frodo_top.gen/sources_1/ip/DRAM5/sim/DRAM5.v" \
 "../../../../../../rtl/Control/AGU.v" \
 "../../../../../../rtl/Control/Bus.v" \
 "../../../../../../rtl/Control/Control.v" \
@@ -9,8 +17,14 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Macs/Macs.v" \
 "../../../../../../rtl/Macs/PE_Simple.v" \
 "../../../../../../rtl/Top.v" \
+"../../../../../../rtl/Transpose.v" \
+"../../../../../../rtl/Hash/chiiota.v" \
 "../../../../../../rtl/dual_port_ram.v" \
+"../../../../../../rtl/Hash/hash_out_buffer.v" \
+"../../../../../../rtl/Hash/keccak.v" \
+"../../../../../../rtl/Hash/pre_theta.v" \
 "../../../../../../rtl/Control/sync_rom.v" \
+"../../../../../../rtl/Hash/theta.v" \
 "../../../../../../rtl/Control/ucontrol.v" \
 "../../../../../../sim/tb_inst_trans.v" \
 
