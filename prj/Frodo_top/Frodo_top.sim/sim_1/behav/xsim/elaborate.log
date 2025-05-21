@@ -9,7 +9,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.dual_port_ram(TIME=100000,STORE_...
+Compiling module xil_defaultlib.dual_port_ram(TIME=100,STORE_PAT...
 Compiling module xil_defaultlib.dual_port_ram(LOAD_FILE_PATH=".....
 Compiling module xil_defaultlib.Bus
 Compiling module xil_defaultlib.sync_rom(ADDR_WIDTH=8,DATA_WIDTH...
@@ -43,7 +43,7 @@ Compiling module xil_defaultlib.DRAM7
 Compiling module dist_mem_gen_v8_0_15.dist_mem_gen_v8_0_15(C_FAMILY="z...
 Compiling module xil_defaultlib.DRAM1
 Compiling module xil_defaultlib.keccak
-Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top(TIME=100)
 Compiling module xil_defaultlib.tb_inst_trans
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_inst_trans_behav

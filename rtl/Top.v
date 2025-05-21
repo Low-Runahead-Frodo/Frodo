@@ -30,6 +30,7 @@ module Top #(
     wire [10:0] di_len;
     wire [7:0] Hash_in_;
     wire Hash_lev,di_valid,squeeze_en,ram_reset,dout_en;
+    wire absorb;
     //wire [63:0] Hash_64out;
     //assign  macs_result=0;
 
@@ -136,6 +137,7 @@ module Top #(
         .ram_reset(ram_reset),
         .dout_en(dout_en),
         .hash_out(Hash_64out),
+        .absorb_en(absorb_en),
 
         .level(level)
     );
@@ -187,7 +189,8 @@ keccak u_keccak(
     .squeeze_en(squeeze_en),
     .ram_reset(ram_reset),
     .dout_en(dout_en),
-    .Hash_64out(Hash_64out)
+    .Hash_64out(Hash_64out),
+    .absorb_en(absorb_en)
 );
 
 endmodule

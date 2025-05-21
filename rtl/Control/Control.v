@@ -44,13 +44,14 @@ module Control #(
     input       [63:0]              data_decode,
 
     output reg  [10:0]              hash_di_len,   // hash输入长度
-    output reg  [7:0]               hash_in,       // hash原始输入
+    output      [7:0]               hash_in,       // hash原始输入
     output reg                      hash_lev,      // hash安全等级
     output                          hash_di_valid, // hash数据有效信号
     output                          squeeze_en,    // 挤压使能
     output                          ram_reset,      // 显示复位使能
     output                          dout_en,        //输出数据使能
     input        [63:0]             hash_out,
+    output                          absorb_en,     //吸收数据有效信号
 
     input        [1:0]              level
 );
@@ -185,7 +186,12 @@ module Control #(
                     A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b011:begin
-                    B_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
+                    if(opcode == 3'b000)begin
+                        B_addr_start  <= {inst_reg[INST_WIDTH-22:INST_WIDTH-23],inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
+                    end
+                    else begin
+                        B_addr_start  <= mem0_rd_data_0[ADDR_WIDTH+1:0];
+                    end
                 end
                 3'b100:begin
                     C_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
@@ -367,6 +373,10 @@ module Control #(
                     loop_1 <= 11'd2;
                     loop_2 <= 11'd4;
                 end
+                3'b000:begin
+                    loop_0 <= {7'b0,inst_reg[INST_WIDTH-16:INST_WIDTH-21]};
+                    loop_1 <= 11'd8;
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -417,6 +427,37 @@ module Control #(
             trans_mode <= 1'b0;
         end
     end
+
+// Hash相关控制信号
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_di_len <= 12'b0;
+        end
+        else begin
+            if(state == ID)begin
+                hash_di_len <= {inst_reg[INST_WIDTH-16:INST_WIDTH-21],6'b0};
+            end
+            else if(state == IDLE)begin
+                hash_di_len <= 12'b0;
+            end
+        end
+    end
+
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_lev <= 1'b0;
+        end
+        else if(state == ID)begin
+            case (opcode)
+                3'b000: hash_lev <= 1'b0;
+            endcase
+        end
+        else if(state == IDLE)begin
+            hash_lev <= 1'b0;
+        end
+    end 
+
+
 //EX阶段
 //start信号
     wire start;
@@ -457,7 +498,7 @@ module Control #(
     assign stride = uinst[21:18];
     assign macs_en = mac_en;
     assign trans_en = uinst[22];
-    assign di_valid = uinst[23];
+    assign hash_di_valid = uinst[23];
     assign squeeze_en = uinst[24];
     assign ram_reset = uinst[25];
     assign dout_en = uinst[26];
@@ -465,6 +506,7 @@ module Control #(
     wire trans_rbias_add,trans_wbias_add;
     assign trans_rbias_add = uinst[28];
     assign trans_wbias_add = uinst[29];
+    assign absorb_en = uinst[30];
 
 //模块实例化连线
     wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
@@ -540,7 +582,8 @@ module Control #(
         .long_data_0(long_data[15:0]),
         .long_data_1(long_data[31:16]),
         .long_data_2(long_data[47:32]),
-        .long_data_3(long_data[63:48])
+        .long_data_3(long_data[63:48]),
+        .hash_in(hash_in)
     );
     assign add_data = C_data;
 

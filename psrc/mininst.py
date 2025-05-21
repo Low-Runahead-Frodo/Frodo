@@ -19,6 +19,7 @@ class MicrocodeAssembler:
             'MEM_WEN': {'bits':1,'offset':27},   #写mem使能
             'RBIAS_T': {'bits':1,'offset':28},  #转置模块读偏置
             'WBIAS_T': {'bits':1,'offset':29},  #转置模块写偏置
+            'ABSORB' : {'bits':1,'offset':30}   #吸收使能
         }
         self.validate_field_structure()
 
