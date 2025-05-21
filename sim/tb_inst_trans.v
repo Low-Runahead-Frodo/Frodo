@@ -1,7 +1,7 @@
 module tb_inst_trans;
     parameter INST_WIDTH = 27;
     parameter ADDR_WIDTH = 12;
-    parameter TIME = 100000;
+    parameter TIME = 100;
 
     // DUT Inputs
     reg clk;
@@ -13,8 +13,11 @@ module tb_inst_trans;
     reg [3:0] A_index,B_index,C_index;
     reg [1:0] level;
     reg mode;
-
-    assign inst = {opcode,A_index,B_index,C_index,mode,11'b0};
+    reg [11:0] Addr;
+    reg [5:0] length;
+    reg [1:0] port;
+    assign  inst = {opcode,Addr,length,port,4'b0};
+    //assign inst = {opcode,A_index,B_index,C_index,mode,11'b0};
 
     // Instantiate the DUT
     Top #(
@@ -45,10 +48,12 @@ module tb_inst_trans;
         opcode = 0;
         mode = 0;
         level = 2'b01;
+        length = 0;
+        Addr = 0;
+        port =0;
         repeat(5)@(posedge clk);
         rstn = 1;
         repeat(1)@(posedge clk);
-
         // //1344 encode
         // inst_valid = 1;
         // opcode = 3'b110;
@@ -68,15 +73,17 @@ module tb_inst_trans;
         // repeat(1)@(posedge clk);
         // inst_valid = 0;
         // repeat(100)@(posedge clk);
-        inst_valid = 1;
-        opcode = 3'b100;
-        A_index = 1;
-        B_index = 2;
-        C_index = 3;
-        mode = 0;
-        repeat(1)@(posedge clk);
-        inst_valid = 0;
-        repeat(TIME)@(posedge clk);
+
+        // inst_valid = 1;
+        // opcode = 3'b100;
+        // A_index = 1;
+        // B_index = 2;
+        // C_index = 3;
+        // mode = 0;
+        // repeat(1)@(posedge clk);
+        // inst_valid = 0;
+        // repeat(TIME)@(posedge clk);
+
         // inst_valid = 1;
         // opcode = 3'b101;
         // A_index = 0;
@@ -86,6 +93,25 @@ module tb_inst_trans;
         // repeat(1)@(posedge clk);
         // inst_valid = 0;
         // repeat(TIME)@(posedge clk);
+
+        opcode = 3'b000;
+        Addr = 12'd100;
+        port = 2'b00;
+        length = 6'd4;
+        inst_valid = 1;
+        repeat(1)@(posedge clk);
+        inst_valid = 0;
+        repeat(TIME)@(posedge clk);
+
+        opcode = 3'b000;
+        Addr = 12'd200;
+        port = 2'b00;
+        length = 6'd2;
+        inst_valid = 1;
+        repeat(1)@(posedge clk);
+        inst_valid = 0;
+        repeat(TIME)@(posedge clk);
+
 
         $finish;
     end

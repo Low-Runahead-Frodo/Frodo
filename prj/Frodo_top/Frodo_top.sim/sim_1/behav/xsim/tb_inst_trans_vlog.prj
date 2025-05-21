@@ -18,13 +18,13 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Macs/PE_Simple.v" \
 "../../../../../../rtl/Top.v" \
 "../../../../../../rtl/Transpose.v" \
-"../../../../../../rtl/Hash/chiiota.v" \
+"../../../../../../rtl/Hash_v1.1/chiiota.v" \
 "../../../../../../rtl/dual_port_ram.v" \
-"../../../../../../rtl/Hash/hash_out_buffer.v" \
-"../../../../../../rtl/Hash/keccak.v" \
-"../../../../../../rtl/Hash/pre_theta.v" \
+"../../../../../../rtl/Hash_v1.1/hash_out_buffer.v" \
+"../../../../../../rtl/Hash_v1.1/keccak.v" \
+"../../../../../../rtl/Hash_v1.1/pre_theta.v" \
 "../../../../../../rtl/Control/sync_rom.v" \
-"../../../../../../rtl/Hash/theta.v" \
+"../../../../../../rtl/Hash_v1.1/theta.v" \
 "../../../../../../rtl/Control/ucontrol.v" \
 "../../../../../../sim/tb_inst_trans.v" \
 

@@ -12,21 +12,65 @@ module Datapre (
     input              long_bia_add,
 
     output reg  [7:0]  short_data_0,short_data_1,short_data_2,short_data_3,
-    output reg  [15:0] long_data_0,long_data_1,long_data_2,long_data_3
+    output reg  [15:0] long_data_0,long_data_1,long_data_2,long_data_3,
+    output reg  [7:0]  hash_in
 );
 
     reg [2:0] short_bia;
     reg [1:0] long_bia;
-    wire [5:0] short_bia_actual,long_bia_actual;
-    assign short_bia_actual = {short_bia,3'b0};
-    assign long_bia_actual = {long_bia,4'b0};
     //当A右乘时，8bit数据每次只读1个，其余每次读4个
     always @(*) begin
         if(short_data_mode)begin
-            short_data_0 = A_data[short_bia_actual+:8];
-            short_data_1 = A_data[short_bia_actual+:8];
-            short_data_2 = A_data[short_bia_actual+:8];
-            short_data_3 = A_data[short_bia_actual+:8];
+            case (short_bia)
+                3'b000:begin
+                    short_data_0 = A_data[7:0];
+                    short_data_1 = A_data[7:0];
+                    short_data_2 = A_data[7:0];
+                    short_data_3 = A_data[7:0];
+                end
+                3'b001:begin
+                    short_data_0 = A_data[15:8];
+                    short_data_1 = A_data[15:8];
+                    short_data_2 = A_data[15:8];
+                    short_data_3 = A_data[15:8];
+                end
+                3'b010:begin
+                    short_data_0 = A_data[23:16];
+                    short_data_1 = A_data[23:16];
+                    short_data_2 = A_data[23:16];
+                    short_data_3 = A_data[23:16];
+                end
+                3'b011:begin
+                    short_data_0 = A_data[31:24];
+                    short_data_1 = A_data[31:24];
+                    short_data_2 = A_data[31:24];
+                    short_data_3 = A_data[31:24];
+                end
+                3'b100:begin
+                    short_data_0 = A_data[39:32];
+                    short_data_1 = A_data[39:32];
+                    short_data_2 = A_data[39:32];
+                    short_data_3 = A_data[39:32];
+                end
+                3'b101:begin
+                    short_data_0 = A_data[47:40];
+                    short_data_1 = A_data[47:40];
+                    short_data_2 = A_data[47:40];
+                    short_data_3 = A_data[47:40];
+                end
+                3'b110:begin
+                    short_data_0 = A_data[55:48];
+                    short_data_1 = A_data[55:48];
+                    short_data_2 = A_data[55:48];
+                    short_data_3 = A_data[55:48];
+                end
+                3'b111:begin
+                    short_data_0 = A_data[63:56];
+                    short_data_1 = A_data[63:56];
+                    short_data_2 = A_data[63:56];
+                    short_data_3 = A_data[63:56];
+                end
+            endcase
         end
         else begin
             if(!short_bia[0])begin
@@ -68,10 +112,32 @@ module Datapre (
             long_data_3 = B_data[63:48];
         end
         else begin
-            long_data_0 = B_data[long_bia_actual+:16];
-            long_data_1 = B_data[long_bia_actual+:16];
-            long_data_2 = B_data[long_bia_actual+:16];
-            long_data_3 = B_data[long_bia_actual+:16];
+            case (long_bia) 
+                2'b00:begin
+                    long_data_0 = B_data[15:0];
+                    long_data_1 = B_data[15:0];
+                    long_data_2 = B_data[15:0];
+                    long_data_3 = B_data[15:0];
+                end
+                2'b01:begin
+                    long_data_0 = B_data[31:16];
+                    long_data_1 = B_data[31:16];
+                    long_data_2 = B_data[31:16];
+                    long_data_3 = B_data[31:16];
+                end
+                2'b10:begin
+                    long_data_0 = B_data[47:32];
+                    long_data_1 = B_data[47:32];
+                    long_data_2 = B_data[47:32];
+                    long_data_3 = B_data[47:32];
+                end
+                2'b11:begin
+                    long_data_0 = B_data[63:48];
+                    long_data_1 = B_data[63:48];
+                    long_data_2 = B_data[63:48];
+                    long_data_3 = B_data[63:48];
+                end
+            endcase
         end
     end
 
@@ -90,6 +156,17 @@ module Datapre (
         end
     end
 
-
+    always @(*) begin
+        case (short_bia)
+            3'b000: hash_in = B_data[7:0];
+            3'b001: hash_in = B_data[15:8];
+            3'b010: hash_in = B_data[23:16];
+            3'b011: hash_in = B_data[31:24];
+            3'b100: hash_in = B_data[39:32];
+            3'b101: hash_in = B_data[47:40];
+            3'b110: hash_in = B_data[55:48];
+            3'b111: hash_in = B_data[63:56];
+        endcase
+    end
 
 endmodule
