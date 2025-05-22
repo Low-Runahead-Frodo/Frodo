@@ -28,12 +28,23 @@ module sample
     input clk,
     input rst_n,
     input en,                              //使能
-    input [2:0] ctrl,                      //安全等级选择
+    input [1:0] level,                      //安全等级选择
     input wire [15:0] random_string,       //输入数据
    
     output reg [7:0] sample_out,           //输出数据
     output reg valid = 1'b0                //输出有效标注信号 
 );  
+
+reg [2:0] ctrl;
+always @(*) begin
+    case (level)
+        2'b01: ctrl = 3'b100;
+        2'b10: ctrl = 3'b010;
+        2'b11: ctrl = 3'b001;
+        2'b00: ctrl = 3'b000;
+    endcase
+end
+
 
 parameter TX_640_1  = 15'd4643;
 parameter TX_640_2  = 15'd13363;

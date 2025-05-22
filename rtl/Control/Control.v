@@ -53,6 +53,11 @@ module Control #(
     input        [63:0]             hash_out,
     output                          absorb_en,     //吸收数据有效信号
 
+    //采样模块信号
+    input        [7:0]              sample_data,
+    output       [15:0]             hash_cut,
+    output reg                      sample_en,
+
     input        [1:0]              level
 );
     
@@ -186,8 +191,8 @@ module Control #(
                     A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b011:begin
-                    if(opcode == 3'b000)begin
-                        B_addr_start  <= {inst_reg[INST_WIDTH-22:INST_WIDTH-23],inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
+                    if(opcode == 3'b000 || opcode == 3'b010)begin
+                        B_addr_start  <= {inst_reg[INST_WIDTH-23],1'b0,inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
                     end
                     else begin
                         B_addr_start  <= mem0_rd_data_0[ADDR_WIDTH+1:0];
@@ -208,6 +213,7 @@ module Control #(
     //D_addr对应的端口为写使能，其余均为读使能
     wire mem_wen;
     reg mem_wen_reg [0:3];
+    wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             mem_wen_reg[0] <= 1'b0;
@@ -217,7 +223,7 @@ module Control #(
         end
         else if(ID_cnt == 3'b101)begin
             if(opcode[2])begin
-                case (D_addr_start[ADDR_WIDTH+1:ADDR_WIDTH])
+                case (D_addr[ADDR_WIDTH+1:ADDR_WIDTH])
                 2'b00:begin
                     mem_wen_reg[0] <= 1'b1;
                     mem_wen_reg[1] <= 1'b0;
@@ -262,11 +268,13 @@ module Control #(
 //wr_src,写数据的来源
     reg [2:0] wr_src; // 写数据来源
     wire [63:0] transpose_data;//转置模块输出
+    wire [63:0] sample_out;//采样后嵌入数据
 
     parameter ENCODE    = 3'b001;
     parameter DECODE    = 3'b010;
     parameter MACS      = 3'b011;
     parameter TRANSPOSE = 3'b100;
+    parameter SAMPLE    = 3'b101;
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
@@ -288,6 +296,9 @@ module Control #(
                 3'b101:begin
                     wr_src <= TRANSPOSE;
                 end
+                3'b010:begin
+                    wr_src <= SAMPLE;
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -301,6 +312,7 @@ module Control #(
             DECODE:     mem_wr_data = data_decode;
             MACS:       mem_wr_data = macs_result;
             TRANSPOSE:  mem_wr_data = transpose_data;
+            SAMPLE:     mem_wr_data = sample_out;
             default:    mem_wr_data = 64'b0;
         endcase
     end
@@ -456,8 +468,86 @@ module Control #(
             hash_lev <= 1'b0;
         end
     end 
+//Hash地址生成单元控制信号
+    reg [1:0] hash_agu_mode;
+    reg hash_agu_clr;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_agu_mode <= 2'b0;
+        end
+        else if(state==ID)begin
+            hash_agu_mode <= inst_reg[INST_WIDTH-24:INST_WIDTH-25];
+        end
+        else if(state==IDLE)begin
+            hash_agu_mode <= 2'b0;
+        end
+    end
 
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_agu_clr <= 1'b0;
+        end
+        else if(state == ID &&opcode == 3'b010)begin
+            if(ID_cnt == 3'b000)begin
+                if(inst_reg[INST_WIDTH-27])begin
+                    hash_agu_clr <= 1'b1;
+                end
+            end
+            else if(ID_cnt == 3'b001)begin
+                hash_agu_clr <= 1'b0;
+            end
+        end
+        else if(state == IDLE)begin
+            hash_agu_clr <= 1'b0;
+        end
+    end
+    reg hash_width,B_hash_en;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_width <= 1'b0;
+        end
+        else if(state == ID)begin
+            //1为16位，2为8位
+            case (opcode)
+                3'b010:begin
+                    hash_width <= inst_reg[INST_WIDTH-22];
+                end  
+            endcase
+        end
+        else if(state == IDLE)begin
+            hash_width <= 1'b0;
+        end
+    end
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            B_hash_en <= 1'b0;
+        end
+        else if(state == ID)begin
+            case (opcode)
+                3'b010: B_hash_en <= 1'b1; 
+            endcase
+        end
+        else if(state == IDLE)begin
+            B_hash_en <= 1'b0;
+        end
+    end
 
+//采样模块
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            sample_en <= 1'b0;
+        end
+        else if(state == ID)begin
+            case (opcode)
+                3'b010:begin
+                    sample_en <= inst_reg[INST_WIDTH-26];
+                end  
+            endcase
+        end
+        else if(state == IDLE)begin
+            sample_en <= 1'b0;
+        end
+    end
 //EX阶段
 //start信号
     wire start;
@@ -507,9 +597,10 @@ module Control #(
     assign trans_rbias_add = uinst[28];
     assign trans_wbias_add = uinst[29];
     assign absorb_en = uinst[30];
+    wire hash_add;
+    assign hash_add = uinst[31];
 
 //模块实例化连线
-    wire [ADDR_WIDTH+1:0] A_addr,B_addr,C_addr,D_addr;
     wire [63:0] A_data,B_data,C_data;
 //数据总线
     Bus u_bus(
@@ -583,11 +674,18 @@ module Control #(
         .long_data_1(long_data[31:16]),
         .long_data_2(long_data[47:32]),
         .long_data_3(long_data[63:48]),
-        .hash_in(hash_in)
+        .hash_in(hash_in),
+        .hash_out(hash_out),
+        .hash_cut(hash_cut),
+        .sample_in(sample_data),
+        .sample_out(sample_out),
+        .hash_width(hash_width)
     );
     assign add_data = C_data;
 
 //地址生成单元
+    reg [10:0] hash_agu_addr_output;
+    reg [1:0] hash_agu_bias_output;
     AGU #(
         .ADDR_WIDTH(ADDR_WIDTH)
     )
@@ -601,6 +699,10 @@ module Control #(
         .B_addr_start(B_addr_start),
         .C_addr_start(C_addr_start),
         .D_addr_start(D_addr_start),
+        .hash_addr(hash_agu_addr_output),
+        .hash_bias(hash_agu_bias_output),
+        .hash_width(hash_width),
+        .B_hash_en(B_hash_en),
         .A_addr(A_addr),
         .B_addr(B_addr),
         .C_addr(C_addr),
@@ -618,6 +720,16 @@ module Control #(
     .wbias_add                        ( trans_wbias_add                   ),
     .output_data                      ( transpose_data                    )
     );
-
+//hash地址生成单元
+    AGU_hash u_agu_hash(
+        .clk(clk),
+        .rstn(rstn),
+        .addr_clr(hash_agu_clr),
+        .add_en(hash_add),
+        .mode(hash_agu_mode),
+        .addr_output(hash_agu_addr_output),
+        .bias(hash_agu_bias_output),
+        .level(level)
+    );
 
 endmodule

@@ -11,6 +11,10 @@ module AGU
     input       [ADDR_WIDTH+1:0]    B_addr_start,
     input       [ADDR_WIDTH+1:0]    C_addr_start,
     input       [ADDR_WIDTH+1:0]    D_addr_start,
+    input       [10:0]              hash_addr,
+    input       [2:0]               hash_bias,
+    input                           hash_width,
+    input                           B_hash_en,
 
     output reg  [ADDR_WIDTH+1:0]    A_addr,
     output reg  [ADDR_WIDTH+1:0]    B_addr,
@@ -22,8 +26,10 @@ wire [ADDR_WIDTH-1:0] A_addr_tb,B_addr_tb,C_addr_tb,D_addr_tb;
 assign A_addr_tb = A_addr[ADDR_WIDTH-1:0];
 assign B_addr_tb = B_addr[ADDR_WIDTH-1:0];
 assign C_addr_tb = C_addr[ADDR_WIDTH-1:0];
-assign D_addr_tb = D_addr[ADDR_WIDTH-1:0];    
+assign D_addr_tb = D_addr[ADDR_WIDTH-1:0];
 
+wire [ADDR_WIDTH+1 : 0] B_hash;
+assign B_hash = B_addr_start + hash_addr;
 
 
     always @(posedge clk or negedge rstn) begin
@@ -49,6 +55,19 @@ assign D_addr_tb = D_addr[ADDR_WIDTH-1:0];
         end
         else if(clr_en[1]) begin
             B_addr <= B_addr_start;
+        end
+        else if(B_hash_en)begin
+            if(hash_width)begin  // 16位数据
+                if(hash_bias[2])begin
+                    B_addr <= B_hash + 1'b1;
+                end
+                else begin
+                    B_addr <= B_hash;
+                end
+            end
+            else begin
+                B_addr <= B_hash;
+            end
         end
         else if(add_en[1])begin
             if(stride[1])begin
@@ -83,6 +102,9 @@ assign D_addr_tb = D_addr[ADDR_WIDTH-1:0];
         end
         else if(clr_en[3]) begin
             D_addr <= D_addr_start;
+        end
+        else if(B_hash_en)begin
+            D_addr <= {B_addr[ADDR_WIDTH+1:0],~B_addr[ADDR_WIDTH],B_addr[ADDR_WIDTH-1:0]};
         end
         else if(add_en[3])begin
             if(stride[3])begin

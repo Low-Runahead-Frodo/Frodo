@@ -6,6 +6,12 @@ module Datapre (
 
     input       [63:0] A_data,
     input       [63:0] B_data,
+    input       [63:0] hash_out,
+    output reg  [15:0] hash_cut,
+
+    input       [7:0]  sample_in,
+    output reg  [63:0] sample_out,
+    input              hash_width,
 
     input              short_data_mode,
     input              short_bia_add,
@@ -167,6 +173,39 @@ module Datapre (
             3'b110: hash_in = B_data[55:48];
             3'b111: hash_in = B_data[63:56];
         endcase
+    end
+
+    always @(*) begin
+        case (long_bia)
+            2'b00:  hash_cut = hash_out[15:0];
+            2'b01:  hash_cut = hash_out[31:0];
+            2'b10:  hash_cut = hash_out[47:32];
+            2'b11:  hash_cut = hash_out[63:48];
+        endcase
+    end
+
+    always @(*) begin
+        sample_out = B_data;
+        if(hash_width)begin
+            case (short_bia[1:0])
+                2'b00: sample_out[15:0]  = {8'b0,sample_in};
+                2'b01: sample_out[31:16] = {8'b0,sample_in};
+                2'b10: sample_out[47:32] = {8'b0,sample_in};
+                2'b11: sample_out[63:48] = {8'b0,sample_in};
+            endcase
+        end
+        else begin
+            case (short_bia)
+                3'b000: sample_out[7:0] = sample_in;
+                3'b001: sample_out[15:8] = sample_in;
+                3'b010: sample_out[23:16] = sample_in;
+                3'b011: sample_out[31:24] = sample_in;
+                3'b100: sample_out[39:32] = sample_in;
+                3'b101: sample_out[47:40] = sample_in;
+                3'b110: sample_out[55:48] = sample_in;
+                3'b111: sample_out[63:56] = sample_in;
+            endcase
+        end
     end
 
 endmodule
