@@ -2,11 +2,14 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu May 22 19:30:00 2025
-# Process ID: 18576
+# Start of session at: Thu May 22 19:27:20 2025
+# Process ID: 21620
 # Current directory: D:/project/Frodo/prj/Frodo_top
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16688 D:\project\Frodo\prj\Frodo_top\Frodo_top.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20616 D:\project\Frodo\prj\Frodo_top\Frodo_top.xpr
 # Log file: D:/project/Frodo/prj/Frodo_top/vivado.log
 # Journal file: D:/project/Frodo/prj/Frodo_top\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project D:/project/Frodo/prj/Frodo_top/Frodo_top.xpr
+open_project C:/Users/17197/Desktop/Frodo_systolic/prj/Frodo.xpr
+update_compile_order -fileset sources_1
