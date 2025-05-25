@@ -102,4 +102,41 @@ module Macs (
         .result(result[63:48]),
         .en(en)
     );
+    // ADDER_FRODO u_pe_0(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(en),
+    //     .in_a(b_0),
+    //     .in_b(a_temp_0),
+    //     .in_c(c_0),
+    //     .result(result[15:0])
+    // );
+    //     ADDER_FRODO u_pe_1(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(en),
+    //     .in_a(b_1),
+    //     .in_b(a_temp_1),
+    //     .in_c(c_1),
+    //     .result(result[31:16])
+    // );
+    //     ADDER_FRODO u_pe_2(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(en),
+    //     .in_a(b_2),
+    //     .in_b(a_temp_2),
+    //     .in_c(c_2),
+    //     .result(result[47:32])
+    // );
+    //     ADDER_FRODO u_pe_3(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(en),
+    //     .in_a(b_3),
+    //     .in_b(a_temp_3),
+    //     .in_c(c_3),
+    //     .result(result[63:48])
+    // );
+
 endmodule

@@ -18,9 +18,9 @@ C = np.array(C)
 reader_2 = MemoryReader('sim/mem1_result.hex','hex')
 D = reader_2.read_matrix(100,8,8,16)
 D = np.array(D)
-print(D)
-
-#result = np.matmul(B[0].reshape((8,1)),[A[0]]) + C
+#print(D)
+#print(B[0])
+# result = np.matmul(B[0].reshape((8,1)),[A[0]]) + C
 #result = B.T @ A + C
 result = np.matmul(B.T,A)+C
 print(result)
