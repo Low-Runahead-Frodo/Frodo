@@ -58,15 +58,15 @@ module Control #(
     output       [15:0]             hash_cut,
     output reg                      sample_en,
 
-    input        [1:0]              level
+    input        [1:0]              level,
+
+    output                          finish  // 完成信号
 );
     
     parameter IDLE = 2'b00;  //待机状态
     parameter IF   = 2'b01;  //取指令阶段
     parameter ID   = 2'b10;  //译码阶段
     parameter EX   = 2'b11;  //执行阶段
-
-    wire finish; // 完成信号
 
     reg [1:0] state,next_state;
     reg [2:0] ID_cnt;  // ID阶段计数器
@@ -223,7 +223,7 @@ module Control #(
         end
         else if(ID_cnt == 3'b101)begin
             if(opcode[2])begin
-                case (D_addr[ADDR_WIDTH+1:ADDR_WIDTH])
+                case (D_addr_start[ADDR_WIDTH+1:ADDR_WIDTH])
                 2'b00:begin
                     mem_wen_reg[0] <= 1'b1;
                     mem_wen_reg[1] <= 1'b0;
@@ -377,6 +377,7 @@ module Control #(
                 end
                 3'b100:begin
                     loop_0 <= level_num;
+                    //loop_0 <= 11'd1;
                     loop_1 <= 11'd2;
                     loop_2 <= 11'd4;
                 end
@@ -637,6 +638,13 @@ module Control #(
         .addr(upc),
         .dout(uinst)
     );
+    // uinst_rom rom(
+    //     .addra(upc),
+    //     .clka(clk),
+    //     .douta(uinst),
+    //     .ena(1'b1)
+    // );
+
 //微pc控制器
     ucontrol #(
         .UINST_ADDR_WIDTH(UINST_ADDR_WIDTH),
@@ -684,8 +692,8 @@ module Control #(
     assign add_data = C_data;
 
 //地址生成单元
-    reg [10:0] hash_agu_addr_output;
-    reg [1:0] hash_agu_bias_output;
+    wire [10:0] hash_agu_addr_output;
+    wire [1:0] hash_agu_bias_output;
     AGU #(
         .ADDR_WIDTH(ADDR_WIDTH)
     )

@@ -1,4 +1,4 @@
-// Module name   :   ADDER_FRODOâ€?
+// Module name   :   ADDER_FRODOï¿½?
 // Full name     :  16bit adder and multiplier for frodo
 //
 // Author        :  
@@ -9,7 +9,7 @@ input  wire   rstn,
 input  wire   en,
 
 input  wire [15:0] in_a,             ////multiplier  (unsiged)
-input  wire [15:0] in_b,             ///multiplicand (signed) 1111_1111_111-1_XXXX or 0000_0000_000-0_XXXX
+input  wire [7:0] in_b,             ///multiplicand (signed) 1111_1111_111-1_XXXX or 0000_0000_000-0_XXXX
 input  wire [15:0] in_c,             ///addend
   
 

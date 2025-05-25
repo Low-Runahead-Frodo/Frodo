@@ -9,8 +9,10 @@ verilog xil_defaultlib  \
 "../../../../Frodo_top.gen/sources_1/ip/DRAM3/sim/DRAM3.v" \
 "../../../../Frodo_top.gen/sources_1/ip/DRAM5/sim/DRAM5.v" \
 "../../../../../../rtl/Control/AGU.v" \
+"../../../../../../rtl/Control/AGU_hash.v" \
 "../../../../../../rtl/Control/Bus.v" \
 "../../../../../../rtl/Control/Control.v" \
+"../../../../../../rtl/Core.v" \
 "../../../../../../rtl/Control/Datapre.v" \
 "../../../../../../rtl/Decode.v" \
 "../../../../../../rtl/Encode.v" \
@@ -23,6 +25,7 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Hash_v1.1/hash_out_buffer.v" \
 "../../../../../../rtl/Hash_v1.1/keccak.v" \
 "../../../../../../rtl/Hash_v1.1/pre_theta.v" \
+"../../../../../../rtl/sample.v" \
 "../../../../../../rtl/Control/sync_rom.v" \
 "../../../../../../rtl/Hash_v1.1/theta.v" \
 "../../../../../../rtl/Control/ucontrol.v" \

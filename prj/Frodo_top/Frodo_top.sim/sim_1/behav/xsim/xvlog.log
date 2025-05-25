@@ -16,10 +16,14 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/prj/F
 INFO: [VRFC 10-311] analyzing module DRAM5
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/AGU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AGU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/AGU_hash.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AGU_hash
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Bus
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Core
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Datapre.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Datapre
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v" into library xil_defaultlib
@@ -159,6 +163,8 @@ WARNING: [VRFC 10-3380] identifier 'data_o30_0' is used before its declaration [
 WARNING: [VRFC 10-3380] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:778]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module PRE_THETA
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/sample.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Control/sync_rom.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sync_rom
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/theta.v" into library xil_defaultlib
