@@ -20,6 +20,7 @@ module Datapre (
     output reg  [7:0]  short_data_0,short_data_1,short_data_2,short_data_3,
     output reg  [15:0] long_data_0,long_data_1,long_data_2,long_data_3,
     output reg  [7:0]  hash_in
+
 );
 
     reg [2:0] short_bia;

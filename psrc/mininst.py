@@ -19,7 +19,10 @@ class MicrocodeAssembler:
             'MEM_WEN': {'bits':1,'offset':27},   #写mem使能
             'RBIAS_T': {'bits':1,'offset':28},  #转置模块读偏置
             'WBIAS_T': {'bits':1,'offset':29},  #转置模块写偏置
-            'ABSORB' : {'bits':1,'offset':30}   #吸收使能
+            'ABSORB' : {'bits':1,'offset':30},   #吸收使能
+            'HASH_AD': {'bits':1,'offset':31},  #hash_agu地址增加
+            'INDEX_A': {'bits':1,'offset':32}, #A行号增加
+            'INDEX_E' :{'bits':2,'offset':33} #hash载入A行号
         }
         self.validate_field_structure()
 
