@@ -2,7 +2,7 @@ module Control #(
     parameter INST_WIDTH        = 27,
     parameter ADDR_WIDTH        = 12,
     parameter UINST_ADDR_WIDTH  = 8,
-    parameter UINST_WIDTH       = 32
+    parameter UINST_WIDTH       = 36
 )(
     input                   clk,
     input                   rstn,
@@ -600,6 +600,26 @@ module Control #(
     assign absorb_en = uinst[30];
     wire hash_add;
     assign hash_add = uinst[31];
+    wire A_index_add;
+    assign A_index_add = uinst[32];
+    wire [1:0] A_index_location;
+    assign  A_index_location = uinst[34:33];
+
+//A矩阵生成
+    reg [15:0] A_line_index;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            A_line_index <= 16'b0;
+        end
+        else if(state == EX && A_index_add)begin
+            A_line_index <= A_line_index + 1'b1;
+        end
+        else if(state == IDLE)begin
+            A_line_index <= 16'b0;
+        end
+    end
+
+
 
 //模块实例化连线
     wire [63:0] A_data,B_data,C_data;
@@ -664,6 +684,8 @@ module Control #(
     );
 
 //数据预处理模块
+    wire [7:0] hash_temp;
+    assign  hash_in = A_index_location[1] ?(A_index_location[0]? A_line_index[15:8]:A_line_index[7:0]) : hash_temp;
     Datapre u_data_pre(
         .clk(clk),
         .rstn(rstn),
@@ -682,7 +704,7 @@ module Control #(
         .long_data_1(long_data[31:16]),
         .long_data_2(long_data[47:32]),
         .long_data_3(long_data[63:48]),
-        .hash_in(hash_in),
+        .hash_in(hash_temp),
         .hash_out(hash_out),
         .hash_cut(hash_cut),
         .sample_in(sample_data),
