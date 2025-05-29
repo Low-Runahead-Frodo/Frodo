@@ -8,6 +8,7 @@ module Datapre (
     input       [63:0] B_data,
     input       [63:0] hash_out,
     output reg  [15:0] hash_cut,
+    input              genA,
 
     input       [7:0]  sample_in,
     output reg  [63:0] sample_out,
@@ -112,39 +113,47 @@ module Datapre (
 
     //long data刚好与short_data相反
     always @(*) begin
-        if(short_data_mode)begin
-            long_data_0 = B_data[15:0];
-            long_data_1 = B_data[31:16];
-            long_data_2 = B_data[47:32];
-            long_data_3 = B_data[63:48];
+        if(genA)begin
+            long_data_0 = hash_cut;
+            long_data_1 = hash_cut;
+            long_data_2 = hash_cut;
+            long_data_3 = hash_cut;
         end
         else begin
-            case (long_bia) 
-                2'b00:begin
-                    long_data_0 = B_data[15:0];
-                    long_data_1 = B_data[15:0];
-                    long_data_2 = B_data[15:0];
-                    long_data_3 = B_data[15:0];
-                end
-                2'b01:begin
-                    long_data_0 = B_data[31:16];
-                    long_data_1 = B_data[31:16];
-                    long_data_2 = B_data[31:16];
-                    long_data_3 = B_data[31:16];
-                end
-                2'b10:begin
-                    long_data_0 = B_data[47:32];
-                    long_data_1 = B_data[47:32];
-                    long_data_2 = B_data[47:32];
-                    long_data_3 = B_data[47:32];
-                end
-                2'b11:begin
-                    long_data_0 = B_data[63:48];
-                    long_data_1 = B_data[63:48];
-                    long_data_2 = B_data[63:48];
-                    long_data_3 = B_data[63:48];
-                end
-            endcase
+            if(short_data_mode)begin
+                long_data_0 = B_data[15:0];
+                long_data_1 = B_data[31:16];
+                long_data_2 = B_data[47:32];
+                long_data_3 = B_data[63:48];
+            end
+            else begin
+                case (long_bia) 
+                    2'b00:begin
+                        long_data_0 = B_data[15:0];
+                        long_data_1 = B_data[15:0];
+                        long_data_2 = B_data[15:0];
+                        long_data_3 = B_data[15:0];
+                    end
+                    2'b01:begin
+                        long_data_0 = B_data[31:16];
+                        long_data_1 = B_data[31:16];
+                        long_data_2 = B_data[31:16];
+                        long_data_3 = B_data[31:16];
+                    end
+                    2'b10:begin
+                        long_data_0 = B_data[47:32];
+                        long_data_1 = B_data[47:32];
+                        long_data_2 = B_data[47:32];
+                        long_data_3 = B_data[47:32];
+                    end
+                    2'b11:begin
+                        long_data_0 = B_data[63:48];
+                        long_data_1 = B_data[63:48];
+                        long_data_2 = B_data[63:48];
+                        long_data_3 = B_data[63:48];
+                    end
+                endcase
+            end
         end
     end
 

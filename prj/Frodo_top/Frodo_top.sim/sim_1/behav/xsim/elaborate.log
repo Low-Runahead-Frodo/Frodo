@@ -5,9 +5,9 @@ Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --debug typical
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 27 differs from formal bit length 32 for port 'dout' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:71]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'hash_bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:711]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:739]
+WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 32 for port 'dout' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:71]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'hash_bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:775]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:803]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -18,7 +18,7 @@ Compiling module xil_defaultlib.dual_port_ram(TIME=100000,STORE_...
 Compiling module xil_defaultlib.dual_port_ram(LOAD_FILE_PATH=".....
 Compiling module xil_defaultlib.Bus
 Compiling module xil_defaultlib.sync_rom(ADDR_WIDTH=8,DATA_WIDTH...
-Compiling module xil_defaultlib.ucontrol
+Compiling module xil_defaultlib.ucontrol(UINST_WIDTH=36)
 Compiling module xil_defaultlib.Datapre
 Compiling module xil_defaultlib.AGU
 Compiling module xil_defaultlib.Transpose

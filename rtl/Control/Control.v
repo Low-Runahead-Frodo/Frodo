@@ -1,5 +1,5 @@
 module Control #(
-    parameter INST_WIDTH        = 27,
+    parameter INST_WIDTH        = 28,
     parameter ADDR_WIDTH        = 12,
     parameter UINST_ADDR_WIDTH  = 8,
     parameter UINST_WIDTH       = 36
@@ -132,6 +132,8 @@ module Control #(
     reg [INST_WIDTH-1:0] inst_reg;//指令寄存器
     wire [2:0] opcode;
     assign opcode = inst_reg[INST_WIDTH-1:INST_WIDTH-3];
+    wire func;
+    assign func = inst_reg[INST_WIDTH-28];
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             inst_reg <= 0;
@@ -222,7 +224,7 @@ module Control #(
             mem_wen_reg[3] <= 1'b0;
         end
         else if(ID_cnt == 3'b101)begin
-            if(opcode[2])begin
+            //if(opcode[2])begin
                 case (D_addr_start[ADDR_WIDTH+1:ADDR_WIDTH])
                 2'b00:begin
                     mem_wen_reg[0] <= 1'b1;
@@ -249,7 +251,7 @@ module Control #(
                     mem_wen_reg[3] <= 1'b1;
                 end   
                 endcase
-            end
+          //  end
         end
         else if(state == IDLE)begin
             mem_wen_reg[0] <= 1'b0;
@@ -299,6 +301,9 @@ module Control #(
                 3'b010:begin
                     wr_src <= SAMPLE;
                 end
+                3'b111:begin
+                    wr_src <= MACS;
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -330,7 +335,8 @@ module Control #(
         else if(state==ID)begin
             case (ID_cnt)
                 3'b000:begin
-                    uinst_addr <= {{(ADDR_WIDTH-3){1'b0}},opcode};
+                    //uinst_addr <= {{(ADDR_WIDTH-3){1'b0}},opcode};
+                    uinst_addr <= {{(ADDR_WIDTH-4){1'b0}},func,opcode};
                     uinst_addr_en <= 1'b1;
                 end
                 3'b010:begin
@@ -355,6 +361,11 @@ module Control #(
         else if(ID_cnt==3'b001)begin
             case (opcode)
                 3'b100:  short_data_mode<=1'b0;
+                3'b111:begin
+                    if(func == 1'b0)begin
+                        short_data_mode <= 1'b0;
+                    end
+                end
                 default: short_data_mode<=1'b1;
             endcase
         end
@@ -363,12 +374,13 @@ module Control #(
         end
     end
 //loop
-    reg [10:0] loop_0,loop_1,loop_2;
+    reg [10:0] loop_0,loop_1,loop_2,loop_3;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             loop_0 <= 11'b0;
             loop_1 <= 11'b0;
             loop_2 <= 11'b0;
+            loop_3 <= 11'b0;
         end
         else if(state==ID)begin
             case (opcode)
@@ -390,12 +402,19 @@ module Control #(
                     loop_0 <= {7'b0,inst_reg[INST_WIDTH-16:INST_WIDTH-21]};
                     loop_1 <= 11'd8;
                 end
+                3'b111:begin
+                    loop_0 <= 11'b1;
+                    loop_1 <= 11'd100;
+                    loop_2 <= 11'd16;
+                    loop_3 <= 11'd84;
+                end
             endcase
         end
         else if(state == IDLE)begin
             loop_0 <= 11'b0;
             loop_1 <= 11'b0;
             loop_2 <= 11'b0;
+            loop_3 <= 11'b0;
         end
     end
 //macs相关控制信号
@@ -426,6 +445,23 @@ module Control #(
             macs_signal <= 1'b0;
         end
     end
+//genA
+    reg genA;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            genA <= 1'b0;
+        end
+        else if(state == ID)begin
+            if(opcode == 3'b111)begin
+                genA <= 1'b1;
+            end
+        end
+        else if(state == IDLE)begin
+            genA <= 1'b0;
+        end
+    end
+
+
 
 //Transpose控制信号
     reg trans_mode;
@@ -448,7 +484,10 @@ module Control #(
         end
         else begin
             if(state == ID)begin
-                hash_di_len <= {inst_reg[INST_WIDTH-16:INST_WIDTH-21],6'b0};
+                //hash_di_len <= {inst_reg[INST_WIDTH-16:INST_WIDTH-21],6'b0};
+                if(opcode == 3'b111)begin
+                    hash_di_len <= 12'd144;
+                end
             end
             else if(state == IDLE)begin
                 hash_di_len <= 12'b0;
@@ -463,6 +502,7 @@ module Control #(
         else if(state == ID)begin
             case (opcode)
                 3'b000: hash_lev <= 1'b0;
+                3'b111: hash_lev <= 1'b0;
             endcase
         end
         else if(state == IDLE)begin
@@ -542,7 +582,7 @@ module Control #(
             case (opcode)
                 3'b010:begin
                     sample_en <= inst_reg[INST_WIDTH-26];
-                end  
+                end      
             endcase
         end
         else if(state == IDLE)begin
@@ -678,6 +718,7 @@ module Control #(
         .loop_0(loop_0),
         .loop_1(loop_1),
         .loop_2(loop_2),
+        .loop_3(loop_3),
         .done(done),
         .upc_up(upc_up),
         .upc_st(upc_st)
@@ -707,6 +748,7 @@ module Control #(
         .hash_in(hash_temp),
         .hash_out(hash_out),
         .hash_cut(hash_cut),
+        .genA(genA),
         .sample_in(sample_data),
         .sample_out(sample_out),
         .hash_width(hash_width)
