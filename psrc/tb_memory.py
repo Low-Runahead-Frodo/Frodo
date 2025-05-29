@@ -6,7 +6,7 @@ from memory import MemoryData
 np.random.seed(1234)
 A = np.random.randint(1,9,size=(8,1344))
 B = np.random.randint(1,9,size=(8,1344))
-C = np.random.randint(1,9,size=(8,8))
+C = np.random.randint(1,9,size=(8,1344))
 
 # print(A)
 

@@ -1,5 +1,5 @@
 module tb_inst_trans;
-    parameter INST_WIDTH = 27;
+    parameter INST_WIDTH = 28;
     parameter ADDR_WIDTH = 12;
     parameter TIME = 100000;
 
