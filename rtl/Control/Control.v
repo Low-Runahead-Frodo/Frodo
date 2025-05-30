@@ -403,10 +403,10 @@ module Control #(
                     loop_1 <= 11'd8;
                 end
                 3'b111:begin
-                    loop_0 <= 11'b1;
+                    loop_0 <= 11'd2;
                     loop_1 <= 11'd100;
                     loop_2 <= 11'd16;
-                    loop_3 <= 11'd84;
+                    loop_3 <= 11'd21;
                 end
             endcase
         end
@@ -644,6 +644,7 @@ module Control #(
     assign A_index_add = uinst[32];
     wire [1:0] A_index_location;
     assign  A_index_location = uinst[34:33];
+    assign  D_bia = uinst[35];
 
 //A矩阵生成
     reg [15:0] A_line_index;
@@ -667,8 +668,10 @@ module Control #(
     Bus u_bus(
         .A_addr(A_addr),
         .B_addr(B_addr),
-        .C_addr(C_addr),
-        .D_addr(D_addr),
+        .C_addr_origin(C_addr),
+        .D_addr_origin(D_addr),
+        .D_bia(D_bia),
+        .C_bia(stride[0]),
         .control_addr(control_addr),
         .control_addr_en(control_addr_en),
         .uinst_addr(uinst_addr),

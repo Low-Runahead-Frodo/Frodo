@@ -40,12 +40,12 @@ assign B_hash = B_addr_start + hash_addr;
             A_addr <= A_addr_start;
         end
         else if(add_en[0])begin
-            if(stride[0])begin
-                A_addr[ADDR_WIDTH+1:1] <= A_addr[ADDR_WIDTH+1:1] + 1'b1;
-            end
-            else begin
+            // if(stride[0])begin
+            //     A_addr[ADDR_WIDTH+1:1] <= A_addr[ADDR_WIDTH+1:1] + 1'b1;
+            // end
+            // else begin
                 A_addr <= A_addr + 1'b1;
-            end
+            //end
         end
     end
 

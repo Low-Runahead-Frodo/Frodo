@@ -4,8 +4,10 @@ module Bus
 )(
     input       [ADDR_WIDTH+1:0]    A_addr,
     input       [ADDR_WIDTH+1:0]    B_addr,
-    input       [ADDR_WIDTH+1:0]    C_addr,
-    input       [ADDR_WIDTH+1:0]    D_addr,
+    input       [ADDR_WIDTH+1:0]    C_addr_origin,
+    input       [ADDR_WIDTH+1:0]    D_addr_origin,
+    input                           C_bia,
+    input                           D_bia,
     input       [ADDR_WIDTH-1:0]    control_addr,
     input                           control_addr_en,
     input       [ADDR_WIDTH-1:0]    uinst_addr,
@@ -25,6 +27,11 @@ module Bus
     output reg  [63:0]              B_data,
     output reg  [63:0]              C_data
 );
+
+    wire [ADDR_WIDTH+1:0] D_addr,C_addr;
+    assign D_addr = D_bia ? D_addr_origin + 1'b1 : D_addr_origin;
+    assign C_addr = C_bia ? C_addr_origin + 1'b1 : C_addr_origin;
+
 
     // 将地址转译到对应的RAM
     always @(*) begin
