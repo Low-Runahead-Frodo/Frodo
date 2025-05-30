@@ -20,9 +20,9 @@ reg [0:1343] Hash_out_buffer;//1344
 //reg          buffer_out_en;//////连续输出使用   
 
 
-assign Hash_64out = dout_en ? Hash_out_buffer[0:63] : 64'd0; 
-
-
+//assign Hash_64out = dout_en ? Hash_out_buffer[0:63] : 64'd0; 
+//assign Hash_64out = Hash_out_buffer[0:63];
+assign Hash_64out = {Hash_out_buffer[48:63],Hash_out_buffer[32:47],Hash_out_buffer[16:31],Hash_out_buffer[0:15]};
 
 always@(posedge clk or posedge rst)
 begin
@@ -30,7 +30,7 @@ begin
             Hash_out_buffer <= 1344'd0;
      else if(dout_en)
             Hash_out_buffer     <=  {Hash_out_buffer[64:1343],64'd0};
-    else if(state == 3'd5)//向buffer里装载数�?
+    else if(state == 3'd5)//向buffer里装载数�?
         begin
             if(Rnd_cnt == 5'd24)
                 begin

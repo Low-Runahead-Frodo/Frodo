@@ -22,7 +22,8 @@ class MicrocodeAssembler:
             'ABSORB' : {'bits':1,'offset':30},   #吸收使能
             'HASH_AD': {'bits':1,'offset':31},  #hash_agu地址增加
             'INDEX_A': {'bits':1,'offset':32}, #A行号增加
-            'INDEX_E' :{'bits':2,'offset':33} #hash载入A行号
+            'INDEX_E' :{'bits':2,'offset':33}, #hash载入A行号
+            'D_BIA'  : {'bits':1,'offset':35} #写地址块内偏置
         }
         self.validate_field_structure()
 

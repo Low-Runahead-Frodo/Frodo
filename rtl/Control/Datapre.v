@@ -188,7 +188,7 @@ module Datapre (
     always @(*) begin
         case (long_bia)
             2'b00:  hash_cut = hash_out[15:0];
-            2'b01:  hash_cut = hash_out[31:0];
+            2'b01:  hash_cut = hash_out[31:16];
             2'b10:  hash_cut = hash_out[47:32];
             2'b11:  hash_cut = hash_out[63:48];
         endcase
