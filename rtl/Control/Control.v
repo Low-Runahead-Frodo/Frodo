@@ -374,13 +374,14 @@ module Control #(
         end
     end
 //loop
-    reg [10:0] loop_0,loop_1,loop_2,loop_3;
+    reg [10:0] loop_0,loop_1,loop_2,loop_3,loop_4;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             loop_0 <= 11'b0;
             loop_1 <= 11'b0;
             loop_2 <= 11'b0;
             loop_3 <= 11'b0;
+            loop_4 <= 11'b0;
         end
         else if(state==ID)begin
             case (opcode)
@@ -403,10 +404,20 @@ module Control #(
                     loop_1 <= 11'd8;
                 end
                 3'b111:begin
-                    loop_0 <= 11'd2;
+                    //loop_0 <= 11'd2;
+                    loop_0 <= level_num;
                     loop_1 <= 11'd100;
-                    loop_2 <= 11'd16;
+                    case (level)
+                        2'b01: loop_2 <= 11'd15; //1344
+                        2'b10: loop_2 <= 11'd11;
+                        2'b11: loop_2 <= 11'd7;
+                    endcase
                     loop_3 <= 11'd21;
+                    case (level)
+                        2'b01: loop_4 <= 11'd21;
+                        2'b10: loop_4 <= 11'd13;
+                        2'b11: loop_4 <= 11'd13;
+                    endcase
                 end
             endcase
         end
@@ -415,6 +426,7 @@ module Control #(
             loop_1 <= 11'b0;
             loop_2 <= 11'b0;
             loop_3 <= 11'b0;
+            loop_4 <= 11'b0;
         end
     end
 //macs相关控制信号
@@ -722,6 +734,7 @@ module Control #(
         .loop_1(loop_1),
         .loop_2(loop_2),
         .loop_3(loop_3),
+        .loop_4(loop_4),
         .done(done),
         .upc_up(upc_up),
         .upc_st(upc_st)

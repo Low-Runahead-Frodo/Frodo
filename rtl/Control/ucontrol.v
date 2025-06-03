@@ -13,6 +13,7 @@ module ucontrol
     input       [10:0]                  loop_1,
     input       [10:0]                  loop_2,
     input       [10:0]                  loop_3,
+    input       [10:0]                  loop_4,
 
     input                               done,
     input       [2:0]                   upc_up,
@@ -20,9 +21,9 @@ module ucontrol
 );  
 
     reg state;
-    reg [10:0] loop_0_cnt,loop_1_cnt,loop_2_cnt,loop_3_cnt;
-    wire [10:0] cnt_0_nxt,cnt_1_nxt,cnt_2_nxt,cnt_3_nxt;
-    reg [UINST_ADDR_WIDTH-1:0] upc_reg_0,upc_reg_1,upc_reg_2,upc_reg_3;
+    reg [10:0] loop_0_cnt,loop_1_cnt,loop_2_cnt,loop_3_cnt,loop_4_cnt;
+    wire [10:0] cnt_0_nxt,cnt_1_nxt,cnt_2_nxt,cnt_3_nxt,cnt_4_nxt;
+    reg [UINST_ADDR_WIDTH-1:0] upc_reg_0,upc_reg_1,upc_reg_2,upc_reg_3,upc_reg_4;
 
 
     always @(posedge clk or negedge rstn) begin
@@ -47,6 +48,7 @@ module ucontrol
     assign cnt_1_nxt = loop_1_cnt - 1'b1;
     assign cnt_2_nxt = loop_2_cnt - 1'b1;
     assign cnt_3_nxt = loop_3_cnt - 1'b1;
+    assign cnt_4_nxt = loop_4_cnt - 1'b1;
 
 
 
@@ -104,6 +106,14 @@ module ucontrol
                 end
                 endcase
             end
+            else if(upc_up == 3'b011)begin
+                if(cnt_4_nxt)begin
+                    upc_nxt = upc_reg_4;
+                end
+                else begin
+                    upc_nxt = upc + 1'b1;
+                end
+            end
             else begin
                 upc_nxt = upc + 1'b1;
             end 
@@ -119,6 +129,7 @@ module ucontrol
             upc_reg_1 <= 0;
             upc_reg_2 <= 0;
             upc_reg_3 <= 0;
+            upc_reg_4 <= 0;
         end
         else if(state)begin
             if(upc_st[2])begin
@@ -137,12 +148,16 @@ module ucontrol
                     end
                 endcase
             end
+            else if(upc_st == 3'b011)begin
+                upc_reg_4 <= upc;
+            end
         end
         else begin
             upc_reg_0 <= 0;
             upc_reg_1 <= 0;
             upc_reg_2 <= 0;
             upc_reg_3 <= 0;
+            upc_reg_4 <= 0;
         end
     end
 
@@ -151,7 +166,8 @@ module ucontrol
             loop_0_cnt <= 11'b0;
             loop_1_cnt <= 11'b0;
             loop_2_cnt <= 11'b0;
-            loop_2_cnt <= 11'b0;
+            loop_3_cnt <= 11'b0;
+            loop_4_cnt <= 11'b0;
         end
         else if(state)begin
             if(upc_st[2])begin
@@ -170,6 +186,9 @@ module ucontrol
                     end
                 endcase
             end
+            else if(upc_st == 3'b011)begin
+                loop_4_cnt <= loop_4;
+            end
             else if(upc_up[2])begin
                 case (upc_up[1:0])
                     2'b00: begin
@@ -186,12 +205,16 @@ module ucontrol
                     end
                 endcase
             end
+            else if(upc_up == 3'b011)begin
+                loop_4_cnt <= cnt_4_nxt;
+            end
         end
         else begin
             loop_0_cnt <= 11'b0;
             loop_1_cnt <= 11'b0;
             loop_2_cnt <= 11'b0;
             loop_3_cnt <= 11'b0;
+            loop_4_cnt <= 11'b0;
         end
     end
     
