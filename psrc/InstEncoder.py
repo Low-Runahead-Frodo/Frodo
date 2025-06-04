@@ -1,6 +1,6 @@
 class InstEncoder:
     def __init__(self):
-        self.instruction_length = 27  # bits
+        self.instruction_length = 28  # bits
 
     def encode(self, instr_type, **kwargs):
         if instr_type == "TRANS":
@@ -22,6 +22,8 @@ class InstEncoder:
         code += self.to_bin(Dst, 10)
         code += self.to_bin(mode, 4)
         return code
+    
+    def encode_ABSORB(self,Addr,Length,port):
 
 
 # 🧪 使用示例

@@ -10,6 +10,7 @@ module Datapre (
     output reg  [15:0] hash_cut,
     input              genA,
 
+
     input       [7:0]  sample_in,
     output reg  [63:0] sample_out,
     input              hash_width,
@@ -20,7 +21,10 @@ module Datapre (
 
     output reg  [7:0]  short_data_0,short_data_1,short_data_2,short_data_3,
     output reg  [15:0] long_data_0,long_data_1,long_data_2,long_data_3,
-    output reg  [7:0]  hash_in
+    output reg  [7:0]  hash_in,
+
+    input              hash_in_tran,
+    input       [2:0]  hash_bias
 
 );
 
@@ -173,16 +177,54 @@ module Datapre (
     end
 
     always @(*) begin
-        case (short_bia)
-            3'b000: hash_in = B_data[7:0];
-            3'b001: hash_in = B_data[15:8];
-            3'b010: hash_in = B_data[23:16];
-            3'b011: hash_in = B_data[31:24];
-            3'b100: hash_in = B_data[39:32];
-            3'b101: hash_in = B_data[47:40];
-            3'b110: hash_in = B_data[55:48];
-            3'b111: hash_in = B_data[63:56];
-        endcase
+        if(!hash_in_tran)begin
+            case (short_bia)
+                3'b000: hash_in = B_data[7:0];
+                3'b001: hash_in = B_data[15:8];
+                3'b010: hash_in = B_data[23:16];
+                3'b011: hash_in = B_data[31:24];
+                3'b100: hash_in = B_data[39:32];
+                3'b101: hash_in = B_data[47:40];
+                3'b110: hash_in = B_data[55:48];
+                3'b111: hash_in = B_data[63:56];
+            endcase
+        end
+        else begin
+            case (hash_bias[2:1])
+                2'b00: begin
+                    if(!hash_bias[0])begin
+                        hash_in = B_data[7:0];
+                    end
+                    else begin
+                        hash_in = B_data[15:8];
+                    end
+                end
+                2'b01: begin
+                    if(!hash_bias[0])begin
+                        hash_in = B_data[23:16];
+                    end
+                    else begin
+                        hash_in = B_data[31:24];
+                    end
+                end
+                2'b10: begin
+                    if(!hash_bias[0])begin
+                        hash_in = B_data[39:32];
+                    end
+                    else begin
+                        hash_in = B_data[47:40];
+                    end
+                end
+                2'b11: begin
+                    if(!hash_bias[0])begin
+                        hash_in = B_data[55:48];
+                    end
+                    else begin
+                        hash_in = B_data[63:56];
+                    end
+                end
+            endcase
+        end
     end
 
     always @(*) begin

@@ -6,15 +6,13 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 28 differs from formal bit length 32 for port 'dout' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:71]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'hash_bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:791]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'bias' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:819]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Core
 Compiling module xil_defaultlib.sync_rom(ADDR_WIDTH=8,DATA_WIDTH...
-Compiling module xil_defaultlib.dual_port_ram(TIME=10000000,STOR...
+Compiling module xil_defaultlib.dual_port_ram(TIME=1000000,STORE...
 Compiling module xil_defaultlib.dual_port_ram(LOAD_FILE_PATH=".....
 Compiling module xil_defaultlib.Bus
 Compiling module xil_defaultlib.sync_rom(ADDR_WIDTH=8,DATA_WIDTH...
@@ -50,7 +48,7 @@ Compiling module dist_mem_gen_v8_0_15.dist_mem_gen_v8_0_15(C_FAMILY="z...
 Compiling module xil_defaultlib.DRAM1
 Compiling module xil_defaultlib.keccak
 Compiling module xil_defaultlib.sample
-Compiling module xil_defaultlib.Top(TIME=10000000)
+Compiling module xil_defaultlib.Top(TIME=1000000)
 Compiling module xil_defaultlib.tb_inst_trans
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_inst_trans_behav

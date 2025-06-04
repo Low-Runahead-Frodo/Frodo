@@ -6,7 +6,7 @@ module Core(
     input                           start,
     input                           inst_done,
     output reg                      valid,
-    output                          inst_valid,
+    output reg                      inst_valid,
     output reg  [1:0]               level_reg,
     output reg  [7:0]               pc
 );
@@ -75,7 +75,7 @@ module Core(
             FINISH:begin
                 case (mode_reg)
                 KEYGEN:begin
-                    if(pc == 8'd5)begin
+                    if(pc == 8'd1)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end
@@ -84,7 +84,7 @@ module Core(
                     end
                 end
                 ENCAP:begin
-                    if(pc == 8'd6)begin
+                    if(pc == 8'd1)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end
@@ -93,7 +93,7 @@ module Core(
                     end
                 end 
                 DECAP:begin
-                    if(pc == 8'd7)begin
+                    if(pc == 8'd1)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end
@@ -145,6 +145,17 @@ module Core(
     end
 
 //inst_valid
-    assign inst_valid = (state==IF)? 1:0;
+
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            inst_valid <= 1'b0;
+        end
+        else if(state == IF)begin
+            inst_valid <= 1'b1;
+        end
+        else begin
+            inst_valid <= 1'b0;
+        end
+    end
 
 endmodule

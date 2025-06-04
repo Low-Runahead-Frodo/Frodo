@@ -3,8 +3,8 @@ module AGU_hash (
     input                   rstn,
     input                   addr_clr,
     input                   add_en,
-    input       [1:0]       mode,
-    output reg  [10:0]      addr_output,
+    input       [2:0]       mode,
+    output reg  [11:0]      addr_output,
     output reg  [2:0]       bias,
     input       [1:0]      level
 );
@@ -21,29 +21,44 @@ module AGU_hash (
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
-            addr_output <= 11'b0;
+            addr_output <= 12'b0;
             bias <= 3'b0;
         end
         else if(addr_clr)begin
-            addr_output <= 11'b0;
+            addr_output <= 12'b0;
             bias <= 3'b0;
         end
         else if(add_en)begin
             case (mode)
-                2'b00:begin // S,S',E'
+                3'b000:begin // S,S',E'
                     if(addr_output == loop)begin
-                        addr_output <= 11'b0;
-                        bias <= bias + 1'b0;
+                        addr_output <= 12'b0;
+                        bias <= bias + 1'b1;
                     end
                     else begin
                         addr_output <= addr_output + 1'b1;
                     end
                 end
-                2'b01:begin// E
+                3'b001:begin// E
                     if(bias == 3'd7)begin
                         bias <= 3'd0;
                         addr_output <= addr_output + 1'b1;
                     end
+                end
+                3'b100:begin//B
+                    addr_output <= addr_output + 1'b1;
+                end
+                3'b101:begin//B'
+                    if(bias[0]==1'b1)begin
+                        if(addr_output[11:1] == loop)begin
+                            addr_output <= 12'b0;
+                            bias[2:1] <= bias[2:1] + 1'b1;
+                        end
+                        else begin
+                            addr_output[11:1] <= addr_output[11:1] + 1'b1;
+                        end
+                    end
+                    bias[0] <= ~bias[0];
                 end
             endcase
         end

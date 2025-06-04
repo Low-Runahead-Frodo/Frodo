@@ -11,7 +11,7 @@ module AGU
     input       [ADDR_WIDTH+1:0]    B_addr_start,
     input       [ADDR_WIDTH+1:0]    C_addr_start,
     input       [ADDR_WIDTH+1:0]    D_addr_start,
-    input       [10:0]              hash_addr,
+    input       [11:0]              hash_addr,
     input       [2:0]               hash_bias,
     input                           hash_width,
     input                           B_hash_en,

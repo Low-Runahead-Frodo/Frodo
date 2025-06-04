@@ -193,7 +193,7 @@ module Control #(
                     A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b011:begin
-                    if(opcode == 3'b000 || opcode == 3'b010)begin
+                    if(opcode == 3'b000 || opcode == 3'b010 || opcode == 3'b001)begin
                         B_addr_start  <= {inst_reg[INST_WIDTH-23],1'b0,inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
                     end
                     else begin
@@ -400,8 +400,21 @@ module Control #(
                     loop_2 <= 11'd4;
                 end
                 3'b000:begin
-                    loop_0 <= {7'b0,inst_reg[INST_WIDTH-16:INST_WIDTH-21]};
-                    loop_1 <= 11'd8;
+                    if(func == 1'b0)begin
+                        loop_0 <= {7'b0,inst_reg[INST_WIDTH-16:INST_WIDTH-21]};
+                        loop_1 <= 11'd8;
+                    end
+                    else begin
+                        case (level)
+                            2'b01:begin
+                                loop_0 <= 11'd15;
+                                loop_1 <= 11'd4;
+                                loop_2 <= 11'd157;
+                                loop_3 <= 11'd17;
+                                loop_4 <= 11'd100;
+                            end
+                        endcase
+                    end
                 end
                 3'b111:begin
                     //loop_0 <= 11'd2;
@@ -418,6 +431,20 @@ module Control #(
                         2'b10: loop_4 <= 11'd13;
                         2'b11: loop_4 <= 11'd13;
                     endcase
+                end
+                3'b001:begin
+                    if(!func)begin
+                        loop_0 <= 11'd79;
+                        loop_1 <= 11'd126;
+                        loop_2 <= 11'd8;
+                        loop_3 <= 11'd100;
+                    end
+                    else begin
+                        loop_0 <= 11'd77;
+                        loop_1 <= 11'd126;
+                        loop_2 <= 11'd128;
+                        loop_3 <= 11'd16;
+                    end
                 end
             endcase
         end
@@ -513,7 +540,7 @@ module Control #(
         end
         else if(state == ID)begin
             case (opcode)
-                3'b000: hash_lev <= 1'b0;
+                3'b000: hash_lev <= 1'b1;
                 3'b111: hash_lev <= 1'b0;
             endcase
         end
@@ -522,17 +549,23 @@ module Control #(
         end
     end 
 //Hash地址生成单元控制信号
-    reg [1:0] hash_agu_mode;
+    reg [2:0] hash_agu_mode;
     reg hash_agu_clr;
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
-            hash_agu_mode <= 2'b0;
+            hash_agu_mode <= 3'b0;
         end
         else if(state==ID)begin
-            hash_agu_mode <= inst_reg[INST_WIDTH-24:INST_WIDTH-25];
+            //hash_agu_mode <= inst_reg[INST_WIDTH-24:INST_WIDTH-25];
+            if(opcode == 3'b000)begin
+                hash_agu_mode <= 3'b100;
+            end
+            else if(opcode == 3'b001)begin
+                hash_agu_mode <= 3'b101;
+            end
         end
         else if(state==IDLE)begin
-            hash_agu_mode <= 2'b0;
+            hash_agu_mode <= 3'b0;
         end
     end
 
@@ -578,12 +611,41 @@ module Control #(
         else if(state == ID)begin
             case (opcode)
                 3'b010: B_hash_en <= 1'b1; 
+                3'b000: begin
+                    if(func)begin
+                        B_hash_en <= 1'b1;
+                    end
+                    else begin
+                        B_hash_en <= 1'b0;
+                    end
+                end
+                3'b001: begin
+                    B_hash_en <= 1'b1;
+                end
             endcase
         end
         else if(state == IDLE)begin
             B_hash_en <= 1'b0;
         end
     end
+
+//hash数据模式
+    reg hash_in_tran;
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn)begin
+            hash_in_tran <= 1'b0;
+        end
+        else if(state == ID)begin
+            //hash_in_tran <= inst_reg[INST_WIDTH-27];
+            if(opcode == 3'b001)begin
+                hash_in_tran <= 1'b1;
+            end
+        end
+        else if(state == IDLE)begin
+            hash_in_tran <= 1'b0;
+        end
+    end
+
 
 //采样模块
     always @(posedge clk or negedge rstn) begin
@@ -601,6 +663,10 @@ module Control #(
             sample_en <= 1'b0;
         end
     end
+
+
+
+
 //EX阶段
 //start信号
     wire start;
@@ -742,6 +808,7 @@ module Control #(
 
 //数据预处理模块
     wire [7:0] hash_temp;
+    wire [2:0] hash_agu_bias_output;
     assign  hash_in = A_index_location[1] ?(A_index_location[0]? A_line_index[15:8]:A_line_index[7:0]) : hash_temp;
     Datapre u_data_pre(
         .clk(clk),
@@ -767,13 +834,14 @@ module Control #(
         .genA(genA),
         .sample_in(sample_data),
         .sample_out(sample_out),
-        .hash_width(hash_width)
+        .hash_width(hash_width),
+        .hash_in_tran(hash_in_tran),
+        .hash_bias(hash_agu_bias_output)
     );
     assign add_data = C_data;
 
 //地址生成单元
-    wire [10:0] hash_agu_addr_output;
-    wire [1:0] hash_agu_bias_output;
+    wire [11:0] hash_agu_addr_output;
     AGU #(
         .ADDR_WIDTH(ADDR_WIDTH)
     )

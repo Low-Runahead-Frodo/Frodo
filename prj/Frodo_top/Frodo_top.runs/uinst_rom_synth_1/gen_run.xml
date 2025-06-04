@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="uinst_rom_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1747987898">
-  <File Type="PA-TCL" Name="uinst_rom.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="uinst_rom_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="uinst_rom_reports.tcl"/>
-  <File Type="RDS-RDS" Name="uinst_rom.vds"/>
   <File Type="RDS-UTIL" Name="uinst_rom_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="uinst_rom_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="uinst_rom.tcl"/>
+  <File Type="RDS-RDS" Name="uinst_rom.vds"/>
   <File Type="RDS-DCP" Name="uinst_rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="uinst_rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="uinst_rom_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/uinst_rom" RelGenDir="$PGENDIR/uinst_rom">
     <File Path="$PSRCDIR/sources_1/ip/uinst_rom/uinst_rom.xci">
       <FileInfo>
@@ -50,9 +47,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -188,7 +188,8 @@ module Top #(
         .hash_cut(sample_data),
         .sample_en(sample_en),
 
-        .level(level_reg)
+        .level(level_reg),
+        .finish(inst_done)
     );
     
     Encode u_encode(
