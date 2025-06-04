@@ -1,7 +1,7 @@
 module tb_inst_trans;
     parameter INST_WIDTH = 28;
     parameter ADDR_WIDTH = 12;
-    parameter TIME = 1000000;
+    parameter TIME = 10000;
 
     // DUT Inputs
     reg clk;

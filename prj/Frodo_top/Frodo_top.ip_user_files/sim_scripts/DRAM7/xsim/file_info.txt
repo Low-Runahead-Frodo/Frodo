@@ -1,0 +1,2 @@
+DRAM7.v,verilog,xil_defaultlib,../../../../Frodo_top.gen/sources_1/ip/DRAM7/sim/DRAM7.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
