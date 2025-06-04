@@ -1,2 +1,0 @@
-dual_ram.v,verilog,xil_defaultlib,../../../../Frodo_top.gen/sources_1/ip/dual_ram/sim/dual_ram.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

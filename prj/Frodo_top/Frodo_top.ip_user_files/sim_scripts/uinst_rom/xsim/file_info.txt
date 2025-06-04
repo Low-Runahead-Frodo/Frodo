@@ -1,2 +1,0 @@
-uinst_rom.v,verilog,xil_defaultlib,../../../../Frodo_top.gen/sources_1/ip/uinst_rom/sim/uinst_rom.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v
