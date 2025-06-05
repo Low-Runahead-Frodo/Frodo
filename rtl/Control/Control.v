@@ -193,7 +193,7 @@ module Control #(
                     A_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
                 end
                 3'b011:begin
-                    if(opcode == 3'b000 || opcode == 3'b010 || opcode == 3'b001)begin
+                    if(opcode == 3'b000 || opcode == 3'b010 || opcode == 3'b001 || opcode == 3'b011)begin
                         B_addr_start  <= {inst_reg[INST_WIDTH-23],1'b0,inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
                     end
                     else begin
@@ -202,7 +202,13 @@ module Control #(
                 end
                 3'b100:begin
                     C_addr_start      <= mem0_rd_data_0[ADDR_WIDTH+1:0];
-                    D_addr_start      <= {mem0_rd_data_0[ADDR_WIDTH+1],~mem0_rd_data_0[ADDR_WIDTH],mem0_rd_data_0[ADDR_WIDTH-1:0]};
+                    //D_addr_start      <= {mem0_rd_data_0[ADDR_WIDTH+1],~mem0_rd_data_0[ADDR_WIDTH],mem0_rd_data_0[ADDR_WIDTH-1:0]};
+                    if(opcode == 3'b010 || opcode == 3'b011)begin
+                        D_addr_start <= {inst_reg[INST_WIDTH-23],1'b1,inst_reg[INST_WIDTH-4:INST_WIDTH-15]};
+                    end
+                    else begin
+                        D_addr_start      <= {mem0_rd_data_0[ADDR_WIDTH+1],~mem0_rd_data_0[ADDR_WIDTH],mem0_rd_data_0[ADDR_WIDTH-1:0]};
+                    end
                 end
                 3'b101:begin
                     control_addr_en <= 1'b0;
@@ -304,10 +310,16 @@ module Control #(
                 3'b111:begin
                     wr_src <= MACS;
                 end
+                3'b010:begin
+                    wr_src <= SAMPLE;
+                end
+                3'b011:begin
+                    wr_src <= SAMPLE;
+                end
             endcase
         end
         else if(state == IDLE)begin
-            wr_src = 3'b00;
+            wr_src = 3'b000;
         end
     end
 
@@ -446,6 +458,44 @@ module Control #(
                         loop_3 <= 11'd16;
                     end
                 end
+                3'b010:begin
+                    loop_0 <= {7'b0,inst_reg[INST_WIDTH-16:INST_WIDTH-21]};
+                end
+                3'b011:begin
+                    if(!func)begin
+                        case (level)
+                            2'b01: loop_0 <= 11'd158;
+                            2'b10: loop_0 <= 11'd114;
+                            2'b11: loop_0 <= 11'd60;
+                        endcase 
+                        loop_1 <= 11'd17;
+                        case (level)
+                            2'b01: loop_2 <= 11'd2;
+                            2'b10: loop_2 <= 11'd14;
+                            2'b11: loop_2 <= 11'd20;
+                        endcase
+                        loop_4 <= 11'd100;
+                    end
+                    else begin
+                        case (level)
+                            2'b01: loop_0 <= 11'd15;
+                            2'b10: loop_0 <= 11'd3;
+                            2'b11: loop_0 <= 11'd1;
+                        endcase
+                        case (level)
+                            2'b01: loop_1 <= 11'd157;
+                            2'b10: loop_1 <= 11'd114;
+                            2'b11: loop_1 <= 11'd60;
+                        endcase
+                        loop_2 <= 11'd17;
+                        case (level)
+                            2'b01: loop_3 <= 11'd4;
+                            2'b10: loop_3 <= 11'd11;
+                            2'b11: loop_3 <= 11'd19;
+                        endcase
+                        loop_4 <= 11'd100;
+                    end
+                end
             endcase
         end
         else if(state == IDLE)begin
@@ -462,7 +512,10 @@ module Control #(
             macs_mode <= 1'b0;
         end
         else if(state == ID)begin
-            macs_mode <= 1'b0;
+            //macs_mode <= 1'b0;
+            if(opcode == 3'b100)begin
+                macs_mode <= func;
+            end
         end
         else if(state == IDLE)begin
             macs_mode <= 1'b0;
@@ -527,6 +580,12 @@ module Control #(
                 if(opcode == 3'b111)begin
                     hash_di_len <= 12'd144;
                 end
+                // if(opcode == 3'b010)begin
+                //     hash_di_len <= 12'd144;
+                // end
+                if(opcode == 3'b011)begin
+                    hash_di_len <= 12'd144;
+                end
             end
             else if(state == IDLE)begin
                 hash_di_len <= 12'b0;
@@ -542,10 +601,20 @@ module Control #(
             case (opcode)
                 3'b000: hash_lev <= 1'b1;
                 3'b111: hash_lev <= 1'b0;
+                3'b011:begin
+                    if(level == 2'b11)begin
+                        hash_lev <= 1'b0;
+                    end
+                end
+                3'b010:begin
+                    if(level == 2'b11)begin
+                        hash_lev <= 1'b0;
+                    end
+                end
             endcase
         end
         else if(state == IDLE)begin
-            hash_lev <= 1'b0;
+            hash_lev <= 1'b1;
         end
     end 
 //Hash地址生成单元控制信号
@@ -562,6 +631,22 @@ module Control #(
             end
             else if(opcode == 3'b001)begin
                 hash_agu_mode <= 3'b101;
+            end
+            else if(opcode == 3'b010)begin
+                hash_agu_mode <= 3'b100;
+            end
+            else if(opcode == 3'b011)begin
+                if(!func)begin
+                    hash_agu_mode <= 3'b000;
+                end
+                else begin
+                    if(inst_reg[INST_WIDTH-25]== 1'b0)begin
+                        hash_agu_mode <= 3'b010;
+                    end
+                    else begin
+                        hash_agu_mode <= 3'b001;
+                    end
+                end
             end
         end
         else if(state==IDLE)begin
@@ -593,11 +678,19 @@ module Control #(
             hash_width <= 1'b0;
         end
         else if(state == ID)begin
-            //1为16位，2为8位
+            //1为16位，0为8位
             case (opcode)
-                3'b010:begin
-                    hash_width <= inst_reg[INST_WIDTH-22];
-                end  
+                // 3'b010:begin
+                //     //hash_width <= inst_reg[INST_WIDTH-22];
+                //     if(func)begin
+                //         hash_width <= 1'b0;
+                //     end
+                // end
+                3'b011:begin
+                    if(func)begin
+                        hash_width <= 1'b1;
+                    end
+                end 
             endcase
         end
         else if(state == IDLE)begin
@@ -620,6 +713,12 @@ module Control #(
                     end
                 end
                 3'b001: begin
+                    B_hash_en <= 1'b1;
+                end
+                3'b010: begin
+                    B_hash_en <= 1'b0;
+                end
+                3'b011:begin
                     B_hash_en <= 1'b1;
                 end
             endcase
@@ -656,6 +755,9 @@ module Control #(
             case (opcode)
                 3'b010:begin
                     sample_en <= inst_reg[INST_WIDTH-26];
+                end
+                3'b011:begin
+                    sample_en <= inst_reg[INST_WIDTH-26];
                 end      
             endcase
         end
@@ -663,9 +765,6 @@ module Control #(
             sample_en <= 1'b0;
         end
     end
-
-
-
 
 //EX阶段
 //start信号
@@ -769,22 +868,22 @@ module Control #(
         .C_data(C_data)
     );
 //微指令存储器
-    sync_rom #(
-        .ADDR_WIDTH(UINST_ADDR_WIDTH),
-        .DATA_WIDTH(UINST_WIDTH)
-    ) inst_rom(
-        .clk(clk),
-        .rstn(rstn),
-        .en(1'b1),
-        .addr(upc),
-        .dout(uinst)
-    );
-    // uinst_rom rom(
-    //     .addra(upc),
-    //     .clka(clk),
-    //     .douta(uinst),
-    //     .ena(1'b1)
+    // sync_rom #(
+    //     .ADDR_WIDTH(UINST_ADDR_WIDTH),
+    //     .DATA_WIDTH(UINST_WIDTH)
+    // ) inst_rom(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(1'b1),
+    //     .addr(upc),
+    //     .dout(uinst)
     // );
+    uinst_rom rom(
+        .addra(upc),
+        .clka(clk),
+        .douta(uinst),
+        .ena(1'b1)
+    );
 
 //微pc控制器
     ucontrol #(

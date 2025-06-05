@@ -58,89 +58,89 @@ module Top #(
         .pc(pc)
     );
 
-    sync_rom #(
-        .ADDR_WIDTH(8),
-        .DATA_WIDTH(32),
-        .DEPTH(256),
-        .INIT_FILE("../../../../../../rtl/Control/inst_data/inst.bin") 
-    ) u_inst_rom(
-        .clk(clk),
-        .rstn(rstn),
-        .en(1'b1),
-        .addr(pc),
-        .dout(inst)
-    );
-
-    // rom u_rom(
-    //     .addra(pc),
-    //     .clka(clk),
-    //     .douta(inst),
-    //     .ena(1'b1)
+    // sync_rom #(
+    //     .ADDR_WIDTH(8),
+    //     .DATA_WIDTH(32),
+    //     .DEPTH(256),
+    //     .INIT_FILE("../../../../../../rtl/Control/inst_data/inst.bin") 
+    // ) u_inst_rom(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .en(1'b1),
+    //     .addr(pc),
+    //     .dout(inst)
     // );
 
-    // dual_ram ram_0(
-    //     .addra(mem0_addr_0),
-    //     .clka(clk),
-    //     .dina(mem_wr_data),
-    //     .douta(mem0_rd_data_0),
-    //     .wea(mem0_wr_en_0),
-    //     .addrb(mem0_addr_1),
-    //     .clkb(clk),
-    //     .dinb(mem_wr_data),
-    //     .doutb(mem0_rd_data_1),
-    //     .web(mem0_wr_en_1)
-    // );
-
-    // dual_ram ram_1(
-    //     .addra(mem1_addr_0),
-    //     .clka(clk),
-    //     .dina(mem_wr_data),
-    //     .douta(mem1_rd_data_0),
-    //     .wea(mem1_wr_en_0),
-    //     .addrb(mem1_addr_1),
-    //     .clkb(clk),
-    //     .dinb(mem_wr_data),
-    //     .doutb(mem1_rd_data_1),
-    //     .web(mem1_wr_en_1)
-    // );
-
-
-
-    dual_port_ram  #(
-        .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem0.hex"),
-        .STORE_PATH("../../../../../../sim/mem0_result.hex"),
-        .TIME(TIME)
-    )u_ram_0(
-        .clk(clk),
-        .rstn(rstn),
-        .port_a_en(mem0_wr_en_0),
-        .addr_a(mem0_addr_0),
-        .din_a(mem_wr_data),
-        .dout_a(mem0_rd_data_0),
-
-        .port_b_en(mem0_wr_en_1),
-        .addr_b(mem0_addr_1),
-        .din_b(mem_wr_data),
-        .dout_b(mem0_rd_data_1)
+    rom u_rom(
+        .addra(pc),
+        .clka(clk),
+        .douta(inst),
+        .ena(1'b1)
     );
 
-    dual_port_ram #(
-        .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem1.hex"),
-        .STORE_PATH("../../../../../../sim/mem1_result.hex"),
-        .TIME(TIME)
-    )u_ram_1(
-        .clk(clk),
-        .rstn(rstn),
-        .port_a_en(mem1_wr_en_0),
-        .addr_a(mem1_addr_0),
-        .din_a(mem_wr_data),
-        .dout_a(mem1_rd_data_0),
-
-        .port_b_en(mem1_wr_en_1),
-        .addr_b(mem1_addr_1),
-        .din_b(mem_wr_data),
-        .dout_b(mem1_rd_data_1)
+    dual_ram ram_0(
+        .addra(mem0_addr_0),
+        .clka(clk),
+        .dina(mem_wr_data),
+        .douta(mem0_rd_data_0),
+        .wea(mem0_wr_en_0),
+        .addrb(mem0_addr_1),
+        .clkb(clk),
+        .dinb(mem_wr_data),
+        .doutb(mem0_rd_data_1),
+        .web(mem0_wr_en_1)
     );
+
+    dual_ram ram_1(
+        .addra(mem1_addr_0),
+        .clka(clk),
+        .dina(mem_wr_data),
+        .douta(mem1_rd_data_0),
+        .wea(mem1_wr_en_0),
+        .addrb(mem1_addr_1),
+        .clkb(clk),
+        .dinb(mem_wr_data),
+        .doutb(mem1_rd_data_1),
+        .web(mem1_wr_en_1)
+    );
+
+
+
+    // dual_port_ram  #(
+    //     .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem0.hex"),
+    //     .STORE_PATH("../../../../../../sim/mem0_result.hex"),
+    //     .TIME(TIME)
+    // )u_ram_0(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .port_a_en(mem0_wr_en_0),
+    //     .addr_a(mem0_addr_0),
+    //     .din_a(mem_wr_data),
+    //     .dout_a(mem0_rd_data_0),
+
+    //     .port_b_en(mem0_wr_en_1),
+    //     .addr_b(mem0_addr_1),
+    //     .din_b(mem_wr_data),
+    //     .dout_b(mem0_rd_data_1)
+    // );
+
+    // dual_port_ram #(
+    //     .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem1.hex"),
+    //     .STORE_PATH("../../../../../../sim/mem1_result.hex"),
+    //     .TIME(TIME)
+    // )u_ram_1(
+    //     .clk(clk),
+    //     .rstn(rstn),
+    //     .port_a_en(mem1_wr_en_0),
+    //     .addr_a(mem1_addr_0),
+    //     .din_a(mem_wr_data),
+    //     .dout_a(mem1_rd_data_0),
+
+    //     .port_b_en(mem1_wr_en_1),
+    //     .addr_b(mem1_addr_1),
+    //     .din_b(mem_wr_data),
+    //     .dout_b(mem1_rd_data_1)
+    // );
 
     Control u_control(
         .clk(clk),

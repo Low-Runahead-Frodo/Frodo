@@ -56,7 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 4
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
@@ -84,11 +84,14 @@ read_verilog -library xil_defaultlib {
   C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Encode.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v
-  C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Transpose.v
+  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/adder_frodo.V
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v
+  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/full_adder.v
+  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/half_adder.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v
+  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/no_carry_adder.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/sample.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/theta.v
@@ -122,10 +125,10 @@ set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Deskto
 read_ip -quiet C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/dual_ram/dual_ram.xci
 set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/dual_ram/dual_ram_ooc.xdc]
 
-read_ip -quiet c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/rom/rom.xci
+read_ip -quiet C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/rom/rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/rom/rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/uinst_rom/uinst_rom.xci
+read_ip -quiet C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/uinst_rom/uinst_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/uinst_rom/uinst_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }

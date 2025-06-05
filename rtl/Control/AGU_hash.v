@@ -18,7 +18,6 @@ module AGU_hash (
         endcase        
     end
 
-
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
             addr_output <= 12'b0;
@@ -30,7 +29,7 @@ module AGU_hash (
         end
         else if(add_en)begin
             case (mode)
-                3'b000:begin // S,S',E'
+                3'b000:begin // S,S'
                     if(addr_output == loop)begin
                         addr_output <= 12'b0;
                         bias <= bias + 1'b1;
@@ -39,10 +38,19 @@ module AGU_hash (
                         addr_output <= addr_output + 1'b1;
                     end
                 end
-                3'b001:begin// E
+                3'b001:begin// E'
                     if(bias == 3'd7)begin
-                        bias <= 3'd0;
                         addr_output <= addr_output + 1'b1;
+                    end
+                    bias <= bias + 1'b1;
+                end
+                3'b010:begin//E
+                    if(addr_output[11:0] == loop)begin
+                        addr_output <= 12'b0;
+                        bias <= bias + 1'b1;
+                    end
+                    else begin
+                        addr_output[11:0] <= addr_output[11:0] + 1'b1;
                     end
                 end
                 3'b100:begin//B

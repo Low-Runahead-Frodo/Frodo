@@ -28,9 +28,8 @@ assign B_addr_tb = B_addr[ADDR_WIDTH-1:0];
 assign C_addr_tb = C_addr[ADDR_WIDTH-1:0];
 assign D_addr_tb = D_addr[ADDR_WIDTH-1:0];
 
-wire [ADDR_WIDTH+1 : 0] B_hash;
+wire [ADDR_WIDTH+1 : 0] B_hash,D_hash;
 assign B_hash = B_addr_start + hash_addr;
-
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn)begin
@@ -104,7 +103,8 @@ assign B_hash = B_addr_start + hash_addr;
             D_addr <= D_addr_start;
         end
         else if(B_hash_en)begin
-            D_addr <= {B_addr[ADDR_WIDTH+1:0],~B_addr[ADDR_WIDTH],B_addr[ADDR_WIDTH-1:0]};
+            //D_addr <= {B_addr[ADDR_WIDTH+1:0],~B_addr[ADDR_WIDTH],B_addr[ADDR_WIDTH-1:0]};
+            D_addr <= {B_addr[ADDR_WIDTH+1:0],~B_addr[ADDR_WIDTH],B_hash[ADDR_WIDTH-1:0]};
         end
         else if(add_en[3])begin
             if(stride[3])begin
