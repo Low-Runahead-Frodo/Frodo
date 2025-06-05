@@ -8,12 +8,12 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Thu Jun  5 14:41:13 2025
+  **** Start of session at: Thu Jun  5 15:07:47 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 620.289 ; gain = 192.680
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 619.285 ; gain = 191.020
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/utils_1/imports/synth_1/Top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -21,15 +21,14 @@ Command: synth_design -top Top -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-[libprotobuf ERROR C:\protobuf-3.21.12\protobuf\src\google\protobuf\wire_format_lite.cc:618] String field 'HDMetricDBGroup.name' contains invalid UTF-8 data when parsing a protocol buffer. Use the 'bytes' type if you intend to send raw bytes. 
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31232
+INFO: [Synth 8-7075] Helper process launched with PID 11188
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1339.719 ; gain = 475.465
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1337.980 ; gain = 474.605
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'D_bia', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:824]
 WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:66]
@@ -157,11 +156,12 @@ INFO: [Synth 8-6157] synthesizing module 'Core' [C:/Users/Lenovo/Desktop/Frodo/r
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:134]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:129]
 INFO: [Synth 8-6155] done synthesizing module 'Core' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:1]
-INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
+WARNING: [Synth 8-689] width (8) of port connection 'addra' does not match port width (9) of module 'rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:75]
 WARNING: [Synth 8-689] width (28) of port connection 'douta' does not match port width (27) of module 'rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:77]
-INFO: [Synth 8-6157] synthesizing module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dual_ram' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dual_ram' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
 WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:86]
 WARNING: [Synth 8-689] width (1) of port connection 'web' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:91]
 WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:99]
@@ -188,11 +188,12 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Leno
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:755]
 INFO: [Synth 8-6157] synthesizing module 'Bus' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'Bus' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v:1]
-INFO: [Synth 8-6157] synthesizing module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'uinst_rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'uinst_rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:882]
 WARNING: [Synth 8-689] width (36) of port connection 'douta' does not match port width (32) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:884]
 INFO: [Synth 8-6157] synthesizing module 'ucontrol' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v:1]
-	Parameter UINST_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter UINST_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter UINST_WIDTH bound to: 36 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ucontrol' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v:1]
 INFO: [Synth 8-6157] synthesizing module 'Datapre' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Datapre.v:1]
@@ -242,22 +243,22 @@ INFO: [Synth 8-6155] done synthesizing module 'chiiota' (0#1) [C:/Users/Lenovo/D
 INFO: [Synth 8-6157] synthesizing module 'hash_out_buffer' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:1]
 INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:37]
 INFO: [Synth 8-6155] done synthesizing module 'hash_out_buffer' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:1]
-INFO: [Synth 8-6157] synthesizing module 'DRAM8' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM8' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM4' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM4' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM5' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM5' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM3' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM3' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM2' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM2' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM6' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM6' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM7' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM7' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM1' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM1' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-25200-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM8' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM8' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM4' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM4' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM5' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM5' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM3' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM3' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM2' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM2' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM6' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM6' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM7' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM7' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM1' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM1' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'keccak' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:1]
 WARNING: [Synth 8-7071] port 'Hash_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:232]
 WARNING: [Synth 8-7071] port 'keccak_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:232]
@@ -370,18 +371,18 @@ WARNING: [Synth 8-7129] Port k_ram_o_all[76] in module PRE_THETA is either uncon
 WARNING: [Synth 8-7129] Port k_ram_o_all[77] in module PRE_THETA is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1502.777 ; gain = 638.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1502.777 ; gain = 638.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1502.777 ; gain = 638.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1502.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1501.270 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -492,11 +493,11 @@ Parsing XDC File [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/con
 Finished Parsing XDC File [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/constrs_1/new/clk.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1579.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1579.805 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1579.816 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1579.805 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'ram_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'ram_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_rom' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
@@ -551,14 +552,14 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.902 ; gain = 715.648
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.902 ; gain = 715.648
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -615,7 +616,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for ram_1. (constraint file  auto gen
 Applied set_property KEEP_HIERARCHY = SOFT for u_rom. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_control/rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1579.902 ; gain = 715.648
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Core'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Control'
@@ -653,7 +654,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'keccak'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1579.902 ; gain = 715.648
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1580.516 ; gain = 717.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -666,7 +667,8 @@ Detailed RTL Component Info :
 	   2 Input   13 Bit       Adders := 3     
 	   2 Input   12 Bit       Adders := 6     
 	   2 Input   11 Bit       Adders := 6     
-	   2 Input    8 Bit       Adders := 7     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 6     
 	   2 Input    5 Bit       Adders := 1     
 	  13 Input    5 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 13    
@@ -693,7 +695,8 @@ Detailed RTL Component Info :
 	               14 Bit    Registers := 7     
 	               12 Bit    Registers := 3     
 	               11 Bit    Registers := 11    
-	                8 Bit    Registers := 10    
+	                9 Bit    Registers := 7     
+	                8 Bit    Registers := 3     
 	                3 Bit    Registers := 8     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 31    
@@ -716,8 +719,10 @@ Detailed RTL Component Info :
 	  11 Input   11 Bit        Muxes := 2     
 	   5 Input   11 Bit        Muxes := 1     
 	   8 Input   11 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 4     
-	   2 Input    8 Bit        Muxes := 45    
+	   2 Input    9 Bit        Muxes := 10    
+	   4 Input    9 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 35    
 	   8 Input    8 Bit        Muxes := 1     
 	   5 Input    8 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 20    
@@ -758,7 +763,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1636.035 ; gain = 771.781
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1636.457 ; gain = 773.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -779,19 +784,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1696.000 ; gain = 831.746
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1699.008 ; gain = 835.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1826.281 ; gain = 962.027
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1828.387 ; gain = 965.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 1845.578 ; gain = 981.324
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1847.465 ; gain = 984.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -809,37 +814,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -893,27 +898,27 @@ Report Cell Usage:
 |65    |OBUF      |   632|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 401 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:06 . Memory (MB): peak = 1951.562 ; gain = 1010.184
-Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 1951.562 ; gain = 1087.309
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1953.902 ; gain = 1011.281
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1960.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1963.023 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1964.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1966.688 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 855932c9
+Synth Design complete | Checksum: 24b80f9f
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 287 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 289 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1964.406 ; gain = 1331.543
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1964.406 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:16 . Memory (MB): peak = 1966.688 ; gain = 1335.281
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1966.688 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 14:42:50 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 15:09:19 2025...

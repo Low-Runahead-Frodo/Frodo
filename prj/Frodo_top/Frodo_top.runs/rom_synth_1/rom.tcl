@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "rom_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -75,7 +76,7 @@ set_property ip_output_repo c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_to
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/rom/rom.xci
+read_ip -quiet C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/rom/rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/rom/rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }

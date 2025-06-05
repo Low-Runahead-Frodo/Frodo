@@ -1,7 +1,7 @@
 module Control #(
     parameter INST_WIDTH        = 28,
     parameter ADDR_WIDTH        = 12,
-    parameter UINST_ADDR_WIDTH  = 8,
+    parameter UINST_ADDR_WIDTH  = 9,
     parameter UINST_WIDTH       = 36
 )(
     input                   clk,

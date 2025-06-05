@@ -1,6 +1,6 @@
 module ucontrol 
 #(
-    parameter  UINST_ADDR_WIDTH = 8,
+    parameter  UINST_ADDR_WIDTH = 9,
     parameter  UINST_WIDTH      = 32
 )(
     input                               clk,
