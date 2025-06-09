@@ -1,0 +1,3 @@
+Core            Encode          Top (*)         dpsram4096X64_1 spsram256X28
+Decode          Macs            dpsram4096X64_0 sample
+1

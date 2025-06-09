@@ -1,0 +1,1513 @@
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v:37: The symbol 'out_d' is not defined. (VER-956)
+*** Presto compilation terminated with 1 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb320x36m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AddrLUT.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU_hash.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Bus.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v:14: Forward references to 'c0' are non-standard. This may be treated as an error in the future. (VER-733)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Control.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:66: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:824: the undeclared symbol 'D_bia' assumed to have the default net type, which is 'wire'. (VER-936)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:287: Variable 'wr_src' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:525: Variable 'macs_signal' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Core.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Datapre.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Decode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Decode.v:35: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:48: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:49: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:50: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:51: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:54: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:55: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:56: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:57: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM1.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM2.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM3.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM4.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM5.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM6.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM7.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM8.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Encode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Encode.v:26: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./full_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./half_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./hash_out_buffer.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./keccak.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'state' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'KECCAK' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Sub_Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:26: The symbol 'RESET' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:218: The symbol 'data_o00_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:220: The symbol 'data_o01_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:221: The symbol 'data_o01_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:223: The symbol 'data_o02_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:224: The symbol 'data_o02_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:226: The symbol 'data_o03_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:227: The symbol 'data_o03_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:229: The symbol 'data_o04_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:230: The symbol 'data_o04_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:232: The symbol 'data_o10_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:233: The symbol 'data_o10_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:235: The symbol 'data_o11_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:236: The symbol 'data_o11_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:238: The symbol 'data_o12_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:239: The symbol 'data_o12_1' is not defined. (VER-956)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Macs.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./no_carry_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./pre_theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sample.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v:21: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Top.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:224: the undeclared symbol 'absorb_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:268: the undeclared symbol 'done' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Transpose.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:295: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:490: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:495: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:510: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:512: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:514: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:554: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:569: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:575: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:590: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:593: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:614: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:637: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:660: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:312: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:533: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:538: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:553: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:557: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:597: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:598: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:612: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:618: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:633: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:636: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:657: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:680: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:703: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:72: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:73: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:74: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:410: real declarations are not supported by synthesis. (VER-177)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:426: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:912: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:925: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:938: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:951: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:975: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:988: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:999: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1056: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1060: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ucontrol.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v:37: The symbol 'out_d' is not defined. (VER-956)
+*** Presto compilation terminated with 1 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb320x36m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AddrLUT.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU_hash.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Bus.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v:14: Forward references to 'c0' are non-standard. This may be treated as an error in the future. (VER-733)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Control.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:66: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:824: the undeclared symbol 'D_bia' assumed to have the default net type, which is 'wire'. (VER-936)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:287: Variable 'wr_src' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:525: Variable 'macs_signal' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Core.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Datapre.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Decode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Decode.v:35: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:48: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:49: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:50: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:51: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:54: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:55: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:56: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:57: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM1.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM2.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM3.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM4.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM5.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM6.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM7.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM8.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Encode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Encode.v:26: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./full_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./half_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./hash_out_buffer.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./keccak.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'state' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'KECCAK' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Sub_Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:26: The symbol 'RESET' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:218: The symbol 'data_o00_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:220: The symbol 'data_o01_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:221: The symbol 'data_o01_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:223: The symbol 'data_o02_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:224: The symbol 'data_o02_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:226: The symbol 'data_o03_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:227: The symbol 'data_o03_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:229: The symbol 'data_o04_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:230: The symbol 'data_o04_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:232: The symbol 'data_o10_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:233: The symbol 'data_o10_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:235: The symbol 'data_o11_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:236: The symbol 'data_o11_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:238: The symbol 'data_o12_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:239: The symbol 'data_o12_1' is not defined. (VER-956)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Macs.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./no_carry_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./pre_theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sample.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v:21: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Top.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:224: the undeclared symbol 'absorb_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:268: the undeclared symbol 'done' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Transpose.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:295: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:490: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:495: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:510: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:512: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:514: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:554: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:569: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:575: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:590: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:593: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:614: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:637: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:660: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:312: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:533: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:538: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:553: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:557: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:597: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:598: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:612: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:618: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:633: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:636: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:657: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:680: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:703: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:72: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:73: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:74: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:410: real declarations are not supported by synthesis. (VER-177)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:426: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:912: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:925: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:938: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:951: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:975: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:988: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:999: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1056: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1060: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ucontrol.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v:37: The symbol 'out_d' is not defined. (VER-956)
+*** Presto compilation terminated with 1 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb320x36m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AddrLUT.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU_hash.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Bus.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v:14: Forward references to 'c0' are non-standard. This may be treated as an error in the future. (VER-733)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Control.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:66: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:824: the undeclared symbol 'D_bia' assumed to have the default net type, which is 'wire'. (VER-936)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:287: Variable 'wr_src' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:525: Variable 'macs_signal' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Core.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Datapre.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Decode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Decode.v:35: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:48: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:49: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:50: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:51: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:54: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:55: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:56: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:57: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM1.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM2.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM3.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM4.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM5.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM6.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM7.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM8.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Encode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Encode.v:26: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./full_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./half_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./hash_out_buffer.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./keccak.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'state' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'KECCAK' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Sub_Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:26: The symbol 'RESET' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:218: The symbol 'data_o00_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:220: The symbol 'data_o01_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:221: The symbol 'data_o01_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:223: The symbol 'data_o02_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:224: The symbol 'data_o02_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:226: The symbol 'data_o03_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:227: The symbol 'data_o03_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:229: The symbol 'data_o04_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:230: The symbol 'data_o04_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:232: The symbol 'data_o10_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:233: The symbol 'data_o10_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:235: The symbol 'data_o11_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:236: The symbol 'data_o11_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:238: The symbol 'data_o12_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:239: The symbol 'data_o12_1' is not defined. (VER-956)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Macs.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./no_carry_adder.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./pre_theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sample.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v:21: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./theta.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Top.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:224: the undeclared symbol 'absorb_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:268: the undeclared symbol 'done' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Transpose.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:295: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:490: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:495: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:510: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:512: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:514: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:554: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:569: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:575: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:590: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:593: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:614: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:637: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:660: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:312: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:533: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:538: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:553: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:557: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:597: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:598: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:612: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:618: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:633: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:636: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:657: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:680: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:703: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:72: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:73: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:74: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:410: real declarations are not supported by synthesis. (VER-177)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:426: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:912: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:925: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:938: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:951: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:975: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:988: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:999: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1056: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1060: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ucontrol.v
+Presto compilation completed successfully.
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v:37: The symbol 'out_d' is not defined. (VER-956)
+*** Presto compilation terminated with 1 errors. ***
+Loading db file '/home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb320x36m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AddrLUT.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU_hash.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Bus.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v:14: Forward references to 'c0' are non-standard. This may be treated as an error in the future. (VER-733)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Control.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:66: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:824: the undeclared symbol 'D_bia' assumed to have the default net type, which is 'wire'. (VER-936)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:287: Variable 'wr_src' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:525: Variable 'macs_signal' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+*** Presto compilation terminated with 2 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Core.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Datapre.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Decode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Decode.v:35: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:48: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:49: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:50: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:51: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:54: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:55: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:56: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:57: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM1.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM2.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM3.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM4.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM5.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM6.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM7.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM8.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Encode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Encode.v:26: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./full_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./half_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./hash_out_buffer.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./keccak.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'state' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'KECCAK' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Sub_Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:26: The symbol 'RESET' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:218: The symbol 'data_o00_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:220: The symbol 'data_o01_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:221: The symbol 'data_o01_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:223: The symbol 'data_o02_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:224: The symbol 'data_o02_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:226: The symbol 'data_o03_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:227: The symbol 'data_o03_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:229: The symbol 'data_o04_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:230: The symbol 'data_o04_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:232: The symbol 'data_o10_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:233: The symbol 'data_o10_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:235: The symbol 'data_o11_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:236: The symbol 'data_o11_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:238: The symbol 'data_o12_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:239: The symbol 'data_o12_1' is not defined. (VER-956)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Macs.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./no_carry_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./pre_theta.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sample.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v:21: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./theta.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Top.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:224: the undeclared symbol 'absorb_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:268: the undeclared symbol 'done' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Transpose.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:295: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:490: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:495: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:510: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:512: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:514: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:554: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:569: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:575: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:590: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:593: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:614: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:637: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:660: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:312: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:533: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:538: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:553: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:557: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:597: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:598: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:612: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:618: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:633: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:636: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:657: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:680: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:703: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:72: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:73: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:74: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:410: real declarations are not supported by synthesis. (VER-177)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:426: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:912: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:925: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:938: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:951: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:975: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:988: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:999: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1056: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1060: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ucontrol.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./adder_frodo.v:37: The symbol 'out_d' is not defined. (VER-956)
+*** Presto compilation terminated with 1 errors. ***
+Loading db file '/home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb320x36m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db'
+Loading db file '/home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AddrLUT.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./AGU_hash.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Bus.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./chiiota.v:14: Forward references to 'c0' are non-standard. This may be treated as an error in the future. (VER-733)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Control.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:66: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:824: the undeclared symbol 'D_bia' assumed to have the default net type, which is 'wire'. (VER-936)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:287: Variable 'wr_src' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./Control.v:525: Variable 'macs_signal' is the target of both blocking and nonblocking assignments in the same always block. (VER-134)
+*** Presto compilation terminated with 2 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Core.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Datapre.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Decode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Decode.v:35: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:48: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:49: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:50: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:51: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:54: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:55: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:56: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./dpsram4096x64.v:57: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM1.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM2.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM3.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM4.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM5.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM6.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM7.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./DRAM8.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Encode.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Encode.v:26: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./full_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./half_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./hash_out_buffer.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./keccak.v
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'state' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'KECCAK' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:25: The symbol 'Sub_Rnd_cnt' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:26: The symbol 'RESET' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:218: The symbol 'data_o00_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:220: The symbol 'data_o01_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:221: The symbol 'data_o01_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:223: The symbol 'data_o02_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:224: The symbol 'data_o02_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:226: The symbol 'data_o03_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:227: The symbol 'data_o03_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:229: The symbol 'data_o04_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:230: The symbol 'data_o04_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:232: The symbol 'data_o10_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:233: The symbol 'data_o10_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:235: The symbol 'data_o11_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:236: The symbol 'data_o11_1' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:238: The symbol 'data_o12_0' is not defined. (VER-956)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./keccak.v:239: The symbol 'data_o12_1' is not defined. (VER-956)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Macs.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./no_carry_adder.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./pre_theta.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sample.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram256x28.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:33: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:34: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:35: delays for continuous assignment are ignored. (VER-173)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./spsram320x36.v:36: delays for continuous assignment are ignored. (VER-173)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./sync_rom.v:21: The statements in initial blocks are ignored. (VER-281)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./theta.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Top.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:224: the undeclared symbol 'absorb_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./Top.v:268: the undeclared symbol 'done' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./Transpose.v
+Presto compilation completed successfully.
+1
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:295: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:490: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:495: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:496: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:507: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:510: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:512: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:514: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:554: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:569: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:575: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:590: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:593: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:614: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:637: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:645: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb256x28m4s_180a_tt1v25c.v:660: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:68: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:69: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:70: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:312: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:533: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:538: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:539: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:550: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:553: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:555: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:557: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:597: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:598: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:612: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:618: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:633: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:636: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:657: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:680: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:688: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./ts1n28hpcphvtb320x36m4s_180a_tt1v25c.v:703: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:72: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:73: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:74: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:410: real declarations are not supported by synthesis. (VER-177)
+Warning:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:426: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:912: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:925: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:938: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:951: case inequality (!==) is not supported by synthesis. (VER-190)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:975: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:986: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:988: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:999: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1009: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1029: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1039: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1056: case equality (===) is not supported by synthesis. (VER-189)
+Error:  /home/usergq/IC_prj/Frodo_DC/src/./tsdn28hpcpa4096x32m8m_130a_tt1v25c.v:1060: case equality (===) is not supported by synthesis. (VER-189)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
+0
+Running PRESTO HDLC
+Compiling source file /home/usergq/IC_prj/Frodo_DC/src/./ucontrol.v
+Presto compilation completed successfully.
+1

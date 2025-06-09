@@ -1,7 +1,7 @@
 module tb_inst_trans;
     parameter INST_WIDTH = 28;
     parameter ADDR_WIDTH = 12;
-    parameter TIME = 10000;
+    parameter TIME = 100000000;
 
     // DUT Inputs
     reg clk;
@@ -59,14 +59,14 @@ module tb_inst_trans;
         C_index = 0;
         opcode = 0;
         mode = 0;
-        level = 2'b01;
+        level = 2'b10;
         length = 0;
         Addr = 0;
         port =0;
         repeat(5)@(posedge clk);
         rstn = 1;
-        level = 2'b01;
-        mode = 2'b01;
+        level = 2'b11;
+        mode = 2'b10;
         repeat(1)@(posedge clk);
         start = 1;
         repeat(1)@(posedge clk);

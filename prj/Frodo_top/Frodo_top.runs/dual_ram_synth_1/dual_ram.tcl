@@ -56,11 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "dual_ram_synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z020clg400-2
+create_project -in_memory -part xczu7ev-ffvc1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -99,7 +100,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top dual_ram -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+synth_design -top dual_ram -part xczu7ev-ffvc1156-2-i -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 

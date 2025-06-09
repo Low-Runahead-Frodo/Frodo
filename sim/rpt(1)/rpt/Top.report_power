@@ -1,0 +1,677 @@
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Information: Updating design information... (UID-85)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Error: Could not read the following target libraries:
+tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db 
+ (UIO-3)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssg_v0p81_125c_ccs.db'. (UID-3)
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:09:28 2025
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: ts1n28hpcphvtb320x36m4s_tt1v25c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Top                                       0.958    8.564  830.814   10.353 100.0
+  u_sample (sample)                       0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_2.8_2.1_8)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C299 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C298 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C297 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C296 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C295 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C294 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C293 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C292 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C291 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C290 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C289 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C288 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C287 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C286 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C285 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C284 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C283 (*SELECT_OP_4.3_4.1_3)           0.000    0.000    0.000    0.000   0.0
+    add_140 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+    add_138_12 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_11 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_10 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_9 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_8 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_7 (*ADD_UNS_OP_7_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_6 (*ADD_UNS_OP_6_1_7)         0.000    0.000    0.000    0.000   0.0
+    add_138_5 (*ADD_UNS_OP_5_1_6)         0.000    0.000    0.000    0.000   0.0
+    add_138_4 (*ADD_UNS_OP_4_1_5)         0.000    0.000    0.000    0.000   0.0
+    add_138_3 (*ADD_UNS_OP_3_1_4)         0.000    0.000    0.000    0.000   0.0
+    add_138_2 (*ADD_UNS_OP_2_1_3)         0.000    0.000    0.000    0.000   0.0
+    add_138 (*ADD_UNS_OP_1_1_2)           0.000    0.000    0.000    0.000   0.0
+    lt_134 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_131 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_127_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_127 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_123_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_123 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_119_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_119 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_115_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_115 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_111_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_111 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_107_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_107 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_103_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_103 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_99_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_95_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_91_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91_2 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91 (*LT_UNS_OP_14_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_87_3 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87_2 (*LT_UNS_OP_13_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87 (*LT_UNS_OP_13_15_1)            0.000    0.000    0.000    0.000   0.0
+  u_Macs (Macs)                        5.59e-02    0.000    0.000 5.59e-02   0.5
+    C118 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C117 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C116 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C115 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    add_54_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_53_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_52_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_51_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    sub_add_54 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_53 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_52 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_51 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+  u_decode (Decode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C360 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C359 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C358 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C357 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C356 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C355 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C354 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C353 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    add_18_C36 (*ADD_UNS_OP_16_13_16)     0.000    0.000    0.000    0.000   0.0
+    add_14_C36 (*ADD_UNS_OP_16_12_16)     0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G2 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G2 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G3 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G3 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G4 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G4 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36 (*ADD_UNS_OP_15_13_15)     0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G2 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G3 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G4 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+  u_encode (Encode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C157 (*SELECT_OP_2.64_2.1_64)      4.80e-02    0.000    0.000 4.80e-02   0.5
+    C156 (*SELECT_OP_4.64_4.1_64)         0.000    0.000    0.000    0.000   0.0
+  ram_1 (dpsram4096X64_0)              9.60e-02    4.115  414.242    4.626  44.7
+  ram_0 (dpsram4096X64_1)              9.60e-02    4.115  414.242    4.626  44.7
+  u_rom (spsram256X28)                    0.000    0.333    2.330    0.336   3.2
+  u_core (Core)                        3.10e-04    0.000    0.000 3.10e-04   0.0
+    C307 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C306 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C305 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C304 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C303 (*SELECT_OP_6.1_6.1_1)        3.08e-04    0.000    0.000 3.08e-04   0.0
+    C302 (*SELECT_OP_6.3_6.1_3)           0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    add_141 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+1
+Information: Updating design information... (UID-85)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Error: Could not read the following target libraries:
+tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db 
+ (UIO-3)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:13:26 2025
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: ts1n28hpcphvtb320x36m4s_tt1v25c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Top                                       0.958    8.564  830.814   10.353 100.0
+  u_sample (sample)                       0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_2.8_2.1_8)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C299 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C298 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C297 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C296 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C295 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C294 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C293 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C292 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C291 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C290 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C289 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C288 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C287 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C286 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C285 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C284 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C283 (*SELECT_OP_4.3_4.1_3)           0.000    0.000    0.000    0.000   0.0
+    add_140 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+    add_138_12 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_11 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_10 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_9 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_8 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_7 (*ADD_UNS_OP_7_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_6 (*ADD_UNS_OP_6_1_7)         0.000    0.000    0.000    0.000   0.0
+    add_138_5 (*ADD_UNS_OP_5_1_6)         0.000    0.000    0.000    0.000   0.0
+    add_138_4 (*ADD_UNS_OP_4_1_5)         0.000    0.000    0.000    0.000   0.0
+    add_138_3 (*ADD_UNS_OP_3_1_4)         0.000    0.000    0.000    0.000   0.0
+    add_138_2 (*ADD_UNS_OP_2_1_3)         0.000    0.000    0.000    0.000   0.0
+    add_138 (*ADD_UNS_OP_1_1_2)           0.000    0.000    0.000    0.000   0.0
+    lt_134 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_131 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_127_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_127 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_123_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_123 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_119_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_119 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_115_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_115 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_111_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_111 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_107_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_107 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_103_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_103 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_99_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_95_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_91_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91_2 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91 (*LT_UNS_OP_14_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_87_3 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87_2 (*LT_UNS_OP_13_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87 (*LT_UNS_OP_13_15_1)            0.000    0.000    0.000    0.000   0.0
+  u_Macs (Macs)                        5.59e-02    0.000    0.000 5.59e-02   0.5
+    C118 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C117 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C116 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C115 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    add_54_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_53_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_52_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_51_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    sub_add_54 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_53 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_52 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_51 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+  u_decode (Decode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C360 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C359 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C358 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C357 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C356 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C355 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C354 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C353 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    add_18_C36 (*ADD_UNS_OP_16_13_16)     0.000    0.000    0.000    0.000   0.0
+    add_14_C36 (*ADD_UNS_OP_16_12_16)     0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G2 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G2 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G3 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G3 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G4 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G4 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36 (*ADD_UNS_OP_15_13_15)     0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G2 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G3 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G4 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+  u_encode (Encode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C157 (*SELECT_OP_2.64_2.1_64)      4.80e-02    0.000    0.000 4.80e-02   0.5
+    C156 (*SELECT_OP_4.64_4.1_64)         0.000    0.000    0.000    0.000   0.0
+  ram_1 (dpsram4096X64_0)              9.60e-02    4.115  414.242    4.626  44.7
+  ram_0 (dpsram4096X64_1)              9.60e-02    4.115  414.242    4.626  44.7
+  u_rom (spsram256X28)                    0.000    0.333    2.330    0.336   3.2
+  u_core (Core)                        3.10e-04    0.000    0.000 3.10e-04   0.0
+    C307 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C306 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C305 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C304 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C303 (*SELECT_OP_6.1_6.1_1)        3.08e-04    0.000    0.000 3.08e-04   0.0
+    C302 (*SELECT_OP_6.3_6.1_3)           0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    add_141 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+1
+Information: Updating design information... (UID-85)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Error: Could not read the following target libraries:
+tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db 
+ (UIO-3)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'tcbn28hpcplusbwp12t30p140ulvtssgv0p81125c_ccs.db'. (UID-3)
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:14:03 2025
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+
+Operating Conditions: tt1v25c   Library: ts1n28hpcphvtb320x36m4s_tt1v25c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Top                                       0.958    8.564  830.814   10.353 100.0
+  u_sample (sample)                       0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_2.8_2.1_8)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C299 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C298 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C297 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C296 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C295 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C294 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C293 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C292 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C291 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C290 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C289 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C288 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C287 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C286 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C285 (*SELECT_OP_3.1_3.1_1)           0.000    0.000    0.000    0.000   0.0
+    C284 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C283 (*SELECT_OP_4.3_4.1_3)           0.000    0.000    0.000    0.000   0.0
+    add_140 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+    add_138_12 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_11 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_10 (*ADD_UNS_OP_8_1_8)        0.000    0.000    0.000    0.000   0.0
+    add_138_9 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_8 (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_7 (*ADD_UNS_OP_7_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_138_6 (*ADD_UNS_OP_6_1_7)         0.000    0.000    0.000    0.000   0.0
+    add_138_5 (*ADD_UNS_OP_5_1_6)         0.000    0.000    0.000    0.000   0.0
+    add_138_4 (*ADD_UNS_OP_4_1_5)         0.000    0.000    0.000    0.000   0.0
+    add_138_3 (*ADD_UNS_OP_3_1_4)         0.000    0.000    0.000    0.000   0.0
+    add_138_2 (*ADD_UNS_OP_2_1_3)         0.000    0.000    0.000    0.000   0.0
+    add_138 (*ADD_UNS_OP_1_1_2)           0.000    0.000    0.000    0.000   0.0
+    lt_134 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_131 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_127_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_127 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_123_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_123 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_119_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_119 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_115_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_115 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_111_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_111 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_107_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_107 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_103_2 (*LT_UNS_OP_15_15_1)         0.000    0.000    0.000    0.000   0.0
+    lt_103 (*LT_UNS_OP_15_15_1)           0.000    0.000    0.000    0.000   0.0
+    lt_99_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_99 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_95_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95_2 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_95 (*LT_UNS_OP_15_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_91_3 (*LT_UNS_OP_15_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91_2 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_91 (*LT_UNS_OP_14_15_1)            0.000    0.000    0.000    0.000   0.0
+    lt_87_3 (*LT_UNS_OP_14_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87_2 (*LT_UNS_OP_13_15_1)          0.000    0.000    0.000    0.000   0.0
+    lt_87 (*LT_UNS_OP_13_15_1)            0.000    0.000    0.000    0.000   0.0
+  u_Macs (Macs)                        5.59e-02    0.000    0.000 5.59e-02   0.5
+    C118 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C117 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C116 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C115 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    add_54_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_53_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_52_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    add_51_ni (*ADD_UNS_OP_8_1_8)         0.000    0.000    0.000    0.000   0.0
+    sub_add_54 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_53 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_52 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+    sub_add_51 (*SUB_UNS_OP_8_8_8)        0.000    0.000    0.000    0.000   0.0
+  u_decode (Decode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C360 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C359 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C358 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C357 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C356 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C355 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    C354 (*SELECT_OP_2.16_2.1_16)      1.20e-02    0.000    0.000 1.20e-02   0.1
+    C353 (*SELECT_OP_4.16_4.1_16)         0.000    0.000    0.000    0.000   0.0
+    add_18_C36 (*ADD_UNS_OP_16_13_16)     0.000    0.000    0.000    0.000   0.0
+    add_14_C36 (*ADD_UNS_OP_16_12_16)     0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G2 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G2 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G3 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G3 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_18_C36_G4 (*ADD_UNS_OP_16_13_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_14_C36_G4 (*ADD_UNS_OP_16_12_16)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36 (*ADD_UNS_OP_15_13_15)     0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G2 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G3 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+    add_22_C36_G4 (*ADD_UNS_OP_15_13_15)
+                                          0.000    0.000    0.000    0.000   0.0
+  u_encode (Encode)                    4.80e-02    0.000    0.000 4.80e-02   0.5
+    C157 (*SELECT_OP_2.64_2.1_64)      4.80e-02    0.000    0.000 4.80e-02   0.5
+    C156 (*SELECT_OP_4.64_4.1_64)         0.000    0.000    0.000    0.000   0.0
+  ram_1 (dpsram4096X64_0)              9.60e-02    4.115  414.242    4.626  44.7
+  ram_0 (dpsram4096X64_1)              9.60e-02    4.115  414.242    4.626  44.7
+  u_rom (spsram256X28)                    0.000    0.333    2.330    0.336   3.2
+  u_core (Core)                        3.10e-04    0.000    0.000 3.10e-04   0.0
+    C307 (*SELECT_OP_2.1_2.1_1)           0.000    0.000    0.000    0.000   0.0
+    C306 (*SELECT_OP_3.8_3.1_8)           0.000    0.000    0.000    0.000   0.0
+    C305 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C304 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C303 (*SELECT_OP_6.1_6.1_1)        3.08e-04    0.000    0.000 3.08e-04   0.0
+    C302 (*SELECT_OP_6.3_6.1_3)           0.000    0.000    0.000    0.000   0.0
+    C301 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    C300 (*SELECT_OP_4.1_4.1_1)           0.000    0.000    0.000    0.000   0.0
+    add_141 (*ADD_UNS_OP_8_1_8)           0.000    0.000    0.000    0.000   0.0
+1
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:20:17 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs (File: /home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Top                    ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Core                   ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+spsram256X28           ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+dpsram4096X64_1        ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Encode                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Decode                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Macs                   ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+sample                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+dpsram4096X64_0        ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+
+Global Operating Voltage = 0.81 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Top                                       0.637    8.587 1.72e+06   10.940 100.0
+  u_sample (sample)                    9.05e-04 3.93e-03 9.35e+04 9.83e-02   0.9
+  u_Macs (Macs)                        3.81e-02 9.97e-04 6.04e+04 9.94e-02   0.9
+  u_decode (Decode)                    3.35e-02 6.08e-03 3.62e+05    0.402   3.7
+  u_encode (Encode)                    3.23e-02 3.69e-03 1.97e+05    0.233   2.1
+  ram_1 (dpsram4096X64_0)              6.30e-02    4.115 4.15e+05    4.593  42.0
+  ram_0 (dpsram4096X64_1)              6.30e-02    4.115 4.15e+05    4.593  42.0
+  u_rom (spsram256X28)                    0.000    0.333 2.33e+03    0.336   3.1
+  u_core (Core)                        3.92e-04 6.68e-03 5.63e+04 6.34e-02   0.6
+1
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:17 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs (File: /home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Top                    ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Core                   ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+spsram256X28           ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+dpsram4096X64_1        ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Encode                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Decode                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Macs                   ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+sample                 ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+dpsram4096X64_0        ZeroWireload      tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+
+Global Operating Voltage = 0.81 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Top                                       0.637    8.587 1.72e+06   10.940 100.0
+  u_sample (sample)                    9.05e-04 3.93e-03 9.35e+04 9.83e-02   0.9
+  u_Macs (Macs)                        3.81e-02 9.97e-04 6.04e+04 9.94e-02   0.9
+  u_decode (Decode)                    3.35e-02 6.08e-03 3.62e+05    0.402   3.7
+  u_encode (Encode)                    3.23e-02 3.69e-03 1.97e+05    0.233   2.1
+  ram_1 (dpsram4096X64_0)              6.30e-02    4.115 4.15e+05    4.593  42.0
+  ram_0 (dpsram4096X64_1)              6.30e-02    4.115 4.15e+05    4.593  42.0
+  u_rom (spsram256X28)                    0.000    0.333 2.33e+03    0.336   3.1
+  u_core (Core)                        3.92e-04 6.68e-03 5.63e+04 6.34e-02   0.6
+1

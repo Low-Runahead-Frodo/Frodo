@@ -21,11 +21,13 @@ module keccak(
 );
 ///////////////////////////////////////////////////FSM/////////////////////////
 ////FSM相关控制信号
-wire needpad     = Hash_lev ? (di_len != 11'd1088) : (di_len != 11'd1344);///本次输入是否要pad
+/*wire needpad     = Hash_lev ? (di_len != 11'd1088) : (di_len != 11'd1344);///本次输入是否要pad
 wire keccak_end  = (state == KECCAK) ? (Rnd_cnt == 5'd24 && Sub_Rnd_cnt == 3'd0) : 1'b0;//keccak运算结束
 wire reset_end   = (state == RESET)  ? (Sub_Rnd_cnt == 3'd0)                     : 1'b0;//显示ram复位结束
-
-
+*/
+wire needpad    ;///本次输入是否要pad
+wire keccak_end ;//keccak运算结束
+wire reset_end  ;//显示ram复位结束
 
 parameter IDLE   =  3'd0;
 parameter DIN    =  3'd1;
@@ -101,10 +103,24 @@ begin
 end        
 
 
+
+reg  [4:0] Rnd_cnt;////0-23 
+reg  [2:0] Sub_Rnd_cnt_;//0-7
+wire [2:0] Sub_Rnd_cnt ;
+
+
+assign needpad     = Hash_lev ? (di_len != 11'd1088) : (di_len != 11'd1344);///本次输入是否要pad
+assign keccak_end  = (state == KECCAK) ? (Rnd_cnt == 5'd24 && Sub_Rnd_cnt == 3'd0) : 1'b0;//keccak运算结束
+assign reset_end   = (state == RESET)  ? (Sub_Rnd_cnt == 3'd0)                     : 1'b0;//显示ram复位结束
+
 assign Hash_ready = (state == IDLE);
 assign keccak_ready = (state == WAIT);
 
-///////////////////////////////////////////////////////////////打拍,调和FSM的非阻塞赋�?�延�?
+
+
+
+
+
 reg [0:7] Hash_in;
 reg       di_valid_r;
 
@@ -127,12 +143,15 @@ end
 
 
 ////////////////////////////////////////////////control cnt//////////////////////
+/*
 reg  [4:0] Rnd_cnt;////0-23 
 reg  [2:0] Sub_Rnd_cnt_;//0-7
-wire [2:0] Sub_Rnd_cnt = ~Sub_Rnd_cnt_;//配合state array的数据顺�?
+wire [2:0] Sub_Rnd_cnt = ~Sub_Rnd_cnt_;
+*/
 
-wire       cnt_IP_flag = (state == DIN)&&(di_valid_r) || (state == DIN)&&(absorb_en);
+wire  cnt_IP_flag = (state == DIN)&&(di_valid_r) || (state == DIN)&&(absorb_en);
 
+assign Sub_Rnd_cnt = ~Sub_Rnd_cnt_;
 
 always@(posedge clk or posedge rst)
 begin
@@ -167,11 +186,22 @@ begin
         else
             Sub_Rnd_cnt_ <= Sub_Rnd_cnt_ + 1'b1;            
     end 
-    else if((state == DIN))
-        Rnd_cnt <= Rnd_cnt;
     else 
         Sub_Rnd_cnt_ <= 3'd0;
 end
+
+/////ram out data
+////异步出端
+wire        data_o20_1,data_o22_1,data_o33_0,data_o41_0,data_o42_0,data_o43_1;
+wire [1:0]  data_o04_0,data_o21_0,data_o24_1,data_o32_1,data_o40_0,data_o44_1;
+wire [2:0]  data_o02_1,data_o03_0,data_o12_1,data_o13_0,data_o14_0,data_o30_1;
+wire [3:0]  data_o01_0,data_o01_1,data_o10_0,data_o10_1,data_o11_0,data_o11_1,data_o31_0,data_o31_1;
+wire [4:0]  data_o02_0,data_o03_1,data_o12_0,data_o13_1,data_o14_1,data_o30_0;
+wire [5:0]  data_o04_1,data_o21_1,data_o24_0,data_o32_0,data_o40_1,data_o44_0;
+wire [6:0]  data_o20_0,data_o22_0,data_o33_1,data_o41_1,data_o42_1,data_o43_0;
+wire [7:0]  data_o00_0,data_o23_0,data_o34_0;
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////DIN  RAM CONTROL//////////////////////////
@@ -670,6 +700,16 @@ assign pd_addr_i44_1 = pd_addr_o44_1;
 
 ////////////////////////////////////////////////////////////////////////////////////////////Fold keccak core
 /////////////////////////////////////////////////////////////////////////////Keccak Data interface control
+wire    [0:24] pre_theta;
+reg     [0:199] theta_in;
+wire    [0:199] theta_out;      
+reg     [0:199] ci_in;
+wire    [0:199] ci_out;    
+
+reg [0:199] k_ram_i_all;//ram总输入，直接接到各自同步端口
+wire [0:199] k_ram_o_all;//ram总输出，直接接到端口
+
+
 always@(*)
     begin
         case(Rnd_cnt)
@@ -694,7 +734,7 @@ always@(*)
     end        
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////pre_calculate
-wire [0:24] pre_theta;
+//wire [0:24] pre_theta;
 
 PRE_THETA U_PRE_THETA
 (
@@ -718,8 +758,8 @@ PRE_THETA U_PRE_THETA
 
 
 ///////////////////////////////////////////////////////////////////////////////theta 
-reg     [0:199] theta_in;
-wire    [0:199] theta_out;        
+//reg     [0:199] theta_in;
+//wire    [0:199] theta_out;        
         
  theta u_theta
 (
@@ -730,8 +770,8 @@ wire    [0:199] theta_out;
         );
 
 //////////////////////////////////////////////////////////chi iota 
-reg    [0:199] ci_in;
-wire    [0:199] ci_out;        
+//reg     [0:199] ci_in;
+//wire    [0:199] ci_out;        
 
  chiiota u_chiiota
 (
@@ -767,9 +807,9 @@ hash_out_buffer u_hash_out_buffer
         
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Keccak Dram control
 //总端输入 输出
-reg [0:199] k_ram_i_all;//ram总输入，直接接到各自同步端口
+//reg [0:199] k_ram_i_all;//ram总输入，直接接到各自同步端口
 
-wire [0:199] k_ram_o_all;//ram总输出，直接接到端口
+//wire [0:199] k_ram_o_all;//ram总输出，直接接到端口
 
 assign k_ram_o_all = {  data_o00_0,data_o01_0,data_o01_1,data_o02_0,data_o02_1,data_o03_0,data_o03_1,data_o04_0,data_o04_1,
                         data_o10_0,data_o10_1,data_o11_0,data_o11_1,data_o12_0,data_o12_1,data_o13_0,data_o13_1,data_o14_0,data_o14_1,                            
@@ -944,7 +984,6 @@ wire [4:0] Sub4 = Sub_Rnd_cnt + 3'd4 ;
 wire [4:0] Sub5 = Sub_Rnd_cnt + 3'd5 ;
 wire [4:0] Sub6 = Sub_Rnd_cnt + 3'd6 ;
 wire [4:0] Sub7 = Sub_Rnd_cnt + 3'd7 ;
-wire [4:0] Sub8 = Sub_Rnd_cnt + 3'd8 ;
 
 
 assign k_addr_i00_0 = (Rnd_cnt == 5'd24) ? (k_addr_o00_0) : {odd,Sub0[2:0]}; //0
@@ -1062,15 +1101,7 @@ assign data_i44_0 = (state == KECCAK) ? k_data_i44_0 : (state == DIN) ? di_data_
 assign data_i44_1 = (state == KECCAK) ? k_data_i44_1 : (state == DIN) ? di_data_i44_1  : PAD ? pd_data_i44_1 : 2'd0;
 
 
-////异步出端�?
-wire        data_o20_1,data_o22_1,data_o33_0,data_o41_0,data_o42_0,data_o43_1;
-wire [1:0]  data_o04_0,data_o21_0,data_o24_1,data_o32_1,data_o40_0,data_o44_1;
-wire [2:0]  data_o02_1,data_o03_0,data_o12_1,data_o13_0,data_o14_0,data_o30_1;
-wire [3:0]  data_o01_0,data_o01_1,data_o10_0,data_o10_1,data_o11_0,data_o11_1,data_o31_0,data_o31_1;
-wire [4:0]  data_o02_0,data_o03_1,data_o12_0,data_o13_1,data_o14_1,data_o30_0;
-wire [5:0]  data_o04_1,data_o21_1,data_o24_0,data_o32_0,data_o40_1,data_o44_0;
-wire [6:0]  data_o20_0,data_o22_0,data_o33_1,data_o41_1,data_o42_1,data_o43_0;
-wire [7:0]  data_o00_0,data_o23_0,data_o34_0;
+
 
 /////ADDER
 //端口地址

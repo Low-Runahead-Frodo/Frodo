@@ -75,7 +75,7 @@ module Core(
             FINISH:begin
                 case (mode_reg)
                 KEYGEN:begin
-                    if(pc == 8'd1)begin
+                    if(pc == 8'd7)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end
@@ -84,7 +84,7 @@ module Core(
                     end
                 end
                 ENCAP:begin
-                    if(pc == 8'd1)begin
+                    if(pc == 8'd17)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end
@@ -93,7 +93,7 @@ module Core(
                     end
                 end 
                 DECAP:begin
-                    if(pc == 8'd1)begin
+                    if(pc == 8'd2)begin
                         state_nxt = IDLE;
                         valid     = 1;
                     end

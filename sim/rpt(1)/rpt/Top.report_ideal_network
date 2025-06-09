@@ -1,0 +1,17 @@
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : ideal_network
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:17 2025
+****************************************
+
+Source ports                Latency                     Transition
+and pins              Rise           Fall           Rise          Fall
+                    min   max      min   max      min   max     min   max
+------------------------------------------------------------------------------
+Top/clk              --    --       --    --       --    --      --    --   
+Top/rstn             --    --       --    --       --    --      --    --   
+
+1

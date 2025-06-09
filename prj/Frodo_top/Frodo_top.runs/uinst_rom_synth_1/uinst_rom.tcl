@@ -56,11 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "uinst_rom_synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z020clg400-2
+create_project -in_memory -part xczu7ev-ffvc1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -75,7 +76,7 @@ set_property ip_output_repo c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_to
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/uinst_rom/uinst_rom.xci
+read_ip -quiet C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/uinst_rom/uinst_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/uinst_rom/uinst_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -99,7 +100,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top uinst_rom -part xc7z020clg400-2 -incremental_mode off -mode out_of_context
+synth_design -top uinst_rom -part xczu7ev-ffvc1156-2-i -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 

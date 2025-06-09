@@ -78,6 +78,15 @@ module Top #(
         .ena(1'b1)
     );
 
+    // spsram256X28 u_rom(
+    //     .clk(clk),
+    //     .en(1'b1),
+    //     .addr(pc),
+    //     .din(28'b0),
+    //     .we(1'b0),
+    //     .dout(inst)
+    // ); 
+
     dual_ram ram_0(
         .addra(mem0_addr_0),
         .clka(clk),
@@ -90,6 +99,8 @@ module Top #(
         .doutb(mem0_rd_data_1),
         .web(mem0_wr_en_1)
     );
+
+    
 
     dual_ram ram_1(
         .addra(mem1_addr_0),
@@ -104,7 +115,35 @@ module Top #(
         .web(mem1_wr_en_1)
     );
 
+    // dpsram4096X64 ram_0(
+    //     .addra(mem0_addr_0),
+    //     .clka(clk),
+    //     .dina(mem_wr_data),
+    //     .douta(mem0_rd_data_0),
+    //     .wea(mem0_wr_en_0),
+    //     .ena(1'b1),
+    //     .addrb(mem0_addr_1),
+    //     .clkb(clk),
+    //     .dinb(mem_wr_data),
+    //     .doutb(mem0_rd_data_1),
+    //     .web(mem0_wr_en_1),
+    //     .enb(1'b1)
+    // );
 
+    // dpsram4096X64 ram_1(
+    //     .addra(mem1_addr_0),
+    //     .clka(clk),
+    //     .dina(mem_wr_data),
+    //     .douta(mem1_rd_data_0),
+    //     .wea(mem1_wr_en_0),
+    //     .ena(1'b1),
+    //     .addrb(mem1_addr_1),
+    //     .clkb(clk),
+    //     .dinb(mem_wr_data),
+    //     .doutb(mem1_rd_data_1),
+    //     .web(mem1_wr_en_1),
+    //     .enb(1'b1)
+    // );
 
     // dual_port_ram  #(
     //     .LOAD_FILE_PATH("../../../../../../sim/RAM/data/mem0.hex"),

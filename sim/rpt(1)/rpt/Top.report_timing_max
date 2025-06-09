@@ -1,0 +1,2102 @@
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -nworst 20
+        -input_pins
+        -nets
+        -max_paths 50
+        -transition_time
+        -capacitance
+        -sort_by slack
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:18 2025
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[49]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[17] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[49] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[49] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[49] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[49] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[48]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[16] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[48] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[48] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[48] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[48] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[47]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[15] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[47] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[47] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[47] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[47] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[46]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[14] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[46] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[46] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[46] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[46] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[45]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[13] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[45] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[45] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[45] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[45] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[44]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[12] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[44] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[44] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[44] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[44] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[43]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[11] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[43] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[43] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[43] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[43] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[42]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[10] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[42] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[42] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[42] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[42] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[41]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[9] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[41] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[41] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[41] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[41] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[40]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[8] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[40] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[40] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[40] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[40] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[39]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[7] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[39] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[39] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[39] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[39] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[38]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[6] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[38] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[38] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[38] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[38] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[37]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[5] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[37] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[37] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[37] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[37] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[36]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[4] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[36] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[36] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[36] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[36] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[35]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[3] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[35] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[35] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[35] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[35] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[34]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[2] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[34] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[34] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[34] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[34] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[33]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[1] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[33] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[33] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[33] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[33] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[32]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_2/QA[0] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[32] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[32] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[32] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[32] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[31]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[31] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[31] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[31] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[31] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[31] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[30]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[30] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[30] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[30] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[30] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[30] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[29]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[29] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[29] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[29] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[29] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[29] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[28]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[28] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[28] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[28] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[28] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[28] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[27]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[27] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[27] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[27] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[27] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[27] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[26]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[26] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[26] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[26] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[26] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[26] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[25]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[25] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[25] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[25] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[25] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[25] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[24]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[24] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[24] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[24] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[24] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[24] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[23]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[23] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[23] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[23] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[23] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[23] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[22]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[22] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[22] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[22] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[22] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[22] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[21]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[21] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[21] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[21] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[21] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[21] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[20]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[20] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[20] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[20] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[20] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[20] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[19]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[19] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[19] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[19] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[19] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[19] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[18]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[18] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[18] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[18] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[18] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[18] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[17]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[17] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[17] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[17] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[17] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[17] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[16]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[16] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[16] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[16] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[16] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[16] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[15]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[15] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[15] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[15] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[15] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[15] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[14]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[14] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[14] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[14] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[14] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[14] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[13]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[13] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[13] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[13] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[13] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[13] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[12]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[12] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[12] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[12] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[12] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[12] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[11]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[11] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[11] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[11] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[11] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[11] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[10]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[10] (TSDN28HPCPA4096X32M8M)
+                                                                    0.21      0.71       0.71 r
+  ram_0/douta[10] (net)                         2         0.30                0.00       0.71 r
+  ram_0/douta[10] (dpsram4096X64_1)                                           0.00       0.71 r
+  mem0_rd_data_0[10] (net)                                0.30                0.00       0.71 r
+  mem0_rd_data_0[10] (out)                                          0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[9]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[9] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[9] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[9] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[9] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[9] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[8]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[8] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[8] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[8] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[8] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[8] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[7]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[7] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[7] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[7] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[7] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[7] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[6]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[6] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[6] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[6] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[6] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[6] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[5]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[5] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[5] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[5] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[5] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[5] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[4]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[4] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[4] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[4] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[4] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[4] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[3]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[3] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[3] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[3] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[3] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[3] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[2]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[2] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[2] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[2] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[2] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[2] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[1]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[1] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[1] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[1] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[1] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[1] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+  Startpoint: ram_0/u_TSDN28HPCPA4096X32M8M_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: mem0_rd_data_0[0]
+            (output port clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/CLKA (TSDN28HPCPA4096X32M8M)      0.00      0.00       0.00 r
+  ram_0/u_TSDN28HPCPA4096X32M8M_1/QA[0] (TSDN28HPCPA4096X32M8M)     0.21      0.71       0.71 r
+  ram_0/douta[0] (net)                          2         0.30                0.00       0.71 r
+  ram_0/douta[0] (dpsram4096X64_1)                                            0.00       0.71 r
+  mem0_rd_data_0[0] (net)                                 0.30                0.00       0.71 r
+  mem0_rd_data_0[0] (out)                                           0.21      0.00       0.71 r
+  data arrival time                                                                      0.71
+
+  clock src_clk_1 (rise edge)                                                10.00      10.00
+  clock network delay (ideal)                                                 0.00      10.00
+  clock uncertainty                                                          -0.40       9.60
+  output external delay                                                      -0.30       9.30
+  data required time                                                                     9.30
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     9.30
+  data arrival time                                                                     -0.71
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            8.59
+
+
+1

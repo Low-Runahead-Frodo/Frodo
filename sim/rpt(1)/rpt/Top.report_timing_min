@@ -1,0 +1,2190 @@
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay min
+        -nworst 20
+        -input_pins
+        -nets
+        -max_paths 50
+        -transition_time
+        -capacitance
+        -sort_by slack
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:18 2025
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: u_core/pc_reg_6
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_6/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_6/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[6] (net)                            3         0.00                0.00       0.04 r
+  u_core/pc[6] (Core)                                                         0.00       0.04 r
+  pc[6] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[6] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[6] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[6] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 r
+  u_core/pc[0] (Core)                                                         0.00       0.04 r
+  pc[0] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[0] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[0] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[0] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 r
+  u_core/pc[2] (Core)                                                         0.00       0.04 r
+  pc[2] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[2] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[2] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[2] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 r
+  u_core/pc[4] (Core)                                                         0.00       0.04 r
+  pc[4] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[4] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[4] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[4] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 r
+  u_core/pc[7] (Core)                                                         0.00       0.04 r
+  pc[7] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[7] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[7] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[7] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_6
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_6/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_6/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[6] (net)                            3         0.00                0.00       0.04 f
+  u_core/pc[6] (Core)                                                         0.00       0.04 f
+  pc[6] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[6] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[6] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[6] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                          0.00
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 f
+  u_core/pc[0] (Core)                                                         0.00       0.04 f
+  pc[0] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[0] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[0] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[0] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 r
+  u_core/pc[1] (Core)                                                         0.00       0.04 r
+  pc[1] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[1] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[1] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[1] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 f
+  u_core/pc[2] (Core)                                                         0.00       0.04 f
+  pc[2] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[2] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[2] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[2] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 r
+  u_core/pc[5] (Core)                                                         0.00       0.04 r
+  pc[5] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[5] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[5] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[5] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 f
+  u_core/pc[4] (Core)                                                         0.00       0.04 f
+  pc[4] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[4] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[4] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[4] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 f
+  u_core/pc[7] (Core)                                                         0.00       0.04 f
+  pc[7] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[7] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[7] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[7] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_3
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_3/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_3/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[3] (net)                            6         0.00                0.00       0.04 r
+  u_core/pc[3] (Core)                                                         0.00       0.04 r
+  pc[3] (net)                                             0.00                0.00       0.04 r
+  u_rom/addr[3] (spsram256X28)                                                0.00       0.04 r
+  u_rom/addr[3] (net)                                     0.00                0.00       0.04 r
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[3] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 r
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 f
+  u_core/pc[1] (Core)                                                         0.00       0.04 f
+  pc[1] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[1] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[1] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[1] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 f
+  u_core/pc[5] (Core)                                                         0.00       0.04 f
+  pc[5] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[5] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[5] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[5] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/pc_reg_3
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_rom/u_TS1N28HPCPHVTB256X28M4S
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_3/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_3/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[3] (net)                            6         0.00                0.00       0.04 f
+  u_core/pc[3] (Core)                                                         0.00       0.04 f
+  pc[3] (net)                                             0.00                0.00       0.04 f
+  u_rom/addr[3] (spsram256X28)                                                0.00       0.04 f
+  u_rom/addr[3] (net)                                     0.00                0.00       0.04 f
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/A[3] (TS1N28HPCPHVTB256X28M4S)
+                                                                    0.01      0.00       0.04 f
+  data arrival time                                                                      0.04
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_rom/u_TS1N28HPCPHVTB256X28M4S/CLK (TS1N28HPCPHVTB256X28M4S)               0.00       0.00 r
+  library hold time                                                           0.04       0.04
+  data required time                                                                     0.04
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.04
+  data arrival time                                                                     -0.04
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.00
+
+
+  Startpoint: u_core/state_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/state_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                   0.00      0.00       0.00 r
+  u_core/state_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                    0.01      0.04       0.04 r
+  u_core/state[2] (net)                         5         0.00                0.00       0.04 r
+  u_core/U55/A1 (NR3D0BWP12T30P140ULVT)                             0.01      0.00       0.04 r
+  u_core/U55/ZN (NR3D0BWP12T30P140ULVT)                             0.01      0.01       0.05 f
+  u_core/state_nxt_2_ (net)                     1         0.00                0.00       0.05 f
+  u_core/state_reg_2/D (DFCNQD1BWP12T30P140ULVT)                    0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                             0.00       0.00 r
+  library hold time                                                           0.01       0.01
+  data required time                                                                     0.01
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.01
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/start_reg_reg
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/state_reg_0
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/start_reg_reg/CP (DFCNQD1BWP12T30P140ULVT)                 0.00      0.00       0.00 r
+  u_core/start_reg_reg/Q (DFCNQD1BWP12T30P140ULVT)                  0.01      0.03       0.03 r
+  u_core/start_reg (net)                        1         0.00                0.00       0.03 r
+  u_core/U52/A1 (OAI31D0BWP12T30P140ULVT)                           0.01      0.00       0.03 r
+  u_core/U52/ZN (OAI31D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n26 (net)                              1         0.00                0.00       0.05 f
+  u_core/state_reg_0/D (DFCNQD1BWP12T30P140ULVT)                    0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                             0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_0
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 r
+  u_core/U18/A1 (AOI22D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U18/ZN (AOI22D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n25 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_0/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_0
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 r
+  u_core/U18/A1 (AOI22D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U18/ZN (AOI22D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n25 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_0/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_0
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 r
+  u_core/U18/A1 (AOI22D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U18/ZN (AOI22D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n25 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_0/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/state_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/state_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                   0.00      0.00       0.00 r
+  u_core/state_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                    0.01      0.03       0.03 r
+  u_core/state[1] (net)                         3         0.00                0.00       0.03 r
+  u_core/U25/A2 (OAI31D0BWP12T30P140ULVT)                           0.01      0.00       0.03 r
+  u_core/U25/ZN (OAI31D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n27 (net)                              1         0.00                0.00       0.05 f
+  u_core/state_reg_1/D (DFCNQD1BWP12T30P140ULVT)                    0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                             0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 r
+  u_core/U46/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n23 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_4
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 r
+  u_core/U44/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U44/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n21 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_4/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 r
+  u_core/U49/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n18 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.04
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 r
+  u_core/U36/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U36/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n24 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_1/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_5
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 r
+  u_core/U34/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U34/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.05 f
+  u_core/n20 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_5/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 r
+  u_core/U46/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n23 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_4
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 r
+  u_core/U44/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U44/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n21 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_4/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/state_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/state_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                   0.00      0.00       0.00 r
+  u_core/state_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                    0.01      0.04       0.04 r
+  u_core/state[2] (net)                         5         0.00                0.00       0.04 r
+  u_core/U25/A1 (OAI31D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U25/ZN (OAI31D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n27 (net)                              1         0.00                0.00       0.05 f
+  u_core/state_reg_1/D (DFCNQD1BWP12T30P140ULVT)                    0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                             0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 r
+  u_core/U49/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n18 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 r
+  u_core/U36/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U36/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n24 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_1/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_5
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 r
+  u_core/U34/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U34/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n20 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_5/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 r
+  u_core/U46/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n23 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_4
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 r
+  u_core/U44/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U44/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n21 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_4/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 r
+  u_core/U49/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.05 f
+  u_core/n18 (net)                              1         0.00                0.00       0.05 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.05 f
+  data arrival time                                                                      0.05
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.05
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/state_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/state_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                   0.00      0.00       0.00 r
+  u_core/state_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                    0.01      0.04       0.04 f
+  u_core/state[0] (net)                         3         0.00                0.00       0.04 f
+  u_core/U54/A1 (ND2D0BWP12T30P140ULVT)                             0.01      0.00       0.04 f
+  u_core/U54/ZN (ND2D0BWP12T30P140ULVT)                             0.01      0.01       0.04 r
+  u_core/n50 (net)                              1         0.00                0.00       0.04 r
+  u_core/U55/A3 (NR3D0BWP12T30P140ULVT)                             0.01      0.00       0.04 r
+  u_core/U55/ZN (NR3D0BWP12T30P140ULVT)                             0.01      0.01       0.06 f
+  u_core/state_nxt_2_ (net)                     1         0.00                0.00       0.06 f
+  u_core/state_reg_2/D (DFCNQD1BWP12T30P140ULVT)                    0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                             0.00       0.00 r
+  library hold time                                                           0.01       0.01
+  data required time                                                                     0.01
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.01
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 r
+  u_core/U36/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U36/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.06 f
+  u_core/n24 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_1/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_5
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 r
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 r
+  u_core/U34/A1 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.04 r
+  u_core/U34/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.02       0.06 f
+  u_core/n20 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_5/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 f
+  u_core/U48/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U48/ZN (INVD0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n40 (net)                              1         0.00                0.00       0.05 r
+  u_core/U49/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n18 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 f
+  u_core/U27/A2 (ND2D0BWP12T30P140ULVT)                             0.01      0.00       0.04 f
+  u_core/U27/ZN (ND2D0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n38 (net)                              2         0.00                0.00       0.05 r
+  u_core/U46/A3 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n23 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 f
+  u_core/U48/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U48/ZN (INVD0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n40 (net)                              1         0.00                0.00       0.05 r
+  u_core/U49/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n18 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_7
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_7
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_7/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[7] (net)                            4         0.00                0.00       0.04 f
+  u_core/U48/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U48/ZN (INVD0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n40 (net)                              1         0.00                0.00       0.05 r
+  u_core/U49/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U49/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n18 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_7/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_7/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_1
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 f
+  u_core/U6/I (INVD0BWP12T30P140ULVT)                               0.01      0.00       0.04 f
+  u_core/U6/ZN (INVD0BWP12T30P140ULVT)                              0.01      0.01       0.05 r
+  u_core/n4 (net)                               1         0.00                0.00       0.05 r
+  u_core/U36/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U36/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n24 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_1/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[1] (net)                            6         0.00                0.00       0.04 f
+  u_core/U27/A1 (ND2D0BWP12T30P140ULVT)                             0.01      0.00       0.04 f
+  u_core/U27/ZN (ND2D0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n38 (net)                              2         0.00                0.00       0.05 r
+  u_core/U46/A3 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n23 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/state_reg_1
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/inst_valid_reg
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/state_reg_1/CP (DFCNQD1BWP12T30P140ULVT)                   0.00      0.00       0.00 r
+  u_core/state_reg_1/Q (DFCNQD1BWP12T30P140ULVT)                    0.01      0.04       0.04 f
+  u_core/state[1] (net)                         3         0.00                0.00       0.04 f
+  u_core/U12/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U12/ZN (INVD0BWP12T30P140ULVT)                             0.02      0.02       0.05 r
+  u_core/n51 (net)                              6         0.00                0.00       0.05 r
+  u_core/U14/A1 (NR2D0BWP12T30P140ULVT)                             0.02      0.00       0.05 r
+  u_core/U14/ZN (NR2D0BWP12T30P140ULVT)                             0.01      0.01       0.06 f
+  u_core/n28 (net)                              1         0.00                0.00       0.06 f
+  u_core/inst_valid_reg/D (DFCNQD1BWP12T30P140ULVT)                 0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/inst_valid_reg/CP (DFCNQD1BWP12T30P140ULVT)                          0.00       0.00 r
+  library hold time                                                           0.01       0.01
+  data required time                                                                     0.01
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.01
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_0
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_0/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_0/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[0] (net)                            4         0.00                0.00       0.04 f
+  u_core/U27/A2 (ND2D0BWP12T30P140ULVT)                             0.01      0.00       0.04 f
+  u_core/U27/ZN (ND2D0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n38 (net)                              2         0.00                0.00       0.05 r
+  u_core/U46/A3 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n23 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_4
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_4
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_4/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[4] (net)                            4         0.00                0.00       0.04 f
+  u_core/U26/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U26/ZN (INVD0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n32 (net)                              2         0.00                0.00       0.05 r
+  u_core/U44/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U44/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n21 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_4/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_4/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_5
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_5
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_5/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[5] (net)                            6         0.00                0.00       0.04 f
+  u_core/U5/I (INVD0BWP12T30P140ULVT)                               0.01      0.00       0.04 f
+  u_core/U5/ZN (INVD0BWP12T30P140ULVT)                              0.01      0.01       0.05 r
+  u_core/n3 (net)                               1         0.00                0.00       0.05 r
+  u_core/U34/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U34/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n20 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_5/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_5/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+  Startpoint: u_core/pc_reg_2
+              (rising edge-triggered flip-flop clocked by src_clk_1)
+  Endpoint: u_core/pc_reg_2
+            (rising edge-triggered flip-flop clocked by src_clk_1)
+  Path Group: src_clk_1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dpsram4096X64_0    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  sample             ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Macs               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  dpsram4096X64_1    ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  spsram256X28       ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Top                ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+  Core               ZeroWireload          tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                      0.00      0.00       0.00 r
+  u_core/pc_reg_2/Q (DFCNQD1BWP12T30P140ULVT)                       0.01      0.04       0.04 f
+  u_core/pc[2] (net)                            4         0.00                0.00       0.04 f
+  u_core/U28/I (INVD0BWP12T30P140ULVT)                              0.01      0.00       0.04 f
+  u_core/U28/ZN (INVD0BWP12T30P140ULVT)                             0.01      0.01       0.05 r
+  u_core/n36 (net)                              2         0.00                0.00       0.05 r
+  u_core/U46/B2 (OAI32D0BWP12T30P140ULVT)                           0.01      0.00       0.05 r
+  u_core/U46/ZN (OAI32D0BWP12T30P140ULVT)                           0.01      0.01       0.06 f
+  u_core/n23 (net)                              1         0.00                0.00       0.06 f
+  u_core/pc_reg_2/D (DFCNQD1BWP12T30P140ULVT)                       0.01      0.00       0.06 f
+  data arrival time                                                                      0.06
+
+  clock src_clk_1 (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  u_core/pc_reg_2/CP (DFCNQD1BWP12T30P140ULVT)                                0.00       0.00 r
+  library hold time                                                           0.00       0.00
+  data required time                                                                     0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.00
+  data arrival time                                                                     -0.06
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.05
+
+
+1

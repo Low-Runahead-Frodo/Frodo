@@ -1,0 +1,16 @@
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -loops
+        -max_paths 50
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:17 2025
+****************************************
+
+Operating Conditions: ssg0p81v125c   Library: tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs
+Wire Load Model Mode: segmented
+No loops.
+
+1

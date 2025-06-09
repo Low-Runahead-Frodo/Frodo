@@ -1,0 +1,176 @@
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : disable_timing
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:17 2025
+****************************************
+
+
+
+Flags:       c  case-analysis
+             f  false net arc
+             C  Conditional arc
+             l  loop breaking
+             u  user-defined
+             m  modes
+
+
+  Cell or Port        From        To             Sense               Flag
+--------------------------------------------------------------------------------
+
+  ram_0/u_TSDN28HPCPA4096X32M8M_1
+                      CLKA        CEBA           setup_clk_rise      c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_1
+                      CLKA        CEBA           hold_clk_rise       c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_1
+                      CLKB        CEBB           setup_clk_rise      c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_1
+                      CLKB        CEBB           hold_clk_rise       c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_2
+                      CLKA        CEBA           setup_clk_rise      c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_2
+                      CLKA        CEBA           hold_clk_rise       c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_2
+                      CLKB        CEBB           setup_clk_rise      c 
+  ram_0/u_TSDN28HPCPA4096X32M8M_2
+                      CLKB        CEBB           hold_clk_rise       c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_1
+                      CLKA        CEBA           setup_clk_rise      c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_1
+                      CLKA        CEBA           hold_clk_rise       c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_1
+                      CLKB        CEBB           setup_clk_rise      c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_1
+                      CLKB        CEBB           hold_clk_rise       c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_2
+                      CLKA        CEBA           setup_clk_rise      c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_2
+                      CLKA        CEBA           hold_clk_rise       c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_2
+                      CLKB        CEBB           setup_clk_rise      c 
+  ram_1/u_TSDN28HPCPA4096X32M8M_2
+                      CLKB        CEBB           hold_clk_rise       c 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         CEB            setup_clk_rise      c 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         CEB            hold_clk_rise       c 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[0]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[0]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[10]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[10]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[11]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[11]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[12]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[12]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[13]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[13]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[14]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[14]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[15]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[15]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[16]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[16]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[17]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[17]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[18]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[18]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[19]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[19]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[1]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[1]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[20]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[20]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[21]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[21]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[22]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[22]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[23]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[23]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[24]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[24]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[25]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[25]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[26]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[26]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[27]          setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[27]          hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[2]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[2]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[3]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[3]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[4]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[4]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[5]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[5]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[6]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[6]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[7]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[7]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[8]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[8]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[9]           setup_clk_rise      c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         D[9]           hold_clk_rise       c C 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         WEB            setup_clk_rise      c 
+  u_rom/u_TS1N28HPCPHVTB256X28M4S
+                      CLK         WEB            hold_clk_rise       c 
+
+1

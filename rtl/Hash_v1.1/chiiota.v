@@ -10,88 +10,12 @@ module chiiota
         );
 
 
-
-assign pre_rnd = c0[63];
-
-/*
-///////////////////for pre-calculate
-reg    [7:0]  c1_pre;
-wire   [63:0] c0_pre;
-reg    [7:0]  c_rnd_pre;
-
-
-
-always@(*)
-		begin
-			case(Rnd_cnt)
-				5'd0 : c1_pre <= 7'b0000_001;	
-                5'd1 : c1_pre <= 7'b0011_010;
-				5'd2 : c1_pre <= 7'b1011_110;	
-                5'd3 : c1_pre <= 7'b1110_000;
-				5'd4 : c1_pre <= 7'b0011_111;	
-                5'd5 : c1_pre <= 7'b0100_001;
-				5'd6 : c1_pre <= 7'b1111_001;	
-                5'd7 : c1_pre <= 7'b1010_101;
-				5'd8 : c1_pre <= 7'b0001_110;	
-                5'd9 : c1_pre <= 7'b0001_100;
-				5'd10: c1_pre <= 7'b0110_101;	
-                5'd11: c1_pre <= 7'b0100_110;
-                5'd12: c1_pre <= 7'b0111_111;	
-                5'd13: c1_pre <= 7'b1001_111;
-                5'd14: c1_pre <= 7'b1011_101;	
-                5'd15: c1_pre <= 7'b1010_011;
-                5'd16: c1_pre <= 7'b1010_010;	
-                5'd17: c1_pre <= 7'b1001_000;
-                5'd18: c1_pre <= 7'b0010_110;	
-                5'd19: c1_pre <= 7'b1100_110;
-                5'd20: c1_pre <= 7'b1111_001;	
-                5'd21: c1_pre <= 7'b1011_000;
-                5'd22: c1_pre <= 7'b0100_001;	
-                5'd23: c1_pre <= 7'b1110_100;
-				default:	c1_pre <= 7'b0000_000;	
-			endcase 
-		end
-
-assign c0_pre = ({c1_pre[6],31'b0,c1_pre[5],15'b0,c1_pre[4],7'b0,c1_pre[3],3'b0,c1_pre[2],1'b0,c1_pre[1:0]});
-
-always@(*)
-		begin
-			case(Sub_Rnd_cnt)
-                3'd0: c_rnd_pre = c0_pre[63:56]    ;
-                3'd1: c_rnd_pre = c0_pre[55:48]    ;
-                3'd2: c_rnd_pre = c0_pre[47:40]    ;
-                3'd3: c_rnd_pre = c0_pre[39:32]    ;
-                3'd4: c_rnd_pre = c0_pre[31:24]    ;
-                3'd5: c_rnd_pre = c0_pre[23:16]    ;
-                3'd6: c_rnd_pre = c0_pre[15:8]     ;
-                3'd7: c_rnd_pre = c0_pre[7:0]      ;
-                default:;
-                endcase    
-        end 
-
-
-always@(*)
-		begin
-			case(Sub_Rnd_cnt)
-                3'd7:pre_rnd = c_rnd[7]    ;
-                3'd6:pre_rnd = c_rnd[7]    ;
-                3'd5:pre_rnd = c_rnd[7]    ;
-                3'd4:pre_rnd = c_rnd[7]    ;
-                3'd3:pre_rnd = c_rnd[7]    ;
-                3'd2:pre_rnd = c_rnd[7]    ;
-                3'd1:pre_rnd = c_rnd[7]    ;
-                3'd0:c_rnd_pre = c_rnd_pre[7]     ;
-                default:;
-                endcase    
-        end    
-*/
-
-
-
 //////////////////////////for chiiota
 reg    [6:0]  c1;
 wire   [63:0] c0;
 reg    [7:0]  c_rnd;  
+
+assign pre_rnd = c0[63];
 
 
 always@(*)

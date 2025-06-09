@@ -1,0 +1,131 @@
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs'
+  Loading link library 'ts1n28hpcphvtb320x36m4s_tt1v25c'
+  Loading link library 'ts1n28hpcphvtb256x28m4s_tt1v25c'
+  Loading link library 'tsdn28hpcpa4096x32m8m_tt1v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'Top'.
+Information: Building the design 'Core'. (HDL-193)
+
+Statistics for case statements in always block at line 50 in file
+	'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+|            76            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 124 in file
+	'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |     no/auto      |
+|           134            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine Core line 27 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    start_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Core line 41 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Core line 112 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    level_reg_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mode_reg_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Core line 124 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       pc_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Core line 149 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./Core.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   inst_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'spsram256X28'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dpsram4096X64'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Control'. (HDL-193)
+Warning: Cannot find the design 'Control' in the library 'WORK'. (LBR-1)
+Information: Building the design 'Encode'. (HDL-193)
+
+Statistics for case statements in always block at line 33 in file
+	'/home/usergq/IC_prj/Frodo_DC/src/./Encode.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Decode'. (HDL-193)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/usergq/IC_prj/Frodo_DC/src/./Decode.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            12            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Macs'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'keccak'. (HDL-193)
+Warning: Cannot find the design 'keccak' in the library 'WORK'. (LBR-1)
+Information: Building the design 'sample'. (HDL-193)
+
+Statistics for case statements in always block at line 39 in file
+	'/home/usergq/IC_prj/Frodo_DC/src/./sample.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sample line 142 in file
+		'/home/usergq/IC_prj/Frodo_DC/src/./sample.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   sample_out_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ADDER_FRODO'. (HDL-193)
+Warning: Cannot find the design 'ADDER_FRODO' in the library 'WORK'. (LBR-1)
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1

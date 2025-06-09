@@ -17,13 +17,16 @@ verilog xil_defaultlib  \
 "../../../../../../rtl/Decode.v" \
 "../../../../../../rtl/Encode.v" \
 "../../../../../../rtl/Macs/Macs.v" \
-"../../../../../../rtl/Macs/PE_Simple.v" \
 "../../../../../../rtl/Top.v" \
 "../../../../../../rtl/Transpose.v" \
+"../../../../../../rtl/ADDR/adder_frodo.V" \
 "../../../../../../rtl/Hash_v1.1/chiiota.v" \
 "../../../../../../rtl/dual_port_ram.v" \
+"../../../../../../rtl/ADDR/full_adder.v" \
+"../../../../../../rtl/ADDR/half_adder.v" \
 "../../../../../../rtl/Hash_v1.1/hash_out_buffer.v" \
 "../../../../../../rtl/Hash_v1.1/keccak.v" \
+"../../../../../../rtl/ADDR/no_carry_adder.v" \
 "../../../../../../rtl/Hash_v1.1/pre_theta.v" \
 "../../../../../../rtl/sample.v" \
 "../../../../../../rtl/Control/sync_rom.v" \

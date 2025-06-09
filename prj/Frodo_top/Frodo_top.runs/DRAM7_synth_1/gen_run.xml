@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="DRAM7_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1747020011">
+<GenRun Id="DRAM7_synth_1" LaunchPart="xczu7ev-ffvc1156-2-i" LaunchTime="1749192540">
+  <File Type="PA-TCL" Name="DRAM7.tcl"/>
   <File Type="REPORTS-TCL" Name="DRAM7_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DRAM7.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="DRAM7_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="DRAM7_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="DRAM7_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="DRAM7.tcl"/>
-  <File Type="RDS-RDS" Name="DRAM7.vds"/>
   <File Type="RDS-DCP" Name="DRAM7.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DRAM7_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DRAM7_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DRAM7" RelGenDir="$PGENDIR/DRAM7">
     <File Path="$PSRCDIR/sources_1/ip/DRAM7/DRAM7.xci">
       <FileInfo>
@@ -34,6 +37,16 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_2"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

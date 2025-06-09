@@ -319,7 +319,7 @@ module Control #(
             endcase
         end
         else if(state == IDLE)begin
-            wr_src = 3'b000;
+            wr_src <= 3'b000;
         end
     end
 
@@ -423,6 +423,20 @@ module Control #(
                                 loop_1 <= 11'd4;
                                 loop_2 <= 11'd157;
                                 loop_3 <= 11'd17;
+                                loop_4 <= 11'd100;
+                            end
+                            2'b10:begin
+                                loop_0 <= 11'd15;
+                                loop_1 <= 11'd16;
+                                loop_2 <= 11'd113;
+                                loop_3 <= 11'd17;
+                                loop_4 <= 11'd100;
+                            end
+                            2'b11:begin
+                                loop_0 <= 11'd19;
+                                loop_1 <= 11'd1;
+                                loop_2 <= 11'd60;
+                                loop_3 <= 11'd21;
                                 loop_4 <= 11'd100;
                             end
                         endcase
@@ -529,7 +543,7 @@ module Control #(
         else if(state==ID)begin
             case (opcode)
                 3'b100:begin
-                    macs_signal = inst_reg[INST_WIDTH-16];
+                    macs_signal <= inst_reg[INST_WIDTH-16];
                 end
             endcase
         end
@@ -821,6 +835,7 @@ module Control #(
     assign A_index_add = uinst[32];
     wire [1:0] A_index_location;
     assign  A_index_location = uinst[34:33];
+    wire D_bia;
     assign  D_bia = uinst[35];
 
 //A矩阵生成
@@ -884,6 +899,15 @@ module Control #(
         .douta(uinst),
         .ena(1'b1)
     );
+
+    // spsram320X36 rom(
+    //     .clk(clk),
+    //     .en(1'b1),
+    //     .addr(upc),
+    //     .din(36'b0),
+    //     .we(1'b0),
+    //     .dout(uinst)
+    // );
 
 //微pc控制器
     ucontrol #(

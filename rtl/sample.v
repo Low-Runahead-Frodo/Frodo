@@ -32,7 +32,7 @@ module sample
     input wire [15:0] random_string,       //输入数据
    
     output reg [7:0] sample_out,           //输出数据
-    output reg valid = 1'b0                //输出有效标注信号 
+    output reg valid                 //输出有效标注信号 
 );  
 
 reg [2:0] ctrl;

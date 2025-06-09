@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
 -- Date        : Thu Jun  5 15:07:21 2025
 -- Host        : DESKTOP-HI4D3F5 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.gen/sources_1/ip/rom/rom_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top rom -prefix
+--               rom_ rom_stub.vhdl
 -- Design      : rom
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2

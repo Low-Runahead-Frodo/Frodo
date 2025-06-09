@@ -1,0 +1,371 @@
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Core            net     n_Logic1_               n_Logic1_0
+Core            net     n_Logic0_               n_Logic0_0
+dpsram4096X64_1 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_1 net     n_Logic0_               n_Logic0_0
+Encode          net     n_Logic0_               n_Logic0_0
+Decode          net     n_Logic1_               n_Logic1_0
+Decode          net     n_Logic0_               n_Logic0_0
+Macs            net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic0_               n_Logic0_0
+dpsram4096X64_0 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_0 net     n_Logic0_               n_Logic0_0
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Core            net     n_Logic1_               n_Logic1_0
+Core            net     n_Logic0_               n_Logic0_0
+dpsram4096X64_1 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_1 net     n_Logic0_               n_Logic0_0
+Encode          net     n_Logic0_               n_Logic0_0
+Decode          net     n_Logic1_               n_Logic1_0
+Decode          net     n_Logic0_               n_Logic0_0
+Macs            net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic0_               n_Logic0_0
+dpsram4096X64_0 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_0 net     n_Logic0_               n_Logic0_0
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Core            net     n_Logic1_               n_Logic1_0
+Core            net     n_Logic0_               n_Logic0_0
+dpsram4096X64_1 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_1 net     n_Logic0_               n_Logic0_0
+Encode          net     n_Logic0_               n_Logic0_0
+Decode          net     n_Logic1_               n_Logic1_0
+Decode          net     n_Logic0_               n_Logic0_0
+Macs            net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic1_               n_Logic1_0
+sample          net     n_Logic0_               n_Logic0_0
+dpsram4096X64_0 net     n_Logic1_               n_Logic1_0
+dpsram4096X64_0 net     n_Logic0_               n_Logic0_0
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Information: Building the design 'Control'. (HDL-193)
+Warning: Cannot find the design 'Control' in the library 'WORK'. (LBR-1)
+Information: Building the design 'keccak'. (HDL-193)
+Warning: Cannot find the design 'keccak' in the library 'WORK'. (LBR-1)
+Information: Building the design 'ADDER_FRODO'. (HDL-193)
+Warning: Cannot find the design 'ADDER_FRODO' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Control' in 'Top'. (LINK-5)
+Warning: Unable to resolve reference 'keccak' in 'Top'. (LINK-5)
+Warning: Unable to resolve reference 'ADDER_FRODO' in 'Macs'. (LINK-5)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Decode          cell    DP_OP_43J1_124_9671/U4  DP_OP_43J1_124_9671.U4
+Decode          cell    DP_OP_43J1_124_9671/U3  DP_OP_43J1_124_9671.U3
+Decode          cell    DP_OP_43J1_124_9671/U2  DP_OP_43J1_124_9671.U2
+Decode          cell    DP_OP_44J1_125_9671/U3  DP_OP_44J1_125_9671.U3
+Decode          cell    DP_OP_44J1_125_9671/U2  DP_OP_44J1_125_9671.U2
+Decode          cell    DP_OP_45J1_126_5574/U2  DP_OP_45J1_126_5574.U2
+Decode          cell    DP_OP_46J1_128_1145/U4  DP_OP_46J1_128_1145.U4
+Decode          cell    DP_OP_46J1_128_1145/U3  DP_OP_46J1_128_1145.U3
+Decode          cell    DP_OP_46J1_128_1145/U2  DP_OP_46J1_128_1145.U2
+Decode          cell    DP_OP_47J1_129_1145/U3  DP_OP_47J1_129_1145.U3
+Decode          cell    DP_OP_47J1_129_1145/U2  DP_OP_47J1_129_1145.U2
+Decode          cell    DP_OP_48J1_130_7015/U2  DP_OP_48J1_130_7015.U2
+Decode          cell    DP_OP_49J1_132_8357/U4  DP_OP_49J1_132_8357.U4
+Decode          cell    DP_OP_49J1_132_8357/U3  DP_OP_49J1_132_8357.U3
+Decode          cell    DP_OP_49J1_132_8357/U2  DP_OP_49J1_132_8357.U2
+Decode          cell    DP_OP_50J1_133_8357/U3  DP_OP_50J1_133_8357.U3
+Decode          cell    DP_OP_50J1_133_8357/U2  DP_OP_50J1_133_8357.U2
+Decode          cell    DP_OP_51J1_134_4260/U2  DP_OP_51J1_134_4260.U2
+Decode          cell    DP_OP_52J1_136_5602/U4  DP_OP_52J1_136_5602.U4
+Decode          cell    DP_OP_52J1_136_5602/U3  DP_OP_52J1_136_5602.U3
+Decode          cell    DP_OP_52J1_136_5602/U2  DP_OP_52J1_136_5602.U2
+Decode          cell    DP_OP_53J1_137_5602/U3  DP_OP_53J1_137_5602.U3
+Decode          cell    DP_OP_53J1_137_5602/U2  DP_OP_53J1_137_5602.U2
+Decode          cell    DP_OP_54J1_138_1505/U2  DP_OP_54J1_138_1505.U2
+Decode          net     C1/DATA1_2              C1.DATA1_2
+Decode          net     C1/DATA1_1              C1.DATA1_1
+Decode          net     C1/DATA1_0              C1.DATA1_0
+Decode          net     C1/DATA2_1              C1.DATA2_1
+Decode          net     C1/DATA2_0              C1.DATA2_0
+Decode          net     C1/DATA3_0              C1.DATA3_0
+Decode          net     DP_OP_43J1_124_9671/n3  DP_OP_43J1_124_9671.n3
+Decode          net     DP_OP_43J1_124_9671/n2  DP_OP_43J1_124_9671.n2
+Decode          net     DP_OP_43J1_124_9671/n1  DP_OP_43J1_124_9671.n1
+Decode          net     DP_OP_44J1_125_9671/n2  DP_OP_44J1_125_9671.n2
+Decode          net     DP_OP_44J1_125_9671/n1  DP_OP_44J1_125_9671.n1
+Decode          net     DP_OP_45J1_126_5574/n1  DP_OP_45J1_126_5574.n1
+Decode          net     DP_OP_46J1_128_1145/n3  DP_OP_46J1_128_1145.n3
+Decode          net     DP_OP_46J1_128_1145/n2  DP_OP_46J1_128_1145.n2
+Decode          net     DP_OP_46J1_128_1145/n1  DP_OP_46J1_128_1145.n1
+Decode          net     DP_OP_47J1_129_1145/n2  DP_OP_47J1_129_1145.n2
+Decode          net     DP_OP_47J1_129_1145/n1  DP_OP_47J1_129_1145.n1
+Decode          net     DP_OP_48J1_130_7015/n1  DP_OP_48J1_130_7015.n1
+Decode          net     DP_OP_49J1_132_8357/n3  DP_OP_49J1_132_8357.n3
+Decode          net     DP_OP_49J1_132_8357/n2  DP_OP_49J1_132_8357.n2
+Decode          net     DP_OP_49J1_132_8357/n1  DP_OP_49J1_132_8357.n1
+Decode          net     DP_OP_50J1_133_8357/n2  DP_OP_50J1_133_8357.n2
+Decode          net     DP_OP_50J1_133_8357/n1  DP_OP_50J1_133_8357.n1
+Decode          net     DP_OP_51J1_134_4260/n1  DP_OP_51J1_134_4260.n1
+Decode          net     DP_OP_52J1_136_5602/n3  DP_OP_52J1_136_5602.n3
+Decode          net     DP_OP_52J1_136_5602/n2  DP_OP_52J1_136_5602.n2
+Decode          net     DP_OP_52J1_136_5602/n1  DP_OP_52J1_136_5602.n1
+Decode          net     DP_OP_53J1_137_5602/n2  DP_OP_53J1_137_5602.n2
+Decode          net     DP_OP_53J1_137_5602/n1  DP_OP_53J1_137_5602.n1
+Decode          net     DP_OP_54J1_138_1505/n1  DP_OP_54J1_138_1505.n1
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Core            net     state_nxt[2]            state_nxt_2_
+dpsram4096X64_1 net     n_Logic1_               n_Logic1_0
+Decode          cell    DP_OP_43J1_124_9671.U4  DP_OP_43J1_124_9671_U4
+Decode          cell    DP_OP_43J1_124_9671.U3  DP_OP_43J1_124_9671_U3
+Decode          cell    DP_OP_43J1_124_9671.U2  DP_OP_43J1_124_9671_U2
+Decode          cell    DP_OP_44J1_125_9671.U3  DP_OP_44J1_125_9671_U3
+Decode          cell    DP_OP_44J1_125_9671.U2  DP_OP_44J1_125_9671_U2
+Decode          cell    DP_OP_45J1_126_5574.U2  DP_OP_45J1_126_5574_U2
+Decode          cell    DP_OP_46J1_128_1145.U4  DP_OP_46J1_128_1145_U4
+Decode          cell    DP_OP_46J1_128_1145.U3  DP_OP_46J1_128_1145_U3
+Decode          cell    DP_OP_46J1_128_1145.U2  DP_OP_46J1_128_1145_U2
+Decode          cell    DP_OP_47J1_129_1145.U3  DP_OP_47J1_129_1145_U3
+Decode          cell    DP_OP_47J1_129_1145.U2  DP_OP_47J1_129_1145_U2
+Decode          cell    DP_OP_48J1_130_7015.U2  DP_OP_48J1_130_7015_U2
+Decode          cell    DP_OP_49J1_132_8357.U4  DP_OP_49J1_132_8357_U4
+Decode          cell    DP_OP_49J1_132_8357.U3  DP_OP_49J1_132_8357_U3
+Decode          cell    DP_OP_49J1_132_8357.U2  DP_OP_49J1_132_8357_U2
+Decode          cell    DP_OP_50J1_133_8357.U3  DP_OP_50J1_133_8357_U3
+Decode          cell    DP_OP_50J1_133_8357.U2  DP_OP_50J1_133_8357_U2
+Decode          cell    DP_OP_51J1_134_4260.U2  DP_OP_51J1_134_4260_U2
+Decode          cell    DP_OP_52J1_136_5602.U4  DP_OP_52J1_136_5602_U4
+Decode          cell    DP_OP_52J1_136_5602.U3  DP_OP_52J1_136_5602_U3
+Decode          cell    DP_OP_52J1_136_5602.U2  DP_OP_52J1_136_5602_U2
+Decode          cell    DP_OP_53J1_137_5602.U3  DP_OP_53J1_137_5602_U3
+Decode          cell    DP_OP_53J1_137_5602.U2  DP_OP_53J1_137_5602_U2
+Decode          cell    DP_OP_54J1_138_1505.U2  DP_OP_54J1_138_1505_U2
+Decode          net     C1.DATA1_2              C1_DATA1_2
+Decode          net     C1.DATA1_1              C1_DATA1_1
+Decode          net     C1.DATA1_0              C1_DATA1_0
+Decode          net     C1.DATA2_1              C1_DATA2_1
+Decode          net     C1.DATA2_0              C1_DATA2_0
+Decode          net     C1.DATA3_0              C1_DATA3_0
+Decode          net     DP_OP_43J1_124_9671.n3  DP_OP_43J1_124_9671_n3
+Decode          net     DP_OP_43J1_124_9671.n2  DP_OP_43J1_124_9671_n2
+Decode          net     DP_OP_43J1_124_9671.n1  DP_OP_43J1_124_9671_n1
+Decode          net     DP_OP_44J1_125_9671.n2  DP_OP_44J1_125_9671_n2
+Decode          net     DP_OP_44J1_125_9671.n1  DP_OP_44J1_125_9671_n1
+Decode          net     DP_OP_45J1_126_5574.n1  DP_OP_45J1_126_5574_n1
+Decode          net     DP_OP_46J1_128_1145.n3  DP_OP_46J1_128_1145_n3
+Decode          net     DP_OP_46J1_128_1145.n2  DP_OP_46J1_128_1145_n2
+Decode          net     DP_OP_46J1_128_1145.n1  DP_OP_46J1_128_1145_n1
+Decode          net     DP_OP_47J1_129_1145.n2  DP_OP_47J1_129_1145_n2
+Decode          net     DP_OP_47J1_129_1145.n1  DP_OP_47J1_129_1145_n1
+Decode          net     DP_OP_48J1_130_7015.n1  DP_OP_48J1_130_7015_n1
+Decode          net     DP_OP_49J1_132_8357.n3  DP_OP_49J1_132_8357_n3
+Decode          net     DP_OP_49J1_132_8357.n2  DP_OP_49J1_132_8357_n2
+Decode          net     DP_OP_49J1_132_8357.n1  DP_OP_49J1_132_8357_n1
+Decode          net     DP_OP_50J1_133_8357.n2  DP_OP_50J1_133_8357_n2
+Decode          net     DP_OP_50J1_133_8357.n1  DP_OP_50J1_133_8357_n1
+Decode          net     DP_OP_51J1_134_4260.n1  DP_OP_51J1_134_4260_n1
+Decode          net     DP_OP_52J1_136_5602.n3  DP_OP_52J1_136_5602_n3
+Decode          net     DP_OP_52J1_136_5602.n2  DP_OP_52J1_136_5602_n2
+Decode          net     DP_OP_52J1_136_5602.n1  DP_OP_52J1_136_5602_n1
+Decode          net     DP_OP_53J1_137_5602.n2  DP_OP_53J1_137_5602_n2
+Decode          net     DP_OP_53J1_137_5602.n1  DP_OP_53J1_137_5602_n1
+Decode          net     DP_OP_54J1_138_1505.n1  DP_OP_54J1_138_1505_n1
+Macs            net     N60                     a_3[0]
+Macs            net     N44                     a_2[0]
+Macs            net     N28                     a_1[0]
+Macs            net     N12                     a_0[0]
+sample          net     e[0]                    e_0_
+dpsram4096X64_0 net     n_Logic1_               n_Logic1_0
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1
+Information: Building the design 'Control'. (HDL-193)
+Warning: Cannot find the design 'Control' in the library 'WORK'. (LBR-1)
+Information: Building the design 'keccak'. (HDL-193)
+Warning: Cannot find the design 'keccak' in the library 'WORK'. (LBR-1)
+Information: Building the design 'ADDER_FRODO'. (HDL-193)
+Warning: Cannot find the design 'ADDER_FRODO' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Control' in 'Top'. (LINK-5)
+Warning: Unable to resolve reference 'keccak' in 'Top'. (LINK-5)
+Warning: Unable to resolve reference 'ADDER_FRODO' in 'Macs'. (LINK-5)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Decode          cell    DP_OP_43J1_124_9671/U4  DP_OP_43J1_124_9671.U4
+Decode          cell    DP_OP_43J1_124_9671/U3  DP_OP_43J1_124_9671.U3
+Decode          cell    DP_OP_43J1_124_9671/U2  DP_OP_43J1_124_9671.U2
+Decode          cell    DP_OP_44J1_125_9671/U3  DP_OP_44J1_125_9671.U3
+Decode          cell    DP_OP_44J1_125_9671/U2  DP_OP_44J1_125_9671.U2
+Decode          cell    DP_OP_45J1_126_5574/U2  DP_OP_45J1_126_5574.U2
+Decode          cell    DP_OP_46J1_128_1145/U4  DP_OP_46J1_128_1145.U4
+Decode          cell    DP_OP_46J1_128_1145/U3  DP_OP_46J1_128_1145.U3
+Decode          cell    DP_OP_46J1_128_1145/U2  DP_OP_46J1_128_1145.U2
+Decode          cell    DP_OP_47J1_129_1145/U3  DP_OP_47J1_129_1145.U3
+Decode          cell    DP_OP_47J1_129_1145/U2  DP_OP_47J1_129_1145.U2
+Decode          cell    DP_OP_48J1_130_7015/U2  DP_OP_48J1_130_7015.U2
+Decode          cell    DP_OP_49J1_132_8357/U4  DP_OP_49J1_132_8357.U4
+Decode          cell    DP_OP_49J1_132_8357/U3  DP_OP_49J1_132_8357.U3
+Decode          cell    DP_OP_49J1_132_8357/U2  DP_OP_49J1_132_8357.U2
+Decode          cell    DP_OP_50J1_133_8357/U3  DP_OP_50J1_133_8357.U3
+Decode          cell    DP_OP_50J1_133_8357/U2  DP_OP_50J1_133_8357.U2
+Decode          cell    DP_OP_51J1_134_4260/U2  DP_OP_51J1_134_4260.U2
+Decode          cell    DP_OP_52J1_136_5602/U4  DP_OP_52J1_136_5602.U4
+Decode          cell    DP_OP_52J1_136_5602/U3  DP_OP_52J1_136_5602.U3
+Decode          cell    DP_OP_52J1_136_5602/U2  DP_OP_52J1_136_5602.U2
+Decode          cell    DP_OP_53J1_137_5602/U3  DP_OP_53J1_137_5602.U3
+Decode          cell    DP_OP_53J1_137_5602/U2  DP_OP_53J1_137_5602.U2
+Decode          cell    DP_OP_54J1_138_1505/U2  DP_OP_54J1_138_1505.U2
+Decode          net     C1/DATA1_2              C1.DATA1_2
+Decode          net     C1/DATA1_1              C1.DATA1_1
+Decode          net     C1/DATA1_0              C1.DATA1_0
+Decode          net     C1/DATA2_1              C1.DATA2_1
+Decode          net     C1/DATA2_0              C1.DATA2_0
+Decode          net     C1/DATA3_0              C1.DATA3_0
+Decode          net     DP_OP_43J1_124_9671/n3  DP_OP_43J1_124_9671.n3
+Decode          net     DP_OP_43J1_124_9671/n2  DP_OP_43J1_124_9671.n2
+Decode          net     DP_OP_43J1_124_9671/n1  DP_OP_43J1_124_9671.n1
+Decode          net     DP_OP_44J1_125_9671/n2  DP_OP_44J1_125_9671.n2
+Decode          net     DP_OP_44J1_125_9671/n1  DP_OP_44J1_125_9671.n1
+Decode          net     DP_OP_45J1_126_5574/n1  DP_OP_45J1_126_5574.n1
+Decode          net     DP_OP_46J1_128_1145/n3  DP_OP_46J1_128_1145.n3
+Decode          net     DP_OP_46J1_128_1145/n2  DP_OP_46J1_128_1145.n2
+Decode          net     DP_OP_46J1_128_1145/n1  DP_OP_46J1_128_1145.n1
+Decode          net     DP_OP_47J1_129_1145/n2  DP_OP_47J1_129_1145.n2
+Decode          net     DP_OP_47J1_129_1145/n1  DP_OP_47J1_129_1145.n1
+Decode          net     DP_OP_48J1_130_7015/n1  DP_OP_48J1_130_7015.n1
+Decode          net     DP_OP_49J1_132_8357/n3  DP_OP_49J1_132_8357.n3
+Decode          net     DP_OP_49J1_132_8357/n2  DP_OP_49J1_132_8357.n2
+Decode          net     DP_OP_49J1_132_8357/n1  DP_OP_49J1_132_8357.n1
+Decode          net     DP_OP_50J1_133_8357/n2  DP_OP_50J1_133_8357.n2
+Decode          net     DP_OP_50J1_133_8357/n1  DP_OP_50J1_133_8357.n1
+Decode          net     DP_OP_51J1_134_4260/n1  DP_OP_51J1_134_4260.n1
+Decode          net     DP_OP_52J1_136_5602/n3  DP_OP_52J1_136_5602.n3
+Decode          net     DP_OP_52J1_136_5602/n2  DP_OP_52J1_136_5602.n2
+Decode          net     DP_OP_52J1_136_5602/n1  DP_OP_52J1_136_5602.n1
+Decode          net     DP_OP_53J1_137_5602/n2  DP_OP_53J1_137_5602.n2
+Decode          net     DP_OP_53J1_137_5602/n1  DP_OP_53J1_137_5602.n1
+Decode          net     DP_OP_54J1_138_1505/n1  DP_OP_54J1_138_1505.n1
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Core            net     state_nxt[2]            state_nxt_2_
+dpsram4096X64_1 net     n_Logic1_               n_Logic1_0
+Decode          cell    DP_OP_43J1_124_9671.U4  DP_OP_43J1_124_9671_U4
+Decode          cell    DP_OP_43J1_124_9671.U3  DP_OP_43J1_124_9671_U3
+Decode          cell    DP_OP_43J1_124_9671.U2  DP_OP_43J1_124_9671_U2
+Decode          cell    DP_OP_44J1_125_9671.U3  DP_OP_44J1_125_9671_U3
+Decode          cell    DP_OP_44J1_125_9671.U2  DP_OP_44J1_125_9671_U2
+Decode          cell    DP_OP_45J1_126_5574.U2  DP_OP_45J1_126_5574_U2
+Decode          cell    DP_OP_46J1_128_1145.U4  DP_OP_46J1_128_1145_U4
+Decode          cell    DP_OP_46J1_128_1145.U3  DP_OP_46J1_128_1145_U3
+Decode          cell    DP_OP_46J1_128_1145.U2  DP_OP_46J1_128_1145_U2
+Decode          cell    DP_OP_47J1_129_1145.U3  DP_OP_47J1_129_1145_U3
+Decode          cell    DP_OP_47J1_129_1145.U2  DP_OP_47J1_129_1145_U2
+Decode          cell    DP_OP_48J1_130_7015.U2  DP_OP_48J1_130_7015_U2
+Decode          cell    DP_OP_49J1_132_8357.U4  DP_OP_49J1_132_8357_U4
+Decode          cell    DP_OP_49J1_132_8357.U3  DP_OP_49J1_132_8357_U3
+Decode          cell    DP_OP_49J1_132_8357.U2  DP_OP_49J1_132_8357_U2
+Decode          cell    DP_OP_50J1_133_8357.U3  DP_OP_50J1_133_8357_U3
+Decode          cell    DP_OP_50J1_133_8357.U2  DP_OP_50J1_133_8357_U2
+Decode          cell    DP_OP_51J1_134_4260.U2  DP_OP_51J1_134_4260_U2
+Decode          cell    DP_OP_52J1_136_5602.U4  DP_OP_52J1_136_5602_U4
+Decode          cell    DP_OP_52J1_136_5602.U3  DP_OP_52J1_136_5602_U3
+Decode          cell    DP_OP_52J1_136_5602.U2  DP_OP_52J1_136_5602_U2
+Decode          cell    DP_OP_53J1_137_5602.U3  DP_OP_53J1_137_5602_U3
+Decode          cell    DP_OP_53J1_137_5602.U2  DP_OP_53J1_137_5602_U2
+Decode          cell    DP_OP_54J1_138_1505.U2  DP_OP_54J1_138_1505_U2
+Decode          net     C1.DATA1_2              C1_DATA1_2
+Decode          net     C1.DATA1_1              C1_DATA1_1
+Decode          net     C1.DATA1_0              C1_DATA1_0
+Decode          net     C1.DATA2_1              C1_DATA2_1
+Decode          net     C1.DATA2_0              C1_DATA2_0
+Decode          net     C1.DATA3_0              C1_DATA3_0
+Decode          net     DP_OP_43J1_124_9671.n3  DP_OP_43J1_124_9671_n3
+Decode          net     DP_OP_43J1_124_9671.n2  DP_OP_43J1_124_9671_n2
+Decode          net     DP_OP_43J1_124_9671.n1  DP_OP_43J1_124_9671_n1
+Decode          net     DP_OP_44J1_125_9671.n2  DP_OP_44J1_125_9671_n2
+Decode          net     DP_OP_44J1_125_9671.n1  DP_OP_44J1_125_9671_n1
+Decode          net     DP_OP_45J1_126_5574.n1  DP_OP_45J1_126_5574_n1
+Decode          net     DP_OP_46J1_128_1145.n3  DP_OP_46J1_128_1145_n3
+Decode          net     DP_OP_46J1_128_1145.n2  DP_OP_46J1_128_1145_n2
+Decode          net     DP_OP_46J1_128_1145.n1  DP_OP_46J1_128_1145_n1
+Decode          net     DP_OP_47J1_129_1145.n2  DP_OP_47J1_129_1145_n2
+Decode          net     DP_OP_47J1_129_1145.n1  DP_OP_47J1_129_1145_n1
+Decode          net     DP_OP_48J1_130_7015.n1  DP_OP_48J1_130_7015_n1
+Decode          net     DP_OP_49J1_132_8357.n3  DP_OP_49J1_132_8357_n3
+Decode          net     DP_OP_49J1_132_8357.n2  DP_OP_49J1_132_8357_n2
+Decode          net     DP_OP_49J1_132_8357.n1  DP_OP_49J1_132_8357_n1
+Decode          net     DP_OP_50J1_133_8357.n2  DP_OP_50J1_133_8357_n2
+Decode          net     DP_OP_50J1_133_8357.n1  DP_OP_50J1_133_8357_n1
+Decode          net     DP_OP_51J1_134_4260.n1  DP_OP_51J1_134_4260_n1
+Decode          net     DP_OP_52J1_136_5602.n3  DP_OP_52J1_136_5602_n3
+Decode          net     DP_OP_52J1_136_5602.n2  DP_OP_52J1_136_5602_n2
+Decode          net     DP_OP_52J1_136_5602.n1  DP_OP_52J1_136_5602_n1
+Decode          net     DP_OP_53J1_137_5602.n2  DP_OP_53J1_137_5602_n2
+Decode          net     DP_OP_53J1_137_5602.n1  DP_OP_53J1_137_5602_n1
+Decode          net     DP_OP_54J1_138_1505.n1  DP_OP_54J1_138_1505_n1
+Macs            net     N60                     a_3[0]
+Macs            net     N44                     a_2[0]
+Macs            net     N28                     a_1[0]
+Macs            net     N12                     a_0[0]
+sample          net     e[0]                    e_0_
+dpsram4096X64_0 net     n_Logic1_               n_Logic1_0
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+1

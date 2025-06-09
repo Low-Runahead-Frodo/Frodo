@@ -56,10 +56,14 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+set_param power.BramSDPPropagationFix 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z020clg400-2
+create_project -in_memory -part xczu7ev-ffvc1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -84,14 +88,11 @@ read_verilog -library xil_defaultlib {
   C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Encode.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v
+  C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Transpose.v
-  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/adder_frodo.V
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v
-  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/full_adder.v
-  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/half_adder.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v
-  C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/no_carry_adder.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/sample.v
   C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/theta.v
@@ -149,7 +150,7 @@ read_checkpoint -auto_incremental -incremental C:/Users/Lenovo/Desktop/Frodo/prj
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Top -part xc7z020clg400-2
+synth_design -top Top -part xczu7ev-ffvc1156-2-i
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

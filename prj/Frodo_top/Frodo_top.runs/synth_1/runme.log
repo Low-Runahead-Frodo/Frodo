@@ -8,29 +8,63 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Thu Jun  5 15:07:47 2025
+  **** Start of session at: Fri Jun  6 15:09:14 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 619.285 ; gain = 191.020
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 618.738 ; gain = 190.062
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/utils_1/imports/synth_1/Top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top Top -part xc7z020clg400-2
+Command: synth_design -top Top -part xczu7ev-ffvc1156-2-i
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Device 21-403] Loading part xc7z020clg400-2
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM1/DRAM1.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM2/DRAM2.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM3/DRAM3.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM4/DRAM4.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM5/DRAM5.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM6/DRAM6.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM7/DRAM7.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/DRAM8/DRAM8.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/dual_ram/dual_ram.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/rom/rom.xci
+C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/sources_1/ip/uinst_rom/uinst_rom.xci
+
+INFO: [IP_Flow 19-2162] IP 'DRAM1' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM1' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM2' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM2' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM3' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM3' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM4' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM4' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM5' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM5' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM6' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM6' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM7' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM7' do not match.
+INFO: [IP_Flow 19-2162] IP 'DRAM8' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'DRAM8' do not match.
+INFO: [IP_Flow 19-2162] IP 'dual_ram' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'dual_ram' do not match.
+INFO: [IP_Flow 19-2162] IP 'rom' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'rom' do not match.
+INFO: [IP_Flow 19-2162] IP 'uinst_rom' is locked:
+* Current project part 'xczu7ev-ffvc1156-2-i' and the part 'xc7z020clg400-2' used to customize the IP 'uinst_rom' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-i
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11188
+INFO: [Synth 8-7075] Helper process launched with PID 24816
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1337.980 ; gain = 474.605
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2003.590 ; gain = 192.285
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'D_bia', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:824]
 WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:66]
 WARNING: [Synth 8-11065] parameter 'IF' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:67]
 WARNING: [Synth 8-11065] parameter 'ID' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:68]
@@ -40,132 +74,24 @@ WARNING: [Synth 8-11065] parameter 'DECODE' becomes localparam in 'Control' with
 WARNING: [Synth 8-11065] parameter 'MACS' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:283]
 WARNING: [Synth 8-11065] parameter 'TRANSPOSE' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:284]
 WARNING: [Synth 8-11065] parameter 'SAMPLE' becomes localparam in 'Control' with formal parameter declaration list [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:285]
-WARNING: [Synth 8-6901] identifier 'out_d' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/adder_frodo.V:37]
-WARNING: [Synth 8-6901] identifier 'c0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v:14]
-INFO: [Synth 8-11241] undeclared symbol 'k_ram_o_all', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:705]
-INFO: [Synth 8-11241] undeclared symbol 'k_ram_i_all', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:706]
-INFO: [Synth 8-11241] undeclared symbol 'ci_out', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:707]
-INFO: [Synth 8-11241] undeclared symbol 'pre_rnd', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:708]
-WARNING: [Synth 8-8895] 'ci_out' is already implicitly declared on line 707 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:734]
-WARNING: [Synth 8-8895] 'k_ram_i_all' is already implicitly declared on line 706 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:770]
-WARNING: [Synth 8-8895] 'k_ram_o_all' is already implicitly declared on line 705 [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:772]
-WARNING: [Synth 8-10929] literal value 'd8 truncated to fit in 3 bits [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:947]
-WARNING: [Synth 8-6901] identifier 'state' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:25]
-WARNING: [Synth 8-6901] identifier 'KECCAK' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:25]
-WARNING: [Synth 8-6901] identifier 'Rnd_cnt' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:25]
-WARNING: [Synth 8-6901] identifier 'Sub_Rnd_cnt' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:25]
-WARNING: [Synth 8-6901] identifier 'state' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:26]
-WARNING: [Synth 8-6901] identifier 'RESET' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:26]
-WARNING: [Synth 8-6901] identifier 'Sub_Rnd_cnt' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:26]
-WARNING: [Synth 8-6901] identifier 'data_o00_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:218]
-WARNING: [Synth 8-6901] identifier 'data_o01_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:220]
-WARNING: [Synth 8-6901] identifier 'data_o01_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:221]
-WARNING: [Synth 8-6901] identifier 'data_o02_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:223]
-WARNING: [Synth 8-6901] identifier 'data_o02_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:224]
-WARNING: [Synth 8-6901] identifier 'data_o03_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:226]
-WARNING: [Synth 8-6901] identifier 'data_o03_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:227]
-WARNING: [Synth 8-6901] identifier 'data_o04_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:229]
-WARNING: [Synth 8-6901] identifier 'data_o04_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:230]
-WARNING: [Synth 8-6901] identifier 'data_o10_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:232]
-WARNING: [Synth 8-6901] identifier 'data_o10_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:233]
-WARNING: [Synth 8-6901] identifier 'data_o11_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:235]
-WARNING: [Synth 8-6901] identifier 'data_o11_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:236]
-WARNING: [Synth 8-6901] identifier 'data_o12_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:238]
-WARNING: [Synth 8-6901] identifier 'data_o12_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:239]
-WARNING: [Synth 8-6901] identifier 'data_o13_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:241]
-WARNING: [Synth 8-6901] identifier 'data_o13_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:242]
-WARNING: [Synth 8-6901] identifier 'data_o14_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:244]
-WARNING: [Synth 8-6901] identifier 'data_o14_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:245]
-WARNING: [Synth 8-6901] identifier 'data_o20_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:247]
-WARNING: [Synth 8-6901] identifier 'data_o20_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:248]
-WARNING: [Synth 8-6901] identifier 'data_o21_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:250]
-WARNING: [Synth 8-6901] identifier 'data_o21_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:251]
-WARNING: [Synth 8-6901] identifier 'data_o22_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:253]
-WARNING: [Synth 8-6901] identifier 'data_o22_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:254]
-WARNING: [Synth 8-6901] identifier 'data_o23_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:256]
-WARNING: [Synth 8-6901] identifier 'data_o24_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:258]
-WARNING: [Synth 8-6901] identifier 'data_o24_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:259]
-WARNING: [Synth 8-6901] identifier 'data_o30_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:261]
-WARNING: [Synth 8-6901] identifier 'data_o30_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:262]
-WARNING: [Synth 8-6901] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:264]
-WARNING: [Synth 8-6901] identifier 'data_o31_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:265]
-WARNING: [Synth 8-6901] identifier 'data_o32_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:267]
-WARNING: [Synth 8-6901] identifier 'data_o32_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:268]
-WARNING: [Synth 8-6901] identifier 'data_o33_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:270]
-WARNING: [Synth 8-6901] identifier 'data_o33_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:271]
-WARNING: [Synth 8-6901] identifier 'data_o34_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:273]
-WARNING: [Synth 8-6901] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:276]
-WARNING: [Synth 8-6901] identifier 'data_o40_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:277]
-WARNING: [Synth 8-6901] identifier 'data_o41_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:279]
-WARNING: [Synth 8-6901] identifier 'data_o41_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:280]
-WARNING: [Synth 8-6901] identifier 'data_o42_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:282]
-WARNING: [Synth 8-6901] identifier 'data_o42_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:283]
-WARNING: [Synth 8-6901] identifier 'data_o43_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:285]
-WARNING: [Synth 8-6901] identifier 'data_o43_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:286]
-WARNING: [Synth 8-6901] identifier 'data_o44_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:288]
-WARNING: [Synth 8-6901] identifier 'data_o44_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:289]
-WARNING: [Synth 8-6901] identifier 'data_o00_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:480]
-WARNING: [Synth 8-6901] identifier 'data_o01_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:482]
-WARNING: [Synth 8-6901] identifier 'data_o01_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:483]
-WARNING: [Synth 8-6901] identifier 'data_o02_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:485]
-WARNING: [Synth 8-6901] identifier 'data_o02_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:486]
-WARNING: [Synth 8-6901] identifier 'data_o03_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:488]
-WARNING: [Synth 8-6901] identifier 'data_o03_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:489]
-WARNING: [Synth 8-6901] identifier 'data_o04_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:491]
-WARNING: [Synth 8-6901] identifier 'data_o04_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:492]
-WARNING: [Synth 8-6901] identifier 'data_o10_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:494]
-WARNING: [Synth 8-6901] identifier 'data_o10_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:495]
-WARNING: [Synth 8-6901] identifier 'data_o11_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:497]
-WARNING: [Synth 8-6901] identifier 'data_o11_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:498]
-WARNING: [Synth 8-6901] identifier 'data_o12_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:500]
-WARNING: [Synth 8-6901] identifier 'data_o12_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:501]
-WARNING: [Synth 8-6901] identifier 'data_o13_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:503]
-WARNING: [Synth 8-6901] identifier 'data_o13_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:504]
-WARNING: [Synth 8-6901] identifier 'data_o14_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:506]
-WARNING: [Synth 8-6901] identifier 'data_o14_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:507]
-WARNING: [Synth 8-6901] identifier 'data_o20_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:509]
-WARNING: [Synth 8-6901] identifier 'data_o20_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:510]
-WARNING: [Synth 8-6901] identifier 'data_o21_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:512]
-WARNING: [Synth 8-6901] identifier 'data_o21_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:513]
-WARNING: [Synth 8-6901] identifier 'data_o22_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:515]
-WARNING: [Synth 8-6901] identifier 'data_o22_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:516]
-WARNING: [Synth 8-6901] identifier 'data_o23_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:518]
-WARNING: [Synth 8-6901] identifier 'data_o24_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:520]
-WARNING: [Synth 8-6901] identifier 'data_o24_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:521]
-WARNING: [Synth 8-6901] identifier 'data_o30_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:523]
-WARNING: [Synth 8-6901] identifier 'data_o30_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:524]
-WARNING: [Synth 8-6901] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:526]
-WARNING: [Synth 8-6901] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:526]
-WARNING: [Synth 8-6901] identifier 'data_o31_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:526]
-WARNING: [Synth 8-6901] identifier 'data_o31_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:527]
-WARNING: [Synth 8-6901] identifier 'data_o31_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:527]
-WARNING: [Synth 8-6901] identifier 'data_o31_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:527]
-WARNING: [Synth 8-6901] identifier 'data_o32_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:529]
-WARNING: [Synth 8-6901] identifier 'data_o32_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:530]
-WARNING: [Synth 8-6901] identifier 'data_o33_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:532]
-WARNING: [Synth 8-6901] identifier 'data_o33_1' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:533]
-WARNING: [Synth 8-6901] identifier 'data_o34_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:535]
-WARNING: [Synth 8-6901] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:538]
-WARNING: [Synth 8-6901] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:538]
-WARNING: [Synth 8-6901] identifier 'data_o40_0' is used before its declaration [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:538]
-INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-11241] undeclared symbol 'absorb_en', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:185]
-INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:229]
+INFO: [Synth 8-11241] undeclared symbol 'pre_rnd', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:748]
+INFO: [Synth 8-11241] undeclared symbol 'absorb_en', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:224]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:268]
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:1]
 INFO: [Synth 8-6157] synthesizing module 'Core' [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:134]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:129]
 INFO: [Synth 8-6155] done synthesizing module 'Core' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Core.v:1]
-INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/rom_stub.v:6]
 WARNING: [Synth 8-689] width (8) of port connection 'addra' does not match port width (9) of module 'rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:75]
 WARNING: [Synth 8-689] width (28) of port connection 'douta' does not match port width (27) of module 'rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:77]
-INFO: [Synth 8-6157] synthesizing module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dual_ram' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:86]
-WARNING: [Synth 8-689] width (1) of port connection 'web' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:91]
-WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:99]
-WARNING: [Synth 8-689] width (1) of port connection 'web' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:104]
+INFO: [Synth 8-6157] synthesizing module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dual_ram' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/dual_ram_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:95]
+WARNING: [Synth 8-689] width (1) of port connection 'web' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:100]
+WARNING: [Synth 8-689] width (1) of port connection 'wea' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:110]
+WARNING: [Synth 8-689] width (1) of port connection 'web' does not match port width (8) of module 'dual_ram' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:115]
 INFO: [Synth 8-6157] synthesizing module 'Control' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:1]
 INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:96]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:142]
@@ -173,25 +99,25 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Leno
 WARNING: [Synth 8-151] case item 3'b010 is unreachable [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:292]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:292]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:420]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:435]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:441]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:466]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:472]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:449]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:455]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:480]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:485]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:491]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:530]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:601]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:682]
-WARNING: [Synth 8-151] case item 3'b010 is unreachable [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:705]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:705]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:755]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:486]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:494]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:499]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:505]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:544]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:615]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:696]
+WARNING: [Synth 8-151] case item 3'b010 is unreachable [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:719]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:719]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:769]
 INFO: [Synth 8-6157] synthesizing module 'Bus' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'Bus' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Bus.v:1]
-INFO: [Synth 8-6157] synthesizing module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'uinst_rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
-WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:882]
-WARNING: [Synth 8-689] width (36) of port connection 'douta' does not match port width (32) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:884]
+INFO: [Synth 8-6157] synthesizing module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'uinst_rom' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/uinst_rom_stub.v:6]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (8) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:897]
+WARNING: [Synth 8-689] width (36) of port connection 'douta' does not match port width (32) of module 'uinst_rom' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/Control.v:899]
 INFO: [Synth 8-6157] synthesizing module 'ucontrol' [C:/Users/Lenovo/Desktop/Frodo/rtl/Control/ucontrol.v:1]
 	Parameter UINST_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter UINST_WIDTH bound to: 36 - type: integer 
@@ -212,63 +138,54 @@ INFO: [Synth 8-6155] done synthesizing module 'Encode' (0#1) [C:/Users/Lenovo/De
 INFO: [Synth 8-6157] synthesizing module 'Decode' [C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'Decode' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Decode.v:1]
 INFO: [Synth 8-6157] synthesizing module 'Macs' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ADDER_FRODO' [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/adder_frodo.V:5]
-INFO: [Synth 8-6157] synthesizing module 'FULL_ADDER' [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/full_adder.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'FULL_ADDER' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/full_adder.v:2]
-INFO: [Synth 8-6157] synthesizing module 'HALF_ADDER' [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/half_adder.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'HALF_ADDER' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/half_adder.v:2]
-INFO: [Synth 8-6157] synthesizing module 'NC_ADDER' [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/no_carry_adder.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'NC_ADDER' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/no_carry_adder.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'ADDER_FRODO' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/ADDR/adder_frodo.V:5]
-WARNING: [Synth 8-7071] port 'done' of module 'ADDER_FRODO' is unconnected for instance 'u_pe_0' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:105]
-WARNING: [Synth 8-7023] instance 'u_pe_0' of module 'ADDER_FRODO' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:105]
-WARNING: [Synth 8-7071] port 'done' of module 'ADDER_FRODO' is unconnected for instance 'u_pe_1' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:114]
-WARNING: [Synth 8-7023] instance 'u_pe_1' of module 'ADDER_FRODO' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:114]
-WARNING: [Synth 8-7071] port 'done' of module 'ADDER_FRODO' is unconnected for instance 'u_pe_2' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:123]
-WARNING: [Synth 8-7023] instance 'u_pe_2' of module 'ADDER_FRODO' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:123]
-WARNING: [Synth 8-7071] port 'done' of module 'ADDER_FRODO' is unconnected for instance 'u_pe_3' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:132]
-WARNING: [Synth 8-7023] instance 'u_pe_3' of module 'ADDER_FRODO' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:132]
+INFO: [Synth 8-6157] synthesizing module 'PE_Simple' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PE_Simple' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/PE_Simple.v:1]
+WARNING: [Synth 8-7071] port 'done' of module 'PE_Simple' is unconnected for instance 'u_pe_1' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:76]
+WARNING: [Synth 8-7023] instance 'u_pe_1' of module 'PE_Simple' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:76]
+WARNING: [Synth 8-7071] port 'done' of module 'PE_Simple' is unconnected for instance 'u_pe_2' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:86]
+WARNING: [Synth 8-7023] instance 'u_pe_2' of module 'PE_Simple' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:86]
+WARNING: [Synth 8-7071] port 'done' of module 'PE_Simple' is unconnected for instance 'u_pe_3' [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:96]
+WARNING: [Synth 8-7023] instance 'u_pe_3' of module 'PE_Simple' has 8 connections declared, but only 7 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:96]
 INFO: [Synth 8-6155] done synthesizing module 'Macs' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:1]
 INFO: [Synth 8-6157] synthesizing module 'keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:1]
-INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:52]
-INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:61]
+INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:54]
+INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:63]
 INFO: [Synth 8-6157] synthesizing module 'PRE_THETA' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v:1]
 INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v:81]
 INFO: [Synth 8-6155] done synthesizing module 'PRE_THETA' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/pre_theta.v:1]
 INFO: [Synth 8-6157] synthesizing module 'theta' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/theta.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'theta' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/theta.v:2]
 INFO: [Synth 8-6157] synthesizing module 'chiiota' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v:2]
-INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v:133]
+INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'chiiota' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/chiiota.v:2]
 INFO: [Synth 8-6157] synthesizing module 'hash_out_buffer' [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:1]
 INFO: [Synth 8-226] default block is never used [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:37]
 INFO: [Synth 8-6155] done synthesizing module 'hash_out_buffer' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/hash_out_buffer.v:1]
-INFO: [Synth 8-6157] synthesizing module 'DRAM8' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM8' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM4' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM4' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM5' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM5' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM3' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM3' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM2' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM2' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM6' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM6' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM7' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM7' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DRAM1' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM1' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-1268-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM8' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM8' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM4' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM4' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM5' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM5' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM3' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM3' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM2' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM2' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM6' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM6' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM7' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM7' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DRAM1' [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM1' (0#1) [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/.Xil/Vivado-37320-DESKTOP-HI4D3F5/realtime/DRAM1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'keccak' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Hash_v1.1/keccak.v:1]
-WARNING: [Synth 8-7071] port 'Hash_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:232]
-WARNING: [Synth 8-7071] port 'keccak_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:232]
-WARNING: [Synth 8-7023] instance 'u_keccak' of module 'keccak' has 13 connections declared, but only 11 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:232]
+WARNING: [Synth 8-7071] port 'Hash_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:271]
+WARNING: [Synth 8-7071] port 'keccak_ready' of module 'keccak' is unconnected for instance 'u_keccak' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:271]
+WARNING: [Synth 8-7023] instance 'u_keccak' of module 'keccak' has 13 connections declared, but only 11 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:271]
 INFO: [Synth 8-6157] synthesizing module 'sample' [C:/Users/Lenovo/Desktop/Frodo/rtl/sample.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'sample' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/sample.v:26]
-WARNING: [Synth 8-7071] port 'valid' of module 'sample' is unconnected for instance 'u_sample' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:246]
-WARNING: [Synth 8-7023] instance 'u_sample' of module 'sample' has 7 connections declared, but only 6 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:246]
+WARNING: [Synth 8-7071] port 'valid' of module 'sample' is unconnected for instance 'u_sample' [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:285]
+WARNING: [Synth 8-7023] instance 'u_sample' of module 'sample' has 7 connections declared, but only 6 given [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:285]
 INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/Users/Lenovo/Desktop/Frodo/rtl/Top.v:1]
-WARNING: [Synth 8-3848] Net done in module/entity Macs does not have driver. [C:/Users/Lenovo/Desktop/Frodo/rtl/Macs/Macs.v:21]
 WARNING: [Synth 8-7129] Port ci_out[168] in module hash_out_buffer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ci_out[169] in module hash_out_buffer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ci_out[170] in module hash_out_buffer is either unconnected or has no load
@@ -371,18 +288,18 @@ WARNING: [Synth 8-7129] Port k_ram_o_all[76] in module PRE_THETA is either uncon
 WARNING: [Synth 8-7129] Port k_ram_o_all[77] in module PRE_THETA is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2164.523 ; gain = 353.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2182.449 ; gain = 371.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1501.270 ; gain = 637.895
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2182.449 ; gain = 371.145
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1501.270 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 2190.457 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -493,11 +410,11 @@ Parsing XDC File [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/con
 Finished Parsing XDC File [C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.srcs/constrs_1/new/clk.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1579.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2294.062 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1579.805 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2294.062 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'ram_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'ram_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_rom' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
@@ -552,14 +469,15 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2294.062 ; gain = 482.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z020clg400-2
+Loading part: xczu7ev-ffvc1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2294.062 ; gain = 482.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -616,7 +534,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for ram_1. (constraint file  auto gen
 Applied set_property KEEP_HIERARCHY = SOFT for u_rom. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for u_control/rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1580.516 ; gain = 717.141
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2294.062 ; gain = 482.758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Core'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Control'
@@ -654,18 +572,18 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'keccak'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1580.516 ; gain = 717.141
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2294.062 ; gain = 482.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   16 Bit       Adders := 8     
+	   2 Input   16 Bit       Adders := 9     
 	   2 Input   15 Bit       Adders := 4     
-	   2 Input   14 Bit       Adders := 6     
+	   2 Input   14 Bit       Adders := 7     
 	   2 Input   13 Bit       Adders := 3     
-	   2 Input   12 Bit       Adders := 6     
+	   2 Input   12 Bit       Adders := 2     
 	   2 Input   11 Bit       Adders := 6     
 	   2 Input    9 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 6     
@@ -685,18 +603,19 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit         XORs := 17    
 	   2 Input      3 Bit         XORs := 9     
 	   2 Input      2 Bit         XORs := 10    
-	   2 Input      1 Bit         XORs := 562   
-	   3 Input      1 Bit         XORs := 22    
+	   2 Input      1 Bit         XORs := 62    
+	   3 Input      1 Bit         XORs := 2     
 +---Registers : 
 	             1344 Bit    Registers := 1     
 	               28 Bit    Registers := 1     
 	               25 Bit    Registers := 2     
-	               16 Bit    Registers := 4     
-	               14 Bit    Registers := 7     
+	               16 Bit    Registers := 5     
+	               14 Bit    Registers := 8     
 	               12 Bit    Registers := 3     
 	               11 Bit    Registers := 11    
 	                9 Bit    Registers := 7     
 	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 8     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 31    
@@ -708,17 +627,17 @@ Detailed RTL Component Info :
 	   2 Input   25 Bit        Muxes := 7     
 	   8 Input   25 Bit        Muxes := 1     
 	   4 Input   16 Bit        Muxes := 11    
-	   2 Input   16 Bit        Muxes := 20    
+	   2 Input   16 Bit        Muxes := 16    
+	   2 Input   14 Bit        Muxes := 11    
 	   5 Input   14 Bit        Muxes := 2     
-	   2 Input   14 Bit        Muxes := 10    
 	   4 Input   14 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 14    
 	   6 Input   12 Bit        Muxes := 2     
 	   2 Input   11 Bit        Muxes := 15    
-	   4 Input   11 Bit        Muxes := 2     
-	  11 Input   11 Bit        Muxes := 2     
-	   5 Input   11 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 5     
+	   5 Input   11 Bit        Muxes := 3     
 	   8 Input   11 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 10    
 	   4 Input    9 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 3     
@@ -726,26 +645,26 @@ Detailed RTL Component Info :
 	   8 Input    8 Bit        Muxes := 1     
 	   5 Input    8 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 20    
-	   2 Input    6 Bit        Muxes := 21    
+	   2 Input    6 Bit        Muxes := 20    
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 25    
 	   4 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 49    
 	   7 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 48    
 	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 45    
 	   6 Input    3 Bit        Muxes := 2     
-	   4 Input    3 Bit        Muxes := 2     
 	   7 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
 	   8 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 24    
 	   3 Input    2 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 25    
+	   4 Input    1 Bit        Muxes := 22    
 	   5 Input    1 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 220   
-	   8 Input    1 Bit        Muxes := 5     
-	   3 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 217   
 	   7 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 7     
+	   8 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -753,8 +672,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 220 (col length:60)
-BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -762,9 +681,21 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP u_Macs/u_pe_0/result0, operation Mode is: A*B.
+DSP Report: operator u_Macs/u_pe_0/result0 is absorbed into DSP u_Macs/u_pe_0/result0.
+DSP Report: Generating DSP u_Macs/u_pe_1/result0, operation Mode is: A*B.
+DSP Report: operator u_Macs/u_pe_1/result0 is absorbed into DSP u_Macs/u_pe_1/result0.
+DSP Report: Generating DSP u_Macs/u_pe_2/result0, operation Mode is: A*B.
+DSP Report: operator u_Macs/u_pe_2/result0 is absorbed into DSP u_Macs/u_pe_2/result0.
+DSP Report: Generating DSP u_Macs/u_pe_3/result0, operation Mode is: A*B.
+DSP Report: operator u_Macs/u_pe_3/result0 is absorbed into DSP u_Macs/u_pe_3/result0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1636.457 ; gain = 773.082
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2294.062 ; gain = 482.758
 ---------------------------------------------------------------------------------
+ Sort Area is  u_Macs/u_pe_0/result0_0 : 0 0 : 878 878 : Used 1 time 0
+ Sort Area is  u_Macs/u_pe_1/result0_2 : 0 0 : 878 878 : Used 1 time 0
+ Sort Area is  u_Macs/u_pe_2/result0_3 : 0 0 : 878 878 : Used 1 time 0
+ Sort Area is  u_Macs/u_pe_3/result0_4 : 0 0 : 878 878 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -777,6 +708,18 @@ ROM: Preliminary Mapping Report
 |chiiota     | c1         | 32x7          | LUT            | 
 +------------+------------+---------------+----------------+
 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -784,19 +727,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1699.008 ; gain = 835.633
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2908.957 ; gain = 1097.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1828.387 ; gain = 965.012
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 2959.961 ; gain = 1148.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 1847.465 ; gain = 984.090
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2989.840 ; gain = 1178.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -814,41 +757,52 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PE_Simple   | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
 
 Report BlackBoxes: 
 +------+--------------+----------+
@@ -868,57 +822,68 @@ Report BlackBoxes:
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+----------+------+
-|      |Cell      |Count |
-+------+----------+------+
-|1     |DRAM1     |     6|
-|7     |DRAM2     |     6|
-|13    |DRAM3     |     6|
-|19    |DRAM4     |     8|
-|27    |DRAM5     |     6|
-|33    |DRAM6     |     6|
-|39    |DRAM7     |     6|
-|45    |DRAM8     |     3|
-|48    |dual_ram  |     2|
-|50    |rom       |     1|
-|51    |uinst_rom |     1|
-|52    |BUFG      |     1|
-|53    |CARRY4    |    73|
-|54    |LUT1      |    61|
-|55    |LUT2      |   296|
-|56    |LUT3      |   426|
-|57    |LUT4      |   549|
-|58    |LUT5      |  1821|
-|59    |LUT6      |  1353|
-|60    |MUXF7     |    23|
-|61    |MUXF8     |     8|
-|62    |FDCE      |  1838|
-|63    |FDPE      |     3|
-|64    |IBUF      |     7|
-|65    |OBUF      |   632|
-+------+----------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |DRAM1           |     6|
+|7     |DRAM2           |     6|
+|13    |DRAM3           |     6|
+|19    |DRAM4           |     8|
+|27    |DRAM5           |     6|
+|33    |DRAM6           |     6|
+|39    |DRAM7           |     6|
+|45    |DRAM8           |     3|
+|48    |dual_ram        |     2|
+|50    |rom             |     1|
+|51    |uinst_rom       |     1|
+|52    |BUFG            |     1|
+|53    |CARRY8          |    10|
+|54    |DSP_ALU         |     4|
+|55    |DSP_A_B_DATA    |     4|
+|56    |DSP_C_DATA      |     4|
+|57    |DSP_MULTIPLIER  |     4|
+|58    |DSP_M_DATA      |     4|
+|59    |DSP_OUTPUT      |     4|
+|60    |DSP_PREADD      |     4|
+|61    |DSP_PREADD_DATA |     4|
+|62    |LUT1            |     3|
+|63    |LUT2            |   219|
+|64    |LUT3            |   397|
+|65    |LUT4            |   416|
+|66    |LUT5            |  1819|
+|67    |LUT6            |  1139|
+|68    |MUXF7           |    32|
+|69    |MUXF8           |     8|
+|70    |FDCE            |  1845|
+|71    |FDPE            |     3|
+|72    |IBUF            |     7|
+|73    |OBUF            |   632|
++------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 401 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1953.902 ; gain = 1011.281
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1953.902 ; gain = 1090.527
+Synthesis finished with 0 errors, 0 critical warnings and 388 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 3133.215 ; gain = 1210.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 3133.215 ; gain = 1321.910
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1963.023 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 3133.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1966.688 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3133.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 12 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
 
-Synth Design complete | Checksum: 24b80f9f
+Synth Design complete | Checksum: 7fb527a5
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 289 Warnings, 0 Critical Warnings and 0 Errors encountered.
+127 Infos, 183 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:16 . Memory (MB): peak = 1966.688 ; gain = 1335.281
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1966.688 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.215 ; gain = 2459.395
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 3133.215 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Lenovo/Desktop/Frodo/prj/Frodo_top/Frodo_top.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 15:09:19 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  6 15:10:44 2025...

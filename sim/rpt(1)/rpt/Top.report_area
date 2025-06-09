@@ -1,0 +1,662 @@
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:09:28 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+Number of ports:                         5550
+Number of nets:                          8053
+Number of cells:                         2684
+Number of combinational cells:           2404
+Number of sequential cells:               143
+Number of macros/black boxes:               5
+Number of buf/inv:                        221
+Number of references:                      11
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:           329777.054443
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                329777.054443
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-    Noncombi-  Black-
+                                  Total        Total    national  national   boxes        Design
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Top                               329777.0544    100.0    0.0000     0.0000       0.0000  Top
+ram_0                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_1
+ram_1                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_0
+u_Macs                                 0.0000      0.0    0.0000     0.0000       0.0000  Macs
+u_Macs/add_51_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_51_ni/*cell*77              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_52_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_52_ni/*cell*79              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_53_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_53_ni/*cell*81              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_54_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_54_ni/*cell*83              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/sub_add_51                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_51/*cell*85             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_52                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_52/*cell*88             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_53                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_53/*cell*91             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_54                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_54/*cell*94             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_core                                 0.0000      0.0    0.0000     0.0000       0.0000  Core
+u_core/add_141                         0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_core/add_141/*cell*36                0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_decode                               0.0000      0.0    0.0000     0.0000       0.0000  Decode
+u_decode/add_14_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36/*cell*40           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G2/*cell*49        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G3/*cell*58        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G4/*cell*67        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36/*cell*43           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G2/*cell*52        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G3/*cell*61        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G4/*cell*70        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_22_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36/*cell*46           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G2/*cell*55        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G3/*cell*64        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G4/*cell*73        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_encode                               0.0000      0.0    0.0000     0.0000       0.0000  Encode
+u_rom                               3080.8357      0.9    0.0000     0.0000    3080.8357  spsram256X28
+u_sample                               0.0000      0.0    0.0000     0.0000       0.0000  sample
+u_sample/add_138                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_1_1_2
+u_sample/add_138/*cell*182             0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width2
+u_sample/add_138_10                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_10/*cell*209          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_11                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_11/*cell*212          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_12                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_12/*cell*215          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_2                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_2_1_3
+u_sample/add_138_2/*cell*185           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width3
+u_sample/add_138_3                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_3_1_4
+u_sample/add_138_3/*cell*188           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width4
+u_sample/add_138_4                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_4_1_5
+u_sample/add_138_4/*cell*191           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width5
+u_sample/add_138_5                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_5_1_6
+u_sample/add_138_5/*cell*194           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width6
+u_sample/add_138_6                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_6_1_7
+u_sample/add_138_6/*cell*197           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width7
+u_sample/add_138_7                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_7_1_8
+u_sample/add_138_7/*cell*200           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_8                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_8/*cell*203           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_9                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_9/*cell*206           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_140                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_140/*cell*218             0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_sample/lt_103                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103/*cell*134              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_103_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103_2/*cell*137            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107/*cell*140              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107_2/*cell*143            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111/*cell*146              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111_2/*cell*149            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115/*cell*152              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115_2/*cell*155            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119/*cell*158              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119_2/*cell*161            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123/*cell*164              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123_2/*cell*167            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127/*cell*170              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127_2/*cell*173            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_131                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_131/*cell*176              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_134                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_134/*cell*179              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87/*cell*98                0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87_2/*cell*101             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_87_3/*cell*104             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91/*cell*107               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91_2/*cell*110             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_91_3/*cell*113             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95/*cell*116               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_2/*cell*119             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_3/*cell*122             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99/*cell*125               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_2/*cell*128             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_3/*cell*131             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Total                                                     0.0000     0.0000  329777.0544
+
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:13:26 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+Number of ports:                         5550
+Number of nets:                          8053
+Number of cells:                         2684
+Number of combinational cells:           2404
+Number of sequential cells:               143
+Number of macros/black boxes:               5
+Number of buf/inv:                        221
+Number of references:                      11
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:           329777.054443
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                329777.054443
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-    Noncombi-  Black-
+                                  Total        Total    national  national   boxes        Design
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Top                               329777.0544    100.0    0.0000     0.0000       0.0000  Top
+ram_0                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_1
+ram_1                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_0
+u_Macs                                 0.0000      0.0    0.0000     0.0000       0.0000  Macs
+u_Macs/add_51_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_51_ni/*cell*77              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_52_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_52_ni/*cell*79              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_53_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_53_ni/*cell*81              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_54_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_54_ni/*cell*83              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/sub_add_51                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_51/*cell*85             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_52                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_52/*cell*88             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_53                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_53/*cell*91             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_54                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_54/*cell*94             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_core                                 0.0000      0.0    0.0000     0.0000       0.0000  Core
+u_core/add_141                         0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_core/add_141/*cell*36                0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_decode                               0.0000      0.0    0.0000     0.0000       0.0000  Decode
+u_decode/add_14_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36/*cell*40           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G2/*cell*49        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G3/*cell*58        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G4/*cell*67        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36/*cell*43           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G2/*cell*52        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G3/*cell*61        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G4/*cell*70        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_22_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36/*cell*46           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G2/*cell*55        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G3/*cell*64        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G4/*cell*73        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_encode                               0.0000      0.0    0.0000     0.0000       0.0000  Encode
+u_rom                               3080.8357      0.9    0.0000     0.0000    3080.8357  spsram256X28
+u_sample                               0.0000      0.0    0.0000     0.0000       0.0000  sample
+u_sample/add_138                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_1_1_2
+u_sample/add_138/*cell*182             0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width2
+u_sample/add_138_10                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_10/*cell*209          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_11                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_11/*cell*212          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_12                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_12/*cell*215          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_2                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_2_1_3
+u_sample/add_138_2/*cell*185           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width3
+u_sample/add_138_3                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_3_1_4
+u_sample/add_138_3/*cell*188           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width4
+u_sample/add_138_4                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_4_1_5
+u_sample/add_138_4/*cell*191           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width5
+u_sample/add_138_5                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_5_1_6
+u_sample/add_138_5/*cell*194           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width6
+u_sample/add_138_6                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_6_1_7
+u_sample/add_138_6/*cell*197           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width7
+u_sample/add_138_7                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_7_1_8
+u_sample/add_138_7/*cell*200           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_8                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_8/*cell*203           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_9                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_9/*cell*206           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_140                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_140/*cell*218             0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_sample/lt_103                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103/*cell*134              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_103_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103_2/*cell*137            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107/*cell*140              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107_2/*cell*143            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111/*cell*146              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111_2/*cell*149            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115/*cell*152              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115_2/*cell*155            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119/*cell*158              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119_2/*cell*161            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123/*cell*164              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123_2/*cell*167            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127/*cell*170              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127_2/*cell*173            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_131                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_131/*cell*176              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_134                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_134/*cell*179              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87/*cell*98                0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87_2/*cell*101             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_87_3/*cell*104             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91/*cell*107               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91_2/*cell*110             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_91_3/*cell*113             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95/*cell*116               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_2/*cell*119             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_3/*cell*122             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99/*cell*125               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_2/*cell*128             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_3/*cell*131             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Total                                                     0.0000     0.0000  329777.0544
+
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:14:03 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    gtech (File: /opt/synopsys/syn_2018.06/syn/O-2018.06-SP1/libraries/syn/gtech.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+Number of ports:                         5550
+Number of nets:                          8053
+Number of cells:                         2684
+Number of combinational cells:           2404
+Number of sequential cells:               143
+Number of macros/black boxes:               5
+Number of buf/inv:                        221
+Number of references:                      11
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:           329777.054443
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                329777.054443
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-    Noncombi-  Black-
+                                  Total        Total    national  national   boxes        Design
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Top                               329777.0544    100.0    0.0000     0.0000       0.0000  Top
+ram_0                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_1
+ram_1                             163348.1094     49.5    0.0000     0.0000  163348.1094  dpsram4096X64_0
+u_Macs                                 0.0000      0.0    0.0000     0.0000       0.0000  Macs
+u_Macs/add_51_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_51_ni/*cell*77              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_52_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_52_ni/*cell*79              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_53_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_53_ni/*cell*81              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/add_54_ni                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_Macs/add_54_ni/*cell*83              0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_Macs/sub_add_51                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_51/*cell*85             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_52                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_52/*cell*88             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_53                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_53/*cell*91             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_Macs/sub_add_54                      0.0000      0.0    0.0000     0.0000       0.0000  *SUB_UNS_OP_8_8_8
+u_Macs/sub_add_54/*cell*94             0.0000      0.0    0.0000     0.0000       0.0000  DW01_sub_width8
+u_core                                 0.0000      0.0    0.0000     0.0000       0.0000  Core
+u_core/add_141                         0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_core/add_141/*cell*36                0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_decode                               0.0000      0.0    0.0000     0.0000       0.0000  Decode
+u_decode/add_14_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36/*cell*40           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G2/*cell*49        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G3/*cell*58        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_14_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_12_16
+u_decode/add_14_C36_G4/*cell*67        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36/*cell*43           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G2/*cell*52        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G3/*cell*61        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_18_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_16_13_16
+u_decode/add_18_C36_G4/*cell*70        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width16
+u_decode/add_22_C36                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36/*cell*46           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G2                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G2/*cell*55        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G3                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G3/*cell*64        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_decode/add_22_C36_G4                 0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_15_13_15
+u_decode/add_22_C36_G4/*cell*73        0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width15
+u_encode                               0.0000      0.0    0.0000     0.0000       0.0000  Encode
+u_rom                               3080.8357      0.9    0.0000     0.0000    3080.8357  spsram256X28
+u_sample                               0.0000      0.0    0.0000     0.0000       0.0000  sample
+u_sample/add_138                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_1_1_2
+u_sample/add_138/*cell*182             0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width2
+u_sample/add_138_10                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_10/*cell*209          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_11                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_11/*cell*212          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_12                    0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_12/*cell*215          0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_2                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_2_1_3
+u_sample/add_138_2/*cell*185           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width3
+u_sample/add_138_3                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_3_1_4
+u_sample/add_138_3/*cell*188           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width4
+u_sample/add_138_4                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_4_1_5
+u_sample/add_138_4/*cell*191           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width5
+u_sample/add_138_5                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_5_1_6
+u_sample/add_138_5/*cell*194           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width6
+u_sample/add_138_6                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_6_1_7
+u_sample/add_138_6/*cell*197           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width7
+u_sample/add_138_7                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_7_1_8
+u_sample/add_138_7/*cell*200           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_8                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_8/*cell*203           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_138_9                     0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_138_9/*cell*206           0.0000      0.0    0.0000     0.0000       0.0000  DW01_add_width8
+u_sample/add_140                       0.0000      0.0    0.0000     0.0000       0.0000  *ADD_UNS_OP_8_1_8
+u_sample/add_140/*cell*218             0.0000      0.0    0.0000     0.0000       0.0000  DW01_inc_width8
+u_sample/lt_103                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103/*cell*134              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_103_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_103_2/*cell*137            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107/*cell*140              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_107_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_107_2/*cell*143            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111/*cell*146              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_111_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_111_2/*cell*149            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115/*cell*152              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_115_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_115_2/*cell*155            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119/*cell*158              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_119_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_119_2/*cell*161            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123/*cell*164              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_123_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_123_2/*cell*167            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127/*cell*170              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_127_2                      0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_127_2/*cell*173            0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_131                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_131/*cell*176              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_134                        0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_134/*cell*179              0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87/*cell*98                0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_13_15_1
+u_sample/lt_87_2/*cell*101             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_87_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_87_3/*cell*104             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91/*cell*107               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_14_15_1
+u_sample/lt_91_2/*cell*110             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_91_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_91_3/*cell*113             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95/*cell*116               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_2/*cell*119             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_95_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_95_3/*cell*122             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99                         0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99/*cell*125               0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_2                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_2/*cell*128             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+u_sample/lt_99_3                       0.0000      0.0    0.0000     0.0000       0.0000  *LT_UNS_OP_15_15_1
+u_sample/lt_99_3/*cell*131             0.0000      0.0    0.0000     0.0000       0.0000  DW01_cmp2_width15
+--------------------------------  -----------  -------  --------  ---------  -----------  --------------------
+Total                                                     0.0000     0.0000  329777.0544
+
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:20:17 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs (File: /home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+Number of ports:                         1784
+Number of nets:                          3057
+Number of cells:                         1165
+Number of combinational cells:           1121
+Number of sequential cells:                31
+Number of macros/black boxes:               5
+Number of buf/inv:                        664
+Number of references:                      11
+
+Combinational area:                828.911996
+Buf/Inv area:                      223.103997
+Noncombinational area:              85.680000
+Macro/Black Box area:           329777.054443
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                330691.646440
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-    Noncombi-  Black-
+                                  Total        Total    national  national   boxes        Design
+--------------------------------  -----------  -------  --------  ---------  -----------  ---------------
+Top                               330691.6464    100.0  157.2480     0.0000       0.0000  Top
+ram_0                             163349.4534     49.4    1.3440     0.0000  163348.1094  dpsram4096X64_1
+ram_1                             163349.4534     49.4    1.3440     0.0000  163348.1094  dpsram4096X64_0
+u_Macs                                96.9360      0.0   96.9360     0.0000       0.0000  Macs
+u_core                                90.0480      0.0   35.2800    54.7680       0.0000  Core
+u_decode                             275.6880      0.1  275.6880     0.0000       0.0000  Decode
+u_encode                             138.9360      0.0  138.9360     0.0000       0.0000  Encode
+u_rom                               3081.5077      0.9    0.6720     0.0000    3080.8357  spsram256X28
+u_sample                             152.3760      0.0  121.4640    30.9120       0.0000  sample
+--------------------------------  -----------  -------  --------  ---------  -----------  ---------------
+Total                                                   828.9120    85.6800  329777.0544
+
+1
+Warning: Design 'Top' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : Top
+Version: O-2018.06-SP1
+Date   : Thu Jun  5 21:41:17 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs (File: /home/usergq/RFID_TSMC28_lib/STDCELL/tcbn28hpcplusbwp12t30p140ulvt_190a/tcbn28hpcplusbwp12t30p140ulvt_180a_ccs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp12t30p140ulvt_180a/tcbn28hpcplusbwp12t30p140ulvtssg0p81v125c_ccs.db)
+    tsdn28hpcpa4096x32m8m_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/tsdn28hpcpa4096x32m8m_130a_tt1v25c.db)
+    ts1n28hpcphvtb256x28m4s_tt1v25c (File: /home/usergq/IC_prj/Frodo_DC/syn/LibTemp/ts1n28hpcphvtb256x28m4s_180a_tt1v25c.db)
+
+Number of ports:                         1784
+Number of nets:                          3057
+Number of cells:                         1165
+Number of combinational cells:           1121
+Number of sequential cells:                31
+Number of macros/black boxes:               5
+Number of buf/inv:                        664
+Number of references:                      11
+
+Combinational area:                828.911996
+Buf/Inv area:                      223.103997
+Noncombinational area:              85.680000
+Macro/Black Box area:           329777.054443
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                330691.646440
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-    Noncombi-  Black-
+                                  Total        Total    national  national   boxes        Design
+--------------------------------  -----------  -------  --------  ---------  -----------  ---------------
+Top                               330691.6464    100.0  157.2480     0.0000       0.0000  Top
+ram_0                             163349.4534     49.4    1.3440     0.0000  163348.1094  dpsram4096X64_1
+ram_1                             163349.4534     49.4    1.3440     0.0000  163348.1094  dpsram4096X64_0
+u_Macs                                96.9360      0.0   96.9360     0.0000       0.0000  Macs
+u_core                                90.0480      0.0   35.2800    54.7680       0.0000  Core
+u_decode                             275.6880      0.1  275.6880     0.0000       0.0000  Decode
+u_encode                             138.9360      0.0  138.9360     0.0000       0.0000  Encode
+u_rom                               3081.5077      0.9    0.6720     0.0000    3080.8357  spsram256X28
+u_sample                             152.3760      0.0  121.4640    30.9120       0.0000  sample
+--------------------------------  -----------  -------  --------  ---------  -----------  ---------------
+Total                                                   828.9120    85.6800  329777.0544
+
+1

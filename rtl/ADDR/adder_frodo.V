@@ -17,7 +17,7 @@ output reg         done,
 output reg [15:0] result          /// a * b /+ c
 
 );
-//
+wire [15:0] out_d;
 wire [15:0] product;
 reg state;
 
@@ -57,7 +57,7 @@ begin
 end
 
 
-wire [15:0] out_d;
+
 /////////////////////////////////////////Partial volume////////////////  
 wire [15:0] cn0; // b[0] & a[15:0]
 wire [14:0] cn1; // b[1] & a[15:0]
